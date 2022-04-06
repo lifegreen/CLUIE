@@ -1,0 +1,5594 @@
+StyleSheet =  
+{
+	Styles =  
+	{
+		 
+		{
+			type = "ButtonStyle",
+			name = "mainMenuDockButton",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "background",
+						ID = 2206184,
+						colour =  
+						{
+							75,
+							75,
+							75,
+							255,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "outline",
+						ID = 2206185,
+						rectangleType = "Border",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						ID = 2206186,
+						nameID = "Text_on",
+						dropShadow = true,
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						ID = 2206187,
+						nameID = "Text_on",
+						dropShadow = true,
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						caretColourBottom =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						ID = 2206188,
+						nameID = "Text",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+						},
+					},
+				},
+				Sound =  
+				{
+					 
+					{
+						sample = "UI\\\\FRONTEND\\\\UI_07",
+						event = "OnClick",
+					},
+				},
+			},
+			size =  
+			{
+				0.12000,
+				0.10000,
+			},
+		},
+		 
+		{
+			ListBox =  
+			{
+				type = "ListBoxStyle",
+				ItemsGroup =  
+				{
+					type = "Style",
+					Presentation =  
+					{
+						Art =  
+						{
+							 
+							{
+								type = "Rectangle",
+								nameID = "black",
+								ID = 2633983,
+								colour =  
+								{
+									37,
+									37,
+									39,
+									221,
+								},
+								shadermode = 0,
+								states =  
+								{
+									"Normal",
+									"Active",
+									"Hover",
+									"Disabled",
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								nameID = "grey_outline",
+								colour =  
+								{
+									90,
+									90,
+									90,
+									192,
+								},
+								ID = 2633984,
+								rectangleType = "Border",
+								shadermode = 0,
+								states =  
+								{
+									"Normal",
+									"Active",
+									"Hover",
+									"Disabled",
+								},
+							},
+						},
+					},
+					size =  
+					{
+						0.16500,
+						0.14000,
+					},
+				},
+				ScrollBar =  
+				{
+					type = "ScrollBarStyle",
+					ButtonUp =  
+					{
+						type = "ButtonStyle",
+						buttonType = "ClickOnPress",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "Hover",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633975,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_up_hover",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Active",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633976,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_up_press",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Disabled",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633977,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_up_disabled",
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Normal",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633978,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_up_default",
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.02000,
+							0.02500,
+						},
+					},
+					range =  
+					{
+						0,
+						0.17500,
+					},
+					ButtonDown =  
+					{
+						type = "ButtonStyle",
+						buttonType = "ClickOnPress",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "Hover",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633979,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_down_hover",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Active",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633980,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_down_press",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Disabled",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633981,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_down_disabled",
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Normal",
+									shadermode = 0,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										150,
+									},
+									position =  
+									{
+										0.06055,
+										0.03125,
+									},
+									ID = 2633982,
+									size =  
+									{
+										0.87891,
+										0.93750,
+									},
+									texture = "art\\ui\\textures\\arrows_slider\\arrow_down_default",
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.02000,
+							0.02500,
+						},
+					},
+					stepSize = 0,
+					orientation = "Vertical",
+					Presentation =  
+					{
+						Art =  
+						{
+							 
+							{
+								type = "Rectangle",
+								shadermode = 0,
+								colour =  
+								{
+									0,
+									0,
+									0,
+									200,
+								},
+								ID = 2633973,
+								states =  
+								{
+									"Normal",
+									"Active",
+									"Hover",
+									"Disabled",
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								shadermode = 0,
+								rectangleType = "Border",
+								ID = 2633974,
+								states =  
+								{
+									"Normal",
+									"Active",
+									"Hover",
+									"Disabled",
+								},
+							},
+						},
+					},
+					size =  
+					{
+						0.02000,
+						0.14000,
+					},
+				},
+				ItemTemplate =  
+				{
+					type = "Style",
+					Presentation =  
+					{
+						Art =  
+						{
+							 
+							{
+								type = "Rectangle",
+								shadermode = 0,
+								colour =  
+								{
+									19,
+									19,
+									19,
+									255,
+								},
+								ID = 2633985,
+								states =  
+								{
+									"Checked",
+									"CheckedDisabled",
+									"CheckedActive",
+									"CheckedHover",
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								shadermode = 0,
+								colour =  
+								{
+									0,
+									0,
+									0,
+									100,
+								},
+								ID = 2633986,
+								states =  
+								{
+									"Hover",
+								},
+							},
+							 
+							{
+								type = "Text",
+								textColourBottom =  
+								{
+									200,
+									200,
+									200,
+									255,
+								},
+								shadermode = 0,
+								textColourTop =  
+								{
+									200,
+									200,
+									200,
+									255,
+								},
+								multiline = false,
+								fontname = "trebuchet ms regular 20",
+								position =  
+								{
+									0.05387,
+									0,
+								},
+								ID = 2633987,
+								size =  
+								{
+									0.94613,
+									1,
+								},
+								dropShadow = true,
+								states =  
+								{
+									"Normal",
+									"Disabled",
+									"Active",
+								},
+							},
+							 
+							{
+								type = "Text",
+								textColourBottom =  
+								{
+									255,
+									238,
+									157,
+									255,
+								},
+								shadermode = 0,
+								textColourTop =  
+								{
+									255,
+									238,
+									157,
+									255,
+								},
+								multiline = false,
+								fontname = "trebuchet ms regular 20",
+								position =  
+								{
+									0.05387,
+									0,
+								},
+								ID = 2633988,
+								size =  
+								{
+									0.94613,
+									1,
+								},
+								dropShadow = true,
+								states =  
+								{
+									"Hover",
+									"Checked",
+									"CheckedDisabled",
+									"CheckedActive",
+									"CheckedHover",
+								},
+							},
+							 
+							{
+								type = "Text",
+								nameID = "Text",
+								shadermode = 0,
+								textColourTop =  
+								{
+									255,
+									255,
+									255,
+									255,
+								},
+								multiline = false,
+								fontname = "trebuchet ms regular 20",
+								size =  
+								{
+									0.94613,
+									1,
+								},
+								position =  
+								{
+									0.05387,
+									0,
+								},
+								ID = 2633989,
+								textColourBottom =  
+								{
+									255,
+									255,
+									255,
+									255,
+								},
+								dropShadow = true,
+								states =  
+								{
+									"Hover",
+								},
+							},
+							 
+							{
+								type = "Text",
+								nameID = "Text",
+								shadermode = 0,
+								textColourTop =  
+								{
+									100,
+									100,
+									100,
+									255,
+								},
+								multiline = false,
+								fontname = "trebuchet ms regular 20",
+								size =  
+								{
+									0.94613,
+									1,
+								},
+								position =  
+								{
+									0.05387,
+									0,
+								},
+								ID = 2633990,
+								textColourBottom =  
+								{
+									100,
+									100,
+									100,
+									255,
+								},
+								dropShadow = true,
+								states =  
+								{
+									"Disabled",
+								},
+							},
+						},
+					},
+					size =  
+					{
+						0.16500,
+						0.04500,
+					},
+				},
+				maxItems = -1,
+				size =  
+				{
+					0.16500,
+					0.14000,
+				},
+			},
+			type = "ComboBoxStyle",
+			name = "DropDownBordered",
+			Label =  
+			{
+				type = "ButtonStyle",
+				buttonType = "ClickOnRelease",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Text",
+							nameID = "Text - Disabled",
+							shadermode = 0,
+							textColourTop =  
+							{
+								255,
+								255,
+								255,
+								64,
+							},
+							multiline = false,
+							fontname = "trebuchet ms regular 20",
+							size =  
+							{
+								0.98000,
+								0.98000,
+							},
+							position =  
+							{
+								0.02000,
+								0.02000,
+							},
+							ID = 2633965,
+							textColourBottom =  
+							{
+								255,
+								255,
+								255,
+								64,
+							},
+							dropShadow = true,
+							states =  
+							{
+								"Disabled",
+							},
+						},
+						 
+						{
+							type = "Text",
+							nameID = "Text - Normal",
+							shadermode = 0,
+							textColourTop =  
+							{
+								255,
+								255,
+								255,
+								192,
+							},
+							multiline = false,
+							fontname = "trebuchet ms regular 20",
+							size =  
+							{
+								0.95000,
+								1,
+							},
+							position =  
+							{
+								0.05000,
+								0,
+							},
+							ID = 2633966,
+							textColourBottom = "TestComboBoxText",
+							dropShadow = true,
+							states =  
+							{
+								"Normal",
+							},
+						},
+						 
+						{
+							type = "Text",
+							nameID = "Text - Hover",
+							shadermode = 0,
+							textColourTop = "TestComboBoxTextHighlight",
+							multiline = false,
+							fontname = "trebuchet ms regular 20",
+							size =  
+							{
+								0.95000,
+								1,
+							},
+							position =  
+							{
+								0.05000,
+								0,
+							},
+							ID = 2633967,
+							textColourBottom = "TestComboBoxTextHighlight",
+							dropShadow = true,
+							states =  
+							{
+								"Hover",
+							},
+						},
+						 
+						{
+							type = "Text",
+							textColourBottom =  
+							{
+								255,
+								240,
+								157,
+								255,
+							},
+							shadermode = 0,
+							textColourTop =  
+							{
+								255,
+								241,
+								157,
+								255,
+							},
+							multiline = false,
+							fontname = "trebuchet ms regular 20",
+							position =  
+							{
+								0.05000,
+								0,
+							},
+							ID = 2633968,
+							size =  
+							{
+								0.95000,
+								1,
+							},
+							dropShadow = true,
+							states =  
+							{
+								"Active",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.16625,
+					0.04500,
+				},
+			},
+			ArrowButton =  
+			{
+				type = "ButtonStyle",
+				buttonType = "ClickOnRelease",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							nameID = "Hover",
+							shadermode = 0,
+							colour =  
+							{
+								255,
+								255,
+								255,
+								150,
+							},
+							position =  
+							{
+								0.11787,
+								0.10937,
+							},
+							ID = 2633969,
+							size =  
+							{
+								0.76427,
+								0.78125,
+							},
+							texture = "art\\ui\\textures\\arrows_slider\\arrow_down_hover",
+							states =  
+							{
+								"Hover",
+							},
+						},
+						 
+						{
+							type = "Graphic",
+							nameID = "Active",
+							shadermode = 0,
+							colour =  
+							{
+								255,
+								255,
+								255,
+								150,
+							},
+							position =  
+							{
+								0.11787,
+								0.10937,
+							},
+							ID = 2633970,
+							size =  
+							{
+								0.76427,
+								0.78125,
+							},
+							texture = "art\\ui\\textures\\arrows_slider\\arrow_down_press",
+							states =  
+							{
+								"Active",
+							},
+						},
+						 
+						{
+							type = "Graphic",
+							nameID = "Disabled",
+							shadermode = 0,
+							colour =  
+							{
+								255,
+								255,
+								255,
+								150,
+							},
+							position =  
+							{
+								0.11787,
+								0.10937,
+							},
+							ID = 2633971,
+							size =  
+							{
+								0.76427,
+								0.78125,
+							},
+							texture = "art\\ui\\textures\\arrows_slider\\arrow_down_disabled",
+							states =  
+							{
+								"Disabled",
+							},
+						},
+						 
+						{
+							type = "Graphic",
+							nameID = "Normal",
+							shadermode = 0,
+							colour =  
+							{
+								255,
+								255,
+								255,
+								150,
+							},
+							position =  
+							{
+								0.11787,
+								0.10937,
+							},
+							ID = 2633972,
+							size =  
+							{
+								0.76427,
+								0.78125,
+							},
+							texture = "art\\ui\\textures\\arrows_slider\\arrow_down_default",
+							states =  
+							{
+								"Normal",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.03375,
+					0.04500,
+				},
+			},
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "Rectangle",
+						ID = 2633963,
+						colour =  
+						{
+							36,
+							36,
+							37,
+							255,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						colour =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						line_width = 0.00200,
+						shadermode = 1,
+						rectangleType = "WidthBorder",
+						ID = 2633964,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.20000,
+				0.04500,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "Text",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							244,
+							244,
+							244,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							244,
+							244,
+							244,
+							255,
+						},
+						ID = 2653594,
+						fontname = "trebuchet ms regular 20",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10000,
+				0.10000,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "TextSmall",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							244,
+							244,
+							244,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							244,
+							244,
+							244,
+							255,
+						},
+						ID = 2668833,
+						fontname = "trebuchet ms regular 16",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10000,
+				0.10000,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "Frame",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "Outline",
+						line_width = 0.00350,
+						shadermode = 0,
+						ID = 2681368,
+						colour =  
+						{
+							165,
+							165,
+							165,
+							255,
+						},
+						rectangleType = "WidthBorder",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10000,
+				0.10000,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "MainFrame",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "Background",
+						ID = 2686198,
+						colour =  
+						{
+							125,
+							125,
+							125,
+							200,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Outline",
+						line_width = 0.00350,
+						shadermode = 0,
+						ID = 2686199,
+						colour =  
+						{
+							165,
+							165,
+							165,
+							255,
+						},
+						rectangleType = "WidthBorder",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.96000,
+				0.87000,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "acceptButton",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "Background",
+						ID = 2686459,
+						colour =  
+						{
+							27,
+							87,
+							0,
+							255,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Outline",
+						line_width = 0.00300,
+						ID = 2686460,
+						rectangleType = "WidthBorder",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						shadermode = 0,
+						size =  
+						{
+							0.50000,
+							1,
+						},
+						position =  
+						{
+							0.25000,
+							0,
+						},
+						ID = 2686461,
+						texture = "art\\ui\\ingame\\targeting\\target_arrow_white",
+						flipHorizontal = true,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10000,
+				0.07000,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "backButton",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "Background",
+						ID = 2691591,
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						size =  
+						{
+							0.50000,
+							1,
+						},
+						position =  
+						{
+							0.25000,
+							0,
+						},
+						shadermode = 0,
+						texture = "art\\ui\\ingame\\targeting\\target_arrow_white",
+						ID = 2691592,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10000,
+				0.07000,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "tab",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "Background_checked",
+						ID = 2706937,
+						colour =  
+						{
+							125,
+							125,
+							125,
+							200,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Checked",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Background_normal",
+						ID = 2706938,
+						colour =  
+						{
+							0,
+							0,
+							0,
+							150,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+							"CheckedDisabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Outline",
+						line_width = 0.00300,
+						shadermode = 0,
+						ID = 2706939,
+						colour =  
+						{
+							165,
+							165,
+							165,
+							255,
+						},
+						rectangleType = "WidthBorder",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+							"Checked",
+							"CheckedDisabled",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "impact_24",
+						ID = 2706940,
+						nameID = "Text_checked",
+						dropShadow = true,
+						states =  
+						{
+							"Checked",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							147,
+							148,
+							148,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "impact_24",
+						ID = 2706941,
+						nameID = "Text_normal",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+							"CheckedDisabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.25000,
+				0.08300,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "tabGroup",
+			Presentation =  
+			{
+			},
+			size =  
+			{
+				0.96000,
+				0.08300,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "supportLinkButton",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "bttn_active",
+						shadermode = 0,
+						position =  
+						{
+							0.01600,
+							0.05800,
+						},
+						ID = 2716402,
+						size =  
+						{
+							0.96800,
+							0.88400,
+						},
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_press",
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bttn_hover",
+						shadermode = 0,
+						position =  
+						{
+							0.01600,
+							0.05800,
+						},
+						ID = 2716403,
+						size =  
+						{
+							0.96800,
+							0.88400,
+						},
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_hover",
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bttn_disabled",
+						shadermode = 0,
+						position =  
+						{
+							0.01600,
+							0.05800,
+						},
+						ID = 2716404,
+						size =  
+						{
+							0.96800,
+							0.88400,
+						},
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_disabled",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bttn_normal",
+						shadermode = 0,
+						position =  
+						{
+							0.01598,
+							0.05787,
+						},
+						ID = 2716405,
+						size =  
+						{
+							0.96805,
+							0.88426,
+						},
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_default",
+						states =  
+						{
+							"Normal",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "text_active",
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							250,
+							200,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						size =  
+						{
+							0.95000,
+							0.75000,
+						},
+						position =  
+						{
+							0.03000,
+							0.10000,
+						},
+						ID = 2716406,
+						textColourBottom =  
+						{
+							255,
+							250,
+							200,
+							255,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "text_hover",
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						size =  
+						{
+							0.95000,
+							0.75000,
+						},
+						position =  
+						{
+							0.03000,
+							0.10000,
+						},
+						ID = 2716407,
+						textColourBottom =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "text_disabled",
+						shadermode = 0,
+						textColourTop =  
+						{
+							100,
+							100,
+							100,
+							200,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						size =  
+						{
+							0.95000,
+							0.75000,
+						},
+						position =  
+						{
+							0.03000,
+							0.10000,
+						},
+						ID = 2716408,
+						textColourBottom =  
+						{
+							100,
+							100,
+							100,
+							200,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "text_normal",
+						shadermode = 0,
+						textColourTop =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						size =  
+						{
+							0.95000,
+							0.75000,
+						},
+						position =  
+						{
+							0.03000,
+							0.10000,
+						},
+						ID = 2716409,
+						textColourBottom =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.35000,
+				0.07000,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "tabStatic",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Rectangle",
+						nameID = "Background",
+						ID = 2716671,
+						colour =  
+						{
+							125,
+							125,
+							125,
+							200,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Outline",
+						line_width = 0.00300,
+						shadermode = 0,
+						ID = 2716672,
+						colour =  
+						{
+							165,
+							165,
+							165,
+							255,
+						},
+						rectangleType = "WidthBorder",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						horzAlign = "Centre",
+						ID = 2716673,
+						fontname = "impact_24",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.25000,
+				0.08300,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "trainingCheckbox",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "Background_disabled",
+						ID = 2757145,
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_disabled",
+						shadermode = 0,
+						states =  
+						{
+							"Disabled",
+							"CheckedDisabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Background",
+						ID = 2757146,
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_default",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Checked",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Check",
+						shadermode = 0,
+						position =  
+						{
+							0,
+							0.02000,
+						},
+						ID = 2757147,
+						size =  
+						{
+							1,
+							0.98000,
+						},
+						texture = "art\\ui\\textures\\cb_button_pointbox_check",
+						states =  
+						{
+							"Checked",
+							"CheckedDisabled",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.05000,
+				0.07000,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "trainingButton",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "Background_active",
+						ID = 2760239,
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_press",
+						shadermode = 0,
+						states =  
+						{
+							"Checked",
+							"CheckedDisabled",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Background",
+						ID = 2760240,
+						texture = "art\\ui\\textures\\textures_fe\\bttn_set02_default",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "Text_active",
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							250,
+							200,
+							255,
+						},
+						fontname = "impact_24",
+						position =  
+						{
+							0.16000,
+							0,
+						},
+						ID = 2760241,
+						textColourBottom =  
+						{
+							255,
+							250,
+							200,
+							255,
+						},
+						size =  
+						{
+							0.84000,
+							1,
+						},
+						states =  
+						{
+							"Checked",
+							"CheckedDisabled",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "Text",
+						shadermode = 0,
+						textColourTop =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						multiline = false,
+						fontname = "impact_24",
+						size =  
+						{
+							0.84000,
+							1,
+						},
+						position =  
+						{
+							0.16000,
+							0,
+						},
+						ID = 2760242,
+						textColourBottom =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.34800,
+				0.07000,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "holdSlot",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						shadermode = 0,
+						texture = "art\\ui\\ingame\\taskbar\\coh - icons - hold slot",
+						ID = 2955648,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.05000,
+				0.06500,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "wheelButton",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "button_disabled",
+						ID = 2978251,
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - allied - off",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_off",
+						ID = 2978252,
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - allied - off",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "border",
+						ID = 2978253,
+						texture = "art\\ui\\ingame\\overlay\\rarity_border",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_hover",
+						ID = 2978254,
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - allied - hover",
+						shadermode = 0,
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "rarity_hover",
+						ID = 2978255,
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - rarity - hover",
+						shadermode = 0,
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon",
+						ID = 2978256,
+						texture = "",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_hover",
+						ID = 2978257,
+						texture = "",
+						shadermode = 0,
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_disabled",
+						ID = 2978258,
+						texture = "",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_shadow",
+						colour =  
+						{
+							199,
+							199,
+							199,
+							182,
+						},
+						ID = 2978259,
+						texture = "",
+						shadermode = 0,
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "overlay",
+						ID = 2978260,
+						texture = "",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_disabled_shadow",
+						ID = 2978261,
+						texture = "art\\ui\\ingame\\taskbar\\coh_taskbar_01_com_btn_05",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.03500,
+				0.04650,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "resourceIcon",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "fuel",
+						colour =  
+						{
+							204,
+							135,
+							51,
+							255,
+						},
+						ID = 2984854,
+						texture = "art\\ui\\ingame\\resources\\resource_small_fuel",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "munition",
+						colour =  
+						{
+							255,
+							125,
+							0,
+							255,
+						},
+						ID = 2984855,
+						texture = "art\\ui\\ingame\\resources\\resource_small_munition",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "manpower",
+						colour =  
+						{
+							248,
+							206,
+							86,
+							255,
+						},
+						ID = 2984856,
+						texture = "art\\ui\\ingame\\resources\\resource_small_manpower",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.02500,
+				0.03200,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "resourceCost",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							174,
+							117,
+							33,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							212,
+							144,
+							36,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "trebuchet ms bold 14",
+						ID = 2986077,
+						nameID = "fuel",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "munition",
+						shadermode = 0,
+						textColourTop =  
+						{
+							216,
+							115,
+							78,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "trebuchet ms bold 14",
+						textColourBottom =  
+						{
+							153,
+							93,
+							70,
+							255,
+						},
+						ID = 2986078,
+						padding =  
+						{
+							0.00250,
+							0.00330,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							174,
+							156,
+							65,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							217,
+							183,
+							103,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "trebuchet ms bold 14",
+						ID = 2986079,
+						nameID = "manpower",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.03000,
+				0.02483,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "optionTitle",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						multiline = false,
+						vertAlign = "Top",
+						ID = 3061744,
+						fontname = "trebuchet ms bold 24",
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.35500,
+				0.05000,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "abilityButton",
+			buttonType = "ClickOnPress",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "button_disabled",
+						shadermode = 0,
+						position =  
+						{
+							0.03506,
+							0.03904,
+						},
+						ID = 3071509,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - allied - dissabled",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_off",
+						shadermode = 0,
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071510,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - allied - off",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_hover",
+						shadermode = 0,
+						position =  
+						{
+							0.03506,
+							0.03904,
+						},
+						ID = 3071511,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - allied - hover",
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_activated",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							201,
+							114,
+							255,
+						},
+						position =  
+						{
+							0.03506,
+							0.03904,
+						},
+						ID = 3071512,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - command - allied - hover",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_hover_orange_outline",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							210,
+						},
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071513,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh_taskbar_01_com_btn_04",
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon",
+						shadermode = 0,
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071514,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\odds\\blank",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_hover",
+						shadermode = 0,
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071515,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "",
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_disabled",
+						shadermode = 0,
+						colour =  
+						{
+							208,
+							208,
+							208,
+							255,
+						},
+						saturation = 0.20000,
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071516,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_activated",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							221,
+							99,
+							204,
+						},
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071517,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "overlay",
+						ID = 3071518,
+						texture = "",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_active_shadow",
+						shadermode = 0,
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071519,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\command_button_shadow_active",
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_disabled_shadow",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							144,
+						},
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071520,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh_taskbar_01_com_btn_05",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_activated_shadow",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							195,
+							54,
+							210,
+						},
+						position =  
+						{
+							0.03100,
+							0.03904,
+						},
+						ID = 3071521,
+						size =  
+						{
+							0.92989,
+							0.93699,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - button activated shadow",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Flash",
+						ID = 3071522,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							0,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.04500,
+				0.06000,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "TextTitle",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							248,
+							248,
+							248,
+							255,
+						},
+						ID = 3073890,
+						horzAlign = "Centre",
+						fontname = "impact_20",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.26221,
+				0.05258,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "ButtonBasic",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Text",
+						nameID = "text_active",
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							250,
+							200,
+							255,
+						},
+						horzAlign = "Centre",
+						fontname = "impact_18",
+						position =  
+						{
+							0.00509,
+							0.08289,
+						},
+						ID = 3091265,
+						textColourBottom =  
+						{
+							255,
+							250,
+							200,
+							255,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "text_hover",
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						horzAlign = "Centre",
+						fontname = "impact_18",
+						position =  
+						{
+							0,
+							0.04872,
+						},
+						ID = 3091266,
+						textColourBottom =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "text_disabled",
+						shadermode = 0,
+						textColourTop =  
+						{
+							0,
+							0,
+							0,
+							100,
+						},
+						horzAlign = "Centre",
+						position =  
+						{
+							0,
+							0.04872,
+						},
+						ID = 3091267,
+						fontname = "impact_18",
+						textColourBottom =  
+						{
+							0,
+							0,
+							0,
+							100,
+						},
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Background",
+						ID = 3091268,
+						colour =  
+						{
+							125,
+							125,
+							125,
+							200,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Border",
+						line_width = 0.00300,
+						shadermode = 0,
+						ID = 3091269,
+						colour =  
+						{
+							165,
+							165,
+							165,
+							200,
+						},
+						rectangleType = "WidthBorder",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "ActiveBackground",
+						ID = 3091270,
+						colour =  
+						{
+							60,
+							60,
+							60,
+							255,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Text",
+						nameID = "text_normal",
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						horzAlign = "Centre",
+						fontname = "impact_18",
+						position =  
+						{
+							0,
+							0.04872,
+						},
+						ID = 3091271,
+						textColourBottom =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						shadermode = 0,
+						colour =  
+						{
+							60,
+							60,
+							60,
+							255,
+						},
+						ID = 3091272,
+						states =  
+						{
+							"Active",
+						},
+					},
+				},
+				Sound =  
+				{
+					 
+					{
+						sample = "UI\\FRONTEND\\UI_13",
+						event = "OnHover",
+					},
+					 
+					{
+						sample = "UI\\FRONTEND\\UI_07",
+						event = "OnClick",
+					},
+				},
+			},
+			size =  
+			{
+				0.24000,
+				0.04200,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "groupShield",
+			buttonType = "ClickOnPress",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "shadow",
+						ID = 3117681,
+						texture = "art\\ui\\ingame\\units\\allied_squad_control_badge_shadow",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "select",
+						ID = 3117682,
+						texture = "art\\ui\\ingame\\units\\allied_squad_control_badge_select",
+						shadermode = 0,
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "badge",
+						ID = 3117683,
+						texture = "art\\ui\\ingame\\units\\allied_squad_control_badge",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							229,
+							229,
+							229,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						fontname = "impact_14",
+						position =  
+						{
+							0.34970,
+							0.33134,
+						},
+						ID = 3117684,
+						size =  
+						{
+							0.35595,
+							0.48786,
+						},
+						dropShadow = true,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						nameID = "Flash",
+						ID = 3117685,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							0,
+						},
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.04800,
+				0.06200,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "fe_checkbox",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "check",
+						colour = "White",
+						ID = 3425355,
+						texture = "art\\ui\\textures\\textures_fe\\bttn__checkmark_complete",
+						shadermode = 0,
+						states =  
+						{
+							"Active",
+							"Checked",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bg",
+						ID = 3425356,
+						texture = "art\\ui\\textures\\textures_fe\\box_blank",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+							"Checked",
+							"CheckedDisabled",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						colour =  
+						{
+							159,
+							159,
+							159,
+							255,
+						},
+						shadermode = 0,
+						rectangleType = "Border",
+						ID = 3425357,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+							"Checked",
+							"CheckedDisabled",
+							"CheckedActive",
+							"CheckedHover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.05000,
+				0.06600,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "fe_button",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "active",
+						ID = 3425590,
+						texture = "art\\ui\\textures\\textures_fe\\training_selected",
+						shadermode = 0,
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bg",
+						ID = 3425591,
+						texture = "art\\ui\\textures\\textures_fe\\training_unselected",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						horzAlign = "Centre",
+						ID = 3425592,
+						fontname = "impact_18",
+						nameID = "Text",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.33417,
+				0.05600,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "ability_descr",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						size =  
+						{
+							1.03275,
+							1.26868,
+						},
+						position =  
+						{
+							0,
+							-0.09289,
+						},
+						shadermode = 0,
+						texture = "art\\ui\\feral\\commander_ability_descr",
+						ID = 3466967,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.22590,
+				0.06000,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "camera_menu_btn",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						shadermode = 0,
+						texture = "art\\ui\\feral\\camera_menu_no_btn",
+						ID = 3467967,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.21700,
+				0.05499,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "selection_filter_btn",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "active_background",
+						ID = 3469138,
+						texture = "art\\ui\\feral\\group_selection_filter_on",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "background",
+						ID = 3469139,
+						texture = "art\\ui\\feral\\group_selection_filter_off",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon",
+						shadermode = 0,
+						position =  
+						{
+							0.15000,
+							0.25000,
+						},
+						ID = 3469140,
+						size =  
+						{
+							0.70000,
+							0.40000,
+						},
+						texture = "art\\ui\\feral\\group_selection_filter_building",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.02424,
+				0.06500,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "confirm_dialog_btn",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "bg",
+						ID = 3480876,
+						texture = "art\\ui\\feral\\confirm_dialog_btn_unselected",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bg_hover",
+						ID = 3480877,
+						texture = "art\\ui\\feral\\confirm_dialog_btn_selected",
+						shadermode = 0,
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							255,
+							255,
+							255,
+							255,
+						},
+						multiline = false,
+						horzAlign = "Centre",
+						ID = 3480878,
+						fontname = "impact_18",
+						nameID = "Text",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Text",
+						textColourBottom =  
+						{
+							165,
+							165,
+							165,
+							255,
+						},
+						shadermode = 0,
+						textColourTop =  
+						{
+							165,
+							165,
+							165,
+							255,
+						},
+						vertAlign = "Top",
+						ID = 3480879,
+						fontname = "century16",
+						nameID = "Text_disabled",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.11500,
+				0.04563,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "branch_ability",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.07500,
+							0.06500,
+						},
+						ID = 3637225,
+						size =  
+						{
+							0.85000,
+							0.78500,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_unavailable_frame",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available",
+						shadermode = 0,
+						position =  
+						{
+							0.07500,
+							0.06500,
+						},
+						ID = 3637226,
+						size =  
+						{
+							0.85000,
+							0.78500,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_available_frame",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button",
+						shadermode = 0,
+						colour =  
+						{
+							174,
+							195,
+							172,
+							255,
+						},
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3637227,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3637228,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							199,
+							199,
+							199,
+							255,
+						},
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3637229,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover_bg",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							206,
+							67,
+							150,
+						},
+						position =  
+						{
+							0.23200,
+							0.20677,
+						},
+						ID = 3637230,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button_hover",
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Frame_button_selected",
+						shadermode = 0,
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3637231,
+						size =  
+						{
+							0.53645,
+							0.75500,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_select_frame",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon",
+						shadermode = 0,
+						saturation = 0.80000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637232,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover",
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						shadermode = 0,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						ID = 3637233,
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_unavailable",
+						shadermode = 0,
+						colour =  
+						{
+							212,
+							212,
+							212,
+							255,
+						},
+						saturation = 0.30000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637234,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						saturation = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637235,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_icon",
+						shadermode = 0,
+						colour =  
+						{
+							214,
+							214,
+							214,
+							255,
+						},
+						saturation = 0.50000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637236,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_unavailable_shadow",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							121,
+						},
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637237,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_shadow_normal",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_purchased_check",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637238,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Preview_icon",
+						shadermode = 0,
+						colour =  
+						{
+							169,
+							169,
+							169,
+							255,
+						},
+						saturation = 0.20000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637239,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_shadow",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3637240,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - button shadow active",
+						states =  
+						{
+							"Active",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.06379,
+				0.12300,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "branch_ability_dynamic",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.07500,
+							0.06500,
+						},
+						ID = 3648197,
+						size =  
+						{
+							0.85000,
+							0.78500,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_unavailable_frame",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available",
+						shadermode = 0,
+						position =  
+						{
+							0.07500,
+							0.06500,
+						},
+						ID = 3648198,
+						size =  
+						{
+							0.85000,
+							0.78500,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_available_frame_no_indent",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button",
+						shadermode = 0,
+						colour =  
+						{
+							174,
+							195,
+							172,
+							255,
+						},
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3648199,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3648200,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							199,
+							199,
+							199,
+							255,
+						},
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3648201,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover_bg",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							206,
+							67,
+							150,
+						},
+						position =  
+						{
+							0.23200,
+							0.20677,
+						},
+						ID = 3648202,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button_hover",
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Frame_button_selected",
+						shadermode = 0,
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3648203,
+						size =  
+						{
+							0.53645,
+							0.49300,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_select_frame_no_light",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon",
+						shadermode = 0,
+						saturation = 0.80000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648204,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover",
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						shadermode = 0,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						ID = 3648205,
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_unavailable",
+						shadermode = 0,
+						colour =  
+						{
+							212,
+							212,
+							212,
+							255,
+						},
+						saturation = 0.30000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648206,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						saturation = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648207,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_icon",
+						shadermode = 0,
+						colour =  
+						{
+							214,
+							214,
+							214,
+							255,
+						},
+						saturation = 0.50000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648208,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_unavailable_shadow",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							121,
+						},
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648209,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_shadow_normal",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_purchased_check",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648210,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Preview_icon",
+						shadermode = 0,
+						colour =  
+						{
+							169,
+							169,
+							169,
+							255,
+						},
+						saturation = 0.20000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648211,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_shadow",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3648212,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - button shadow active",
+						states =  
+						{
+							"Active",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.06379,
+				0.12300,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "branch_ability_phone",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.07000,
+							0.06000,
+						},
+						ID = 3660820,
+						size =  
+						{
+							0.86000,
+							0.80000,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_unavailable_frame",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available",
+						shadermode = 0,
+						position =  
+						{
+							0.07957,
+							0.07887,
+						},
+						ID = 3660821,
+						size =  
+						{
+							0.85702,
+							0.77305,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_available_frame",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button",
+						shadermode = 0,
+						colour =  
+						{
+							174,
+							195,
+							172,
+							255,
+						},
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3660822,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3660823,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							199,
+							199,
+							199,
+							255,
+						},
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3660824,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover_bg",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							206,
+							67,
+							150,
+						},
+						position =  
+						{
+							0.23200,
+							0.20677,
+						},
+						ID = 3660825,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button_hover",
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Frame_button_selected",
+						shadermode = 0,
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3660826,
+						size =  
+						{
+							0.53645,
+							0.75500,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_select_frame",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon",
+						shadermode = 0,
+						saturation = 0.80000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660827,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover",
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						shadermode = 0,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						ID = 3660828,
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_unavailable",
+						shadermode = 0,
+						colour =  
+						{
+							212,
+							212,
+							212,
+							255,
+						},
+						saturation = 0.30000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660829,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						saturation = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660830,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_icon",
+						shadermode = 0,
+						colour =  
+						{
+							214,
+							214,
+							214,
+							255,
+						},
+						saturation = 0.50000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660831,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_unavailable_shadow",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							121,
+						},
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660832,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_shadow_normal",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_purchased_check",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660833,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Preview_icon",
+						shadermode = 0,
+						colour =  
+						{
+							169,
+							169,
+							169,
+							255,
+						},
+						saturation = 0.20000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660834,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_shadow",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660835,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - button shadow active",
+						states =  
+						{
+							"Active",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10200,
+				0.18400,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "branch_ability_dynamic_phone",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.07000,
+							0.06000,
+						},
+						ID = 3660852,
+						size =  
+						{
+							0.86000,
+							0.80000,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_unavailable_frame",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available",
+						shadermode = 0,
+						position =  
+						{
+							0.07957,
+							0.07887,
+						},
+						ID = 3660853,
+						size =  
+						{
+							0.85702,
+							0.77305,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_available_frame_no_indent",
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button",
+						shadermode = 0,
+						colour =  
+						{
+							174,
+							195,
+							172,
+							255,
+						},
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3660854,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_unavailable",
+						shadermode = 0,
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3660855,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "button_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							199,
+							199,
+							199,
+							255,
+						},
+						position =  
+						{
+							0.23178,
+							0.20677,
+						},
+						ID = 3660856,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover_bg",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							206,
+							67,
+							150,
+						},
+						position =  
+						{
+							0.23200,
+							0.20677,
+						},
+						ID = 3660857,
+						size =  
+						{
+							0.53645,
+							0.49325,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cmdr_flag_button_hover",
+						states =  
+						{
+							"Active",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Frame_button_selected",
+						shadermode = 0,
+						position =  
+						{
+							0.23177,
+							0.20677,
+						},
+						ID = 3660858,
+						size =  
+						{
+							0.53645,
+							0.49300,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_select_frame_no_light",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon",
+						shadermode = 0,
+						saturation = 0.80000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660859,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Normal",
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "frame_button_available_hover",
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						shadermode = 0,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						ID = 3660860,
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_unavailable",
+						shadermode = 0,
+						colour =  
+						{
+							212,
+							212,
+							212,
+							255,
+						},
+						saturation = 0.30000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660861,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "icon_purchased",
+						shadermode = 0,
+						colour =  
+						{
+							148,
+							148,
+							148,
+							255,
+						},
+						saturation = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660862,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_icon",
+						shadermode = 0,
+						colour =  
+						{
+							214,
+							214,
+							214,
+							255,
+						},
+						saturation = 0.50000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660863,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_unavailable_shadow",
+						shadermode = 0,
+						colour =  
+						{
+							255,
+							255,
+							255,
+							121,
+						},
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660864,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_shadow_normal",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_purchased_check",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660865,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_purchased",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "Preview_icon",
+						shadermode = 0,
+						colour =  
+						{
+							169,
+							169,
+							169,
+							255,
+						},
+						saturation = 0.20000,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660866,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\commander\\cmdr_axis_volksgenadier_reinf",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "art_click_shadow",
+						shadermode = 0,
+						position =  
+						{
+							0.21525,
+							0.18988,
+						},
+						ID = 3660867,
+						size =  
+						{
+							0.56950,
+							0.52366,
+						},
+						texture = "art\\ui\\ingame\\taskbar\\coh - button shadow active",
+						states =  
+						{
+							"Active",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10200,
+				0.18400,
+			},
+		},
+		 
+		{
+			type = "Style",
+			name = "branch_checkbox",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "Graphic",
+						ID = 3679793,
+						texture = "art\\ui\\ingame\\commander_frame\\cb_button_pointbox",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.03523,
+				0.06261,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "branch_arrow",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "arrow_unavailable_02",
+						shadermode = 0,
+						colour =  
+						{
+							80,
+							80,
+							80,
+							221,
+						},
+						saturation = 0,
+						position =  
+						{
+							0.28500,
+							-1.94686,
+						},
+						ID = 3699468,
+						size =  
+						{
+							0.43240,
+							2.78403,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_arrow_head",
+						states =  
+						{
+							"Disabled",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "arrow_hover02",
+						shadermode = 0,
+						position =  
+						{
+							0.28500,
+							-1.94686,
+						},
+						ID = 3699469,
+						size =  
+						{
+							0.43240,
+							2.78403,
+						},
+						texture = "art\\ui\\ingame\\commander_frame\\cb_arrow_head",
+						states =  
+						{
+							"Normal",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.05059,
+				0.09778,
+			},
+		},
+	},
+	version = 4,
+}
