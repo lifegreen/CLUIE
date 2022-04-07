@@ -1,7 +1,11 @@
-import os, argparse, sys
+import os, sys
 import re
 from shutil import copyfile
 import weakref
+
+
+
+
 
 ################################################################################
 #									GLOBALS
@@ -108,10 +112,9 @@ def dispValue(value):
 
 
 ################################################################################
-#									CLASES
+#									CLASSES
 ################################################################################
 class List():
-################################################################################
 	# objs = []
 	strings = []
 	IDs = []
@@ -178,8 +181,8 @@ class List():
 
 		self.parse(lines, start + 2, self.end)  # skip the opening brace line
 
-		if   'name' in self: self.name = self['name']
-		else:				 self.name = self.key 
+		if   'name' in self: self.dispName = self['name']
+		else:				 self.dispName = self.key 
 
 
 	def parse(self, lines, start, end):
@@ -317,7 +320,7 @@ class List():
 					if issubclass(type(item), List):
 						results.extend(item.search(rule))
 
-		return Selection(results)
+		return results
 
 	def searchAttrs(self, rule):
 		results = []
@@ -326,7 +329,7 @@ class List():
 			if rule(value):
 				results.append(weakref.ref(value))
 
-		return Selection(results)
+		return results
 
 
 	def findAttrByKey(self, attrKey):
@@ -422,7 +425,7 @@ class List():
 	def __repr__(self):
 		prefix = "W" if type(self) is Widget else "L"
 
-		name = self.name
+		name = self.dispName
 
 		# Add the shape info to the name if the widget is not named
 		if not self.hasName():
@@ -475,6 +478,7 @@ class List():
 					string += f"{key}: {self.formatAttr(key, value)}\n"
 
 		return string
+################################################################################
 
 
 
@@ -482,7 +486,6 @@ class List():
 
 ################################################################################
 class Widget(List):
-################################################################################
 	def parseSelf(self, lines, start):
 		if DEBUG and CCALL: print("New Widget")
 
@@ -498,9 +501,9 @@ class Widget(List):
 
 		self.parse(lines, start + 2, self.end) # skip the opening brace line
 
-		if   'name' in self: self.name = self['name']
-		elif 'type' in self: self.name = self['type']
-		else:				 self.name = self.key 
+		if   'name' in self: self.dispName = self['name']
+		elif 'type' in self: self.dispName = self['type']
+		else:				 self.dispName = self.key 
 
 	def remove(self):
 		if self.parent:
@@ -548,21 +551,20 @@ class Widget(List):
 
 	def hasEssntials(self):
 		return self.hasAttr(['type', 'size', 'position'])
-
+################################################################################
 
 
 
 
 ################################################################################
 class Screen(Widget):
-################################################################################
 	def __init__(self, filePath, VB=0, DB=DEBUG):
 		# Allow debugging to be enabled per screen
 		global DEBUG
 		self.DBold = DEBUG
 		DEBUG = DB 
 
-		self.VB = VB
+		self.VB = VB # Verbose level (currently used as a bool)
 
 		self.parent = None
 		self.filePath = filePath
@@ -698,3 +700,4 @@ def roundRange(_min, _max):
 	if (_max % 50) or (_max == _min) : end += 50 
 	end -= 1 # the range ends on 1 less than a multiple of 50
 	return (start, end)
+################################################################################

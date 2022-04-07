@@ -7,7 +7,7 @@ from Selection import *
 
 
 ################################################################################
-#									FUNCTIONS
+#							OPERATION FACTORIES
 ################################################################################
 def edit(items, operation):
 	return list(map(operation, items))
@@ -40,17 +40,6 @@ def opApplyStyle(styleSheet, style):
 		if 'size' in item:
 			del item['size']
 	return apply
-
-
-# def opResize(width, height, add=False):
-# 	if add:
-# 		def operation(item, value): item['position'] = value
-# 	else:
-# 		def operation(item, value): item['position'] += value
-
-
-
-
 
 
 def opTransform(size=None, pos=None, add=False):
@@ -91,12 +80,11 @@ def opTransform(size=None, pos=None, add=False):
 #									CLASSES
 ################################################################################
 class Editor():
-################################################################################
 	def __init__(self, filePath=None):
 		if filePath:
 			self.filePath = filePath
-			self.Screen = Screen(filePath, VB=1)
-			print(f"Starting Editor with {repr(self.Screen)}")
+			self.screen = Screen(filePath, VB=1)
+			print(f"Starting Editor with {repr(self.screen)}")
 	
 
 	def applyStyleToWidgets(self, styleSheet, style, widgets=None, RegEx=None):
@@ -113,7 +101,7 @@ class Editor():
 			# 	else:
 			# 		return False
 
-			widgets = Selection(root=self.Screen['Screen'], rule=query)
+			widgets = Selection(root=self.screen['Screen'], rule=query)
 
 		else:
 			raise Exception("Widget set not specified")
@@ -122,6 +110,7 @@ class Editor():
 		widgets.edit(opApplyStyle(styleSheet, style))
 
 		return widgets
+################################################################################
 
 
 
@@ -129,12 +118,12 @@ class Editor():
 
 ################################################################################
 class Directory():
-################################################################################
 	def __init__(self, directory):
 		self.dir = os.path.expandvars(directory)
 
 	def get(self, screenName):
 		return os.path.join(self.dir, screenName + ".screen")
+################################################################################
 
 
 

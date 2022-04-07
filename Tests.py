@@ -49,14 +49,14 @@ E = Editor(filePath)
 
 
 ax_dlc_00 = re.compile(r"upgrade_\d\d_btn_2")
-	def rule(value):
-		C = issubclass(type(value), List)
-		N = value.hasName() if C else False
-		M = ax_dlc_00.search(value['name']) if N else False
-		# print(f"C:{C} N:{N} M:{M}\n")
-		rule.count += 1
-		return C and N and M
-	rule.count = 0
+def rule(value):
+	C = issubclass(type(value), List)
+	N = value.hasName() if C else False
+	M = ax_dlc_00.search(value['name']) if N else False
+	# print(f"C:{C} N:{N} M:{M}\n")
+	rule.count += 1
+	return C and N and M
+rule.count = 0
 
 
 widgets = E.applyStyleToWidgets("feral", "branch_ability", RegEx=r"upgrade_\d\d_btn_[^2]+$")
