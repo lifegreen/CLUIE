@@ -3,6 +3,7 @@ import re
 from shutil import copyfile
 
 from Screen import *
+from Selection import *
 
 
 ################################################################################
