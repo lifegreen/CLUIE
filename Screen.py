@@ -124,35 +124,13 @@ class List():
 			raise Exception("Insufficient arguments passed")
 
 
-	def __setitem__(self, key, value):
-		self.attrs[key] = value
-
-	def __getitem__(self, key):
-		return self.attrs[key]
-
-	def __delitem__(self, key):
-		del self.attrs[key]
-
-	def __contains__(self, key):
-		return key in self.attrs
+	def __setitem__(self, key, value):	self.attrs[key] = value
+	def __getitem__(self, key):			return self.attrs[key]
+	def __delitem__(self, key):			del self.attrs[key]
+	def __contains__(self, key):		return key in self.attrs
 
 
-	def remove(self):
-		if self.parent:
-			del self.parent[self.key]
-		else:
-			raise Exception("Removing List with no parent")
-
-	def valid(self):
-		return 'type' in self
-
-	def hasName(self):
-		return 'name' in self
-
-	def hasAttr(self, attr):
-		return all(map(lambda x: x in self, attr))
-
-
+# Parsing screen files
 	def parseSelf(self, lines, start):
 		if DEBUG and CCALL: print("New List")
 
@@ -262,6 +240,8 @@ class List():
 			j += 1
 
 
+
+# Manipulating data
 	def addAttr(self, key, value, asList=False):
 		if key == 'text' and '$' in value:
 			List.strings.append((weakref.ref(self), value))
@@ -279,6 +259,7 @@ class List():
 			else:							self[key] = value
 
 
+
 	def attach(self, key, children):
 		if not issubclass(type(children), List): raise Exception("Can only attach List subclasses")
 		if not isinstance(children, list): children = [ children ]
@@ -289,7 +270,37 @@ class List():
 			child.parent = self
 			child.key = key
 
+	def remove(self):
+		if self.parent:
+			del self.parent[self.key]
+		else:
+			raise Exception("Removing List with no parent")
 
+
+# Utility methods
+	def getScreen(self):
+		node = self
+
+		while(node.parent):
+			node = node.parent
+
+		if not isinstance(node, Screen): raise Exception("Root is not a Screen")
+
+		return node
+
+	def valid(self):
+		return 'type' in self
+
+	def hasName(self):
+		return 'name' in self
+
+	def hasAttr(self, attr):
+		return all(map(lambda x: x in self, attr))
+
+
+
+
+# Searching the screen
 	def search(self, rule):
 		results = []
 
@@ -335,7 +346,7 @@ class List():
 		return self.search(isNameMatch)
 
 
-
+# Outputting screen file 
 	def write(self, file, LE='\n'):
 		# Opening/Closing brace and the list name
 		indent = '\t' * self.indentLvl
@@ -392,7 +403,7 @@ class List():
 			return 'ERR'
 
 
-
+# String representations
 	def printShape(self):
 		string = ""
 		if 'position' in self:
@@ -416,7 +427,7 @@ class List():
 			if shape := self.printShape():
 				name += ' ' + shape
 
-		loc = f"({self.start+1}|{self.end-self.start}|{self.indentLvl})"
+		loc = f"({lNum(self.start)}|{self.end-self.start}|{self.indentLvl})"
 
 		attr = f"{{{len(self.attrs)}}}"
 
@@ -509,16 +520,6 @@ class Widget(List):
 		return self.getScreen()['ToolInfo']['WidgetInfo']
 
 
-	def getScreen(self):
-		node = self
-
-		while(node.parent):
-			node = node.parent
-
-		if not isinstance(node, Screen): raise Exception("Root is not a Screen")
-
-		return node
-
 
 	def write(self, file, LE='\n'):
 			# Opening/Closing brace indent
@@ -565,7 +566,7 @@ class Screen(Widget):
 	def __repr__(self):
 		prefix = "Screen"
 		name = self.key
-		return f"{prefix}: {name} ({self.start+1}-{self.end+1})"
+		return f"{prefix}: {name} ({lNum(self.start)}-{lNum(self.end)})"
 
 	def __str__(self):
 		return self.__repr__() + '\n' + str(self.attrs)
