@@ -122,7 +122,7 @@ class Directory():
 
 # directory = r"C:\Users\Mark\Desktop\MUIEGA"
 # directory = r"/home/mfomenko/Desktop/MUIEGA"
-directory = r"/Volumes/DEVSSD14/feraldev/trunk/Companies/Feral/Development/Products/CompanyOfHeroes/Feral/OverrideData/art/ui/screens"
+directory = r"$FERAL_SVN_ROOT/Feral/Development/Products/CompanyOfHeroes/Feral/OverrideData/art/ui/screens"
 screenName = "feral_skirmish_setup"
 outputName = "_" + screenName
 
