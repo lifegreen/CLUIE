@@ -39,7 +39,6 @@ def qUIElement():
 
 
 def qAND(*queries):
-	# return lambda item: A(item) and B(item)
 	def combo(item):
 		for query in queries:
 			if not query(item): return False
@@ -48,7 +47,6 @@ def qAND(*queries):
 	return combo
 
 def qOR(*querries):
-	# return lambda item: A(item) or B(item)
 	def combo(item):
 		for query in queries:
 			if query(item): return True
@@ -100,7 +98,6 @@ class Selection:
 
 	def __repr__(self):
 		return self.__str__()
-		# return str(self.items)
 
 	def __str__(self):
 		string = "Selection:\n"
@@ -116,7 +113,6 @@ class Selection:
 
 
 	def edit(self, operation):
-		# return list(map(operation, self.items))
 		for item in self:
 			operation(item()) # Call 'item' to dereference weakref
 

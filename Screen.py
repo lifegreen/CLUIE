@@ -1,6 +1,5 @@
 import os, sys
 import re
-from shutil import copyfile
 import weakref
 
 
@@ -32,7 +31,6 @@ stringPattern = re.compile(r'^\t*' + key + string + ',\n')
 
 numEntryPattern = re.compile(r'^\t*' + number + ',\n')
 strEntryPattern = re.compile(r'^\t*' + string + ',\n')
-# entryPattern  = re.compile(r'^\t*(\w+) = (' + string + '|' + number + '),\n')
 
 # Two-line
 listPattern   = re.compile(r'^\t*(\w+) =\s*\n\t*({)\n')
@@ -70,15 +68,6 @@ def findMatchingBrace(lines, start):
 			if braceCount == 0:
 				return i
 
-
-		# if "{" in lines[i]:
-		# 	braceCount += 1
-
-		# elif "}" in lines[i]:
-		# 	braceCount -= 1
-		# 	if braceCount == 0:
-		# 		return i
-
 		i += 1
 
 	errMsg = f"Couldn't find matching brace starting at line {lNum(start)}\n"
@@ -115,11 +104,9 @@ def dispValue(value):
 #									CLASSES
 ################################################################################
 class List():
-	# objs = []
 	strings = []
 	IDs = []
 	def __init__(self, parent=None, key=None, lines=None, start=None):
-		# List.objs.append(self)
 		self.attrs 	= {}
 		self.parent = parent
 		self.key 	= key
@@ -254,8 +241,6 @@ class List():
 				printConsecLine(j, lines[j])
 
 			# A new List
-			# elif listPattern.match( "".join(lines[j:j+2])) or \
-			# 	 entryPattern.match("".join(lines[j:j+2])):
 			elif '=' in lines[j]:
 				# If '=' is present then it's either a single line attribute
 				# or another List. In both cases we want to create a new List
@@ -283,6 +268,9 @@ class List():
 			List.IDs.append(int(value[1:]))
 
 
+		# If adding a new attribute value then add it as a single item
+		# If further values are added then the attribute turns into a list
+		# If asList is set then attribute will always be a list
 		if key in self:
 			if isinstance(self[key], list):	self[key].append(value)
 			else:							self[key] = [self[key], value]
@@ -340,14 +328,10 @@ class List():
 
 	def findWidgetWithName(self, name):
 		def isNameMatch(value):
-			# return isinstance(value, Widget) \
 			return issubclass(type(value), List) \
 			and value.hasName() \
 			and value['name'] == name
 
-		# results = self.search(isNameMatch)
-		# if len(results) == 0:
-		# 	results = self.searchAttrs(qNameMatch)
 		return self.search(isNameMatch)
 
 
@@ -499,7 +483,7 @@ class Widget(List):
 		self.indentLvl 	= match.start(1)
 		self.indent 	= '\t' * (self.indentLvl + 1)
 
-		self.parse(lines, start + 2, self.end) # skip the opening brace line
+		self.parse(lines, start + 2, self.end) # Skip the opening brace line
 
 		if   'name' in self: self.dispName = self['name']
 		elif 'type' in self: self.dispName = self['type']
@@ -513,7 +497,6 @@ class Widget(List):
 				widgetInfo = self.getWidgetInfo()
 
 				for info in list(widgetInfo):
-					# print(repr(info))
 					if info.hasName() and info['name'] == self['name']:
 						widgetInfo.remove(info)
 
@@ -576,9 +559,6 @@ class Screen(Widget):
 		else:
 			raise Exception("Invalid screen file name")
 
-		# Make a backup
-		# copyfile(filePath, filePath + ".bak");
-
 		self.openScreen(filePath)
 		DEBUG = self.DBold
 
@@ -627,7 +607,6 @@ class Screen(Widget):
 			printConsecLine(line+1, lines[line+1])
 			lst = List(self, lines=lines, start=line)
 			self[lst.key] = lst
-				# print("Fail")
 
 			printConsecLine(lst.end, lines[lst.end])
 			line = lst.end + 1

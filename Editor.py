@@ -92,14 +92,7 @@ class Editor():
 			widgets = Selection(widgets)
 
 		elif RegEx:
-			# name = re.compile(RegEx)
-
 			query = qAND(qNamedWidget(), qNameMatch(RegEx))
-			# def rule(value): 
-			# 	if isinstance(value, Widget) and value.hasName():
-			# 		return name.match(value['name'])
-			# 	else:
-			# 		return False
 
 			widgets = Selection(root=self.screen['Screen'], rule=query)
 
