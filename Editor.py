@@ -1,4 +1,5 @@
 import os, sys
+import pandas as pd
 import re
 
 from Screen import *
@@ -108,8 +109,8 @@ class Editor():
 		def getRange(ids):
 			ids = list(set(ids))
 			ids.sort()
-			overall = roundRange(min(ids), max(ids))
-			return ids, overall
+			limits = roundRange(min(ids), max(ids))
+			return ids, limits
 
 		def roundRange(_min, _max):
 			# Round down to nearest fifty
@@ -121,27 +122,35 @@ class Editor():
 			end -= 1 # The range has to end on 1 less than a multiple of 50
 			return (start, end)
 
-
-			
-		ids, range = getRange(List.IDs)
-
-		fileName = f"Text.UI.{self.screen.key}.dat"
-		with open(fileName, 'w') as file:
-			file.write(
+		def datFileHeader():
+			return \
 f'''/////////////////////////////////////////////////////////////////////
-// Generated with python UIEditor
+// Generated with CLUIE
 
-filerange {range[0]} {range[1]}
+filerange {limits[0]} {limits[1]}
 
 /////////////////////////////////////////////////////////////////////
 // UI Screen: {self.screen.key}
 
-''')
-			file.write(f"rangestart {range[0]} {range[1]}\n")
+'''
+
+		ids, limits = getRange(List.IDs)
+
+		strings = pd.read_table(LOC_FILE_PATH, encoding='utf-16', delimiter='\t', index_col=0, names=['ID', 'String'], on_bad_lines='warn')
+
+		fileName = f"Text.UI.{self.screen.key}.dat"
+		with open(fileName, 'w') as file:
+			file.write(datFileHeader())
+			file.write(f"rangestart {limits[0]} {limits[1]}\n")
+
 			for id in ids:
-				file.write(f"{id}\t${id}\n")
+				if id in strings.index:
+					file.write(f"{id}\t{strings.loc[id].item()}\n")
+				else:
+					file.write(f"{id}\t${id}\n")
 			file.write("rangeend\n")
 		return fileName
+
 ################################################################################
 
 
@@ -177,6 +186,9 @@ D = Directory(directory)
 filePath   = D.get(screenName)
 outputPath = D.get(outputName)
 
+LOC_FILE_PATH = os.path.expandvars("$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/CompanyOfHeroesData/Data/coh/engine/locale/english/reliccoh.english.ucs")
+
+
 
 E = Editor(filePath)
 
@@ -191,11 +203,23 @@ if __name__ == "__main__":
 	def isNamed(value):
 		C = issubclass(type(value), List)
 		N = value.hasName() if C else False
-		print(f"C:{C} N:{N}")
+		# print(f"C:{C} N:{N}")
 		return C and N
 
+	# widgets = Selection(root=E.screen['Screen'], rule=isNamed)
 
-	widgets = E.applyStyleToWidgets("feral", "branch_ability", RegEx=r"upgrade_\d\d_btn_[^2]+$")
-	widgets = Selection(root=E.screen['Screen'], rule=isNamed)
+	# print(widgets)
 
+	strings = pd.read_table(LOC_FILE_PATH, encoding='utf-16', delimiter='\t', index_col=0, names=['ID', 'String'], on_bad_lines='warn')
+	# print(type(strings))
+	print()
+
+	# print(strings)
+
+
+	# print(type(strings.loc[1].item()))
+	# print(strings.loc[1].item())
 	E.generateDatFile()
+
+	# print()
+	# print(E.screen['Screen']['Widgets'])
