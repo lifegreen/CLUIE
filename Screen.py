@@ -642,41 +642,4 @@ class Screen(Widget):
 				section.writeAttrs(file, LE)
 
 				file.write(f"}}{LE}")
-
-	def generateDatFile(self):
-		ids, range = getRange(List.IDs)
-
-		fileName = f"Text.UI.{self.key}.dat"
-		with open(fileName, 'w') as file:
-			file.write(
-f'''/////////////////////////////////////////////////////////////////////
-// Generated with python UIEditor
-
-filerange {range[0]} {range[1]}
-
-/////////////////////////////////////////////////////////////////////
-// UI Screen: {self.key}
-
-''')
-			file.write(f"rangestart {range[0]} {range[1]}\n")
-			for id in ids:
-				file.write(f"{id}\t${id}\n")
-			file.write("rangeend\n")
-		return fileName
-
-def getRange(ids):
-	ids = list(set(ids))
-	ids.sort()
-	overall = roundRange(min(ids), max(ids))
-	return ids, overall
-
-def roundRange(_min, _max):
-	# Round down to nearest fifty
-	start = (_min // 50) * 50 
-	end = (_max // 50) * 50
-
-	# Round up unless it divides equally or if we only have a single value
-	if (_max % 50) or (_max == _min) : end += 50 
-	end -= 1 # the range ends on 1 less than a multiple of 50
-	return (start, end)
 ################################################################################
