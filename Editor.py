@@ -5,6 +5,9 @@ from shutil import copyfile
 from Screen import *
 
 
+################################################################################
+#									FUNCTIONS
+################################################################################
 def edit(items, operation):
 	return list(map(operation, items))
 
@@ -80,6 +83,12 @@ def opTransform(size=None, pos=None, add=False):
 		return resize
 
 
+
+
+
+################################################################################
+#									CLASSES
+################################################################################
 class Editor():
 	def __init__(self, filePath=None):
 		if filePath:
@@ -113,17 +122,30 @@ class Editor():
 		return widgets
 
 
+
+
+
+################################################################################
 class Directory():
 	def __init__(self, directory):
-		self.dir = directory
+		self.dir = os.path.expandvars(directory)
 
-	def get(self, name):
-		return os.path.join(self.dir, name + ".screen")
+	def get(self, screenName):
+		return os.path.join(self.dir, screenName + ".screen")
 
+
+
+
+
+
+
+################################################################################
+#									SETUP
+################################################################################
 # directory = r"C:\Users\Mark\Desktop\MUIEGA"
 # directory = r"/home/mfomenko/Desktop/MUIEGA"
 directory = r"$FERAL_SVN_ROOT/Feral/Development/Products/CompanyOfHeroes/Feral/OverrideData/art/ui/screens"
-screenName = "feral_skirmish_setup"
+screenName = "feral_skirmish_menu"
 outputName = "_" + screenName
 
 D = Directory(directory)
@@ -165,6 +187,12 @@ E = Editor(filePath)
 # 		print('No Name\t', repr(item))
 
 
+
+
+
+################################################################################
+#									MAIN
+################################################################################
 if __name__ == "__main__":
 
 	ax_dlc_00 = re.compile(r"upgrade_\d\d_btn_2")

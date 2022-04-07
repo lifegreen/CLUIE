@@ -3,14 +3,16 @@ import re
 from shutil import copyfile
 import weakref
 
-
+################################################################################
+#									GLOBALS
+################################################################################
 DEFAULT_LOCALE_PATH=r"/home/mfomenko/UIeditor/BIA/Root/CoH/Locale/English"
 
 
-DEBUG = 1
-LINES = 1
-FCALL = 0
-CCALL = 0
+DEBUG = 0	# Toggle for all Debug output
+LINES = 1	# Print contents of lines as they are being processed
+FCALL = 0	# Print names of parsing functions when they are being called
+CCALL = 0	# Print names of classes when they are being created
 
 
 # RegEx patterns
@@ -32,8 +34,15 @@ strEntryPattern = re.compile(r'^\t*' + string + ',\n')
 listPattern   = re.compile(r'^\t*(\w+) =\s*\n\t*({)\n')
 widgetPattern = re.compile(r'^\t*( \n)\t*({)\n')
 
-# Convert line index to line number
-def lNum(i): return i + 1
+
+
+
+
+################################################################################
+#									FUNCTIONS
+################################################################################
+
+def lNum(i): return i + 1 # Convert line index to line number
 
 def findMatchingBrace(lines, start):
 	length = len(lines)
@@ -96,7 +105,13 @@ def dispValue(value):
 		return value
 
 
+
+
+################################################################################
+#									CLASES
+################################################################################
 class List():
+################################################################################
 	# objs = []
 	strings = []
 	IDs = []
@@ -461,7 +476,13 @@ class List():
 
 		return string
 
+
+
+
+
+################################################################################
 class Widget(List):
+################################################################################
 	def parseSelf(self, lines, start):
 		if DEBUG and CCALL: print("New Widget")
 
@@ -528,8 +549,15 @@ class Widget(List):
 	def hasEssntials(self):
 		return self.hasAttr(['type', 'size', 'position'])
 
+
+
+
+
+################################################################################
 class Screen(Widget):
+################################################################################
 	def __init__(self, filePath, VB=0, DB=DEBUG):
+		# Allow debugging to be enabled per screen
 		global DEBUG
 		self.DBold = DEBUG
 		DEBUG = DB 
@@ -719,7 +747,12 @@ def qOR(*querries):
 	return combo
 
 
+
+
+
+################################################################################
 class Selection:
+################################################################################
 	def __init__(self, sel=None, rule=None, root=None):
 		self.root = root
 		if sel is not None:
