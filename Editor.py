@@ -6,6 +6,18 @@ from Screen import *
 from Selection import *
 
 
+
+
+
+################################################################################
+#								FUNCTIONS
+################################################################################
+def resolvePath(path):
+	return os.path.realpath(os.path.abspath(os.path.expandvars(os.path.expanduser(path))))
+
+
+
+
 ################################################################################
 #							OPERATION FACTORIES
 ################################################################################
@@ -80,11 +92,31 @@ def opTransform(size=None, pos=None, add=False):
 #									CLASSES
 ################################################################################
 class Editor():
-	def __init__(self, filePath=None):
+	def __init__(self, filePath=None, datPath=None):
 		if filePath:
-			self.filePath = filePath
-			self.screen = Screen(filePath, VB=1)
-			print(f"Starting Editor with {repr(self.screen)}")
+			filePath = resolvePath(filePath)
+
+			if os.path.isfile(filePath):
+				self.filePath = os.path.basename(filePath)
+				self.screen = Screen(filePath, VB=1)
+				print(f"Starting Editor with {repr(self.screen)}")
+			else:
+				err = f"File: '{filePath}' DOES NOT EXIST"
+				raise Exception(err)
+
+
+		if datPath:
+			datPath = resolvePath(datPath)
+
+			if os.path.isdir(datPath):
+				self.datPath = datPath
+			else:
+				err = f"Directory: '{filePath}' DOES NOT EXIST"
+				raise Exception(err)
+
+		else: 
+			self.datPath = None
+
 	
 
 	def applyStyleToWidgets(self, styleSheet, style, widgets=None, RegEx=None):
@@ -105,7 +137,7 @@ class Editor():
 		return widgets
 
 
-	def generateDatFile(self):
+	def generateDatFile(self, outPath=None):
 		def getRange(ids):
 			ids = list(set(ids))
 			ids.sort()
@@ -123,34 +155,62 @@ class Editor():
 			return (start, end)
 
 		def datFileHeader():
-			return \
-f'''/////////////////////////////////////////////////////////////////////
-// Generated with CLUIE
-
-filerange {limits[0]} {limits[1]}
-
-/////////////////////////////////////////////////////////////////////
-// UI Screen: {self.screen.key}
-
-'''
+			# Dat file boiler plate
+			header = '/' * 69 + '\n' 
+			header += "// Generated with CLUIE\n\n"
+			header += f"filerange {limits[0]} {limits[1]}\n\n"
+			header += '/' * 69 + '\n' # nice
+			header += f"// UI Screen: {self.screen.key}\n\n"
+			return header
 
 		ids, limits = getRange(List.IDs)
 
-		strings = pd.read_table(LOC_FILE_PATH, encoding='utf-16', delimiter='\t', index_col=0, names=['ID', 'String'], on_bad_lines='warn')
+		# TODO: Deal with bad lines
+		strings = pd.read_table(LOC_FILE_PATH
+								, encoding='utf-16'
+								, delimiter='\t'
+								, index_col=0
+								, names=['ID', 'String']
+								, on_bad_lines='warn'
+								)
 
-		fileName = f"Text.UI.{self.screen.key}.dat"
-		with open(fileName, 'w') as file:
+		# Make sure we have an output directory
+		outDir = None
+		outName = f"Text.UI.{self.screen.key}.dat"
+		while outDir == None:
+			if outPath:
+				if os.path.isdir(outPath):
+					outDir = outPath
+				elif os.path.isfile(outPath) and outPath.endswtih(".dat"):
+					outDir = os.path.dirname(outPath)
+					outName = os.path.basename(outPath)
+				else:
+					print(f"[Error] Invalid output path: '{outPath}'")
+					return None
+
+			elif self.datPath:
+				outDir = self.datPath
+
+			# Loop until we get a valid directory
+			if not outDir:
+				print(f"Please provide output directory: ", end='')
+				newPath = input()
+
+				if newPath:	outPath = resolvePath(newPath)
+				else:		return None # If user entered and empty line return
+
+		path = os.path.join(outDir, outName)
+
+		with open(path, 'w') as file:
 			file.write(datFileHeader())
 			file.write(f"rangestart {limits[0]} {limits[1]}\n")
 
 			for id in ids:
-				if id in strings.index:
-					file.write(f"{id}\t{strings.loc[id].item()}\n")
-				else:
-					file.write(f"{id}\t${id}\n")
-			file.write("rangeend\n")
-		return fileName
+				if id in strings.index:	file.write(f"{id}\t{strings.loc[id].item()}\n")
+				else:					file.write(f"{id}\t${id}\n")
 
+			file.write("rangeend\n")
+		return path
 ################################################################################
 
 
@@ -165,8 +225,6 @@ class Directory():
 	def get(self, screenName):
 		return os.path.join(self.dir, screenName + ".screen")
 ################################################################################
-
-
 
 
 
