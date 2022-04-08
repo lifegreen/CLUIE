@@ -260,7 +260,7 @@ class List():
 
 
 
-	def attach(self, key, children):
+	def attachChildren(self, key, children):
 		if not issubclass(type(children), List): raise Exception("Can only attach List subclasses")
 		if not isinstance(children, list): children = [ children ]
 		
@@ -281,8 +281,7 @@ class List():
 	def getScreen(self):
 		node = self
 
-		while(node.parent):
-			node = node.parent
+		while(node.parent): node = node.parent
 
 		if not isinstance(node, Screen): raise Exception("Root is not a Screen")
 
@@ -294,8 +293,8 @@ class List():
 	def hasName(self):
 		return 'name' in self
 
-	def hasAttr(self, attr):
-		return all(map(lambda x: x in self, attr))
+	def hasAttrs(self, attrs):
+		return all(map(lambda x: x in self, attrs))
 
 
 
@@ -503,7 +502,7 @@ class Widget(List):
 	def remove(self):
 		if self.parent:
 			if isinstance(self.parent[self.key], list):
-				self.parent[self.key].remove(self)
+				self.parent.remove(self)
 
 				widgetInfo = self.getWidgetInfo()
 
@@ -534,7 +533,7 @@ class Widget(List):
 
 
 	def hasEssntials(self):
-		return self.hasAttr(['type', 'size', 'position'])
+		return self.hasAttrs(['type', 'size', 'position'])
 ################################################################################
 
 

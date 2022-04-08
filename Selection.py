@@ -77,8 +77,11 @@ class Selection:
 		elif rule and root and issubclass(type(root), List):
 			self.items = root.search(rule)
 
-		else:
+		elif not any(sel, rule, root):
 			self.items = []
+
+		else:
+			raise Exception('Invalid/not enough arguments specified')
 
 
 	def __setitem__(self, i, value):
