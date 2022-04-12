@@ -20,7 +20,7 @@ CCALL = 0	# Print names of classes when they are being created
 
 # RegEx patterns
 number 	= r'(-?\d+(\.\d\d\d\d\d)?)'
-string 	= r'"?([\w\s\d\\/_\-$/*]*)"?'
+string 	= r'"?([ !#-~]*)"?' # Any printable char except double quotes
 
 key 	= r'(\w+) = '
 brace 	= r'\t*({)\n'
