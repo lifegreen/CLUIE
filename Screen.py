@@ -132,7 +132,7 @@ class List():
 
 # Parsing screen files
 	def parseSelf(self, lines, start):
-		if DEBUG and CCALL: print("New List")
+		if DEBUG and CCALL: print(f"New List @{lNum(start)}")
 
 		if not (match := listPattern.match(''.join(lines[start:start+2]))):
 			printLine(start, ''.join(lines[start:start+2]))
@@ -185,7 +185,7 @@ class List():
 
 	def parseList(self, lines, listStart, listEnd, listName):
 		printConsecLine(listStart+1, lines[listStart+1])
-		if DEBUG and FCALL:print("parseList")
+		if DEBUG and FCALL: print("parseList")
 
 		# Empty list
 		if "}," in lines[listStart+2]:
@@ -481,7 +481,7 @@ class List():
 ################################################################################
 class Widget(List):
 	def parseSelf(self, lines, start):
-		if DEBUG and CCALL: print("New Widget")
+		if DEBUG and CCALL: print(f"New Widget @{lNum(start)}")
 
 		if not (match := widgetPattern.match(''.join(lines[start:start+2]))):
 			printConsecLine(start, ''.join(lines[start:start+2]))
@@ -600,6 +600,9 @@ class Screen(Widget):
 		self.scanLines(self.lines)
 
 	def scanLines(self, lines):
+		# Reset consecutive line counter
+		printConsecLine.counter = -1
+
 		line = self.start
 		self.attrs = {}
 		while line < self.length:

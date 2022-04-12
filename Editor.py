@@ -163,6 +163,8 @@ class Editor():
 			header += f"// UI Screen: {self.screen.key}\n\n"
 			return header
 
+
+
 		ids, limits = getRange(List.IDs)
 
 		# TODO: Deal with bad lines
@@ -199,6 +201,7 @@ class Editor():
 				if newPath:	outPath = resolvePath(newPath)
 				else:		return None # If user entered and empty line return
 
+
 		path = os.path.join(outDir, outName)
 
 		with open(path, 'w') as file:
@@ -210,6 +213,7 @@ class Editor():
 				else:					file.write(f"{id}\t${id}\n")
 
 			file.write("rangeend\n")
+
 		return path
 ################################################################################
 
@@ -248,7 +252,7 @@ LOC_FILE_PATH = os.path.expandvars("$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/Co
 
 
 
-E = Editor(filePath)
+# E = Editor(filePath)
 
 
 
@@ -267,17 +271,3 @@ if __name__ == "__main__":
 	# widgets = Selection(root=E.screen['Screen'], rule=isNamed)
 
 	# print(widgets)
-
-	strings = pd.read_table(LOC_FILE_PATH, encoding='utf-16', delimiter='\t', index_col=0, names=['ID', 'String'], on_bad_lines='warn')
-	# print(type(strings))
-	print()
-
-	# print(strings)
-
-
-	# print(type(strings.loc[1].item()))
-	# print(strings.loc[1].item())
-	E.generateDatFile()
-
-	# print()
-	# print(E.screen['Screen']['Widgets'])
