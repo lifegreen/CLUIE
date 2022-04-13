@@ -210,7 +210,7 @@ class Editor():
 
 			for id in ids:
 				if id in strings.index:	file.write(f"{id}\t{strings.loc[id].item()}\n")
-				else:					file.write(f"{id}\t${id}\n")
+				else:					file.write(f"{id}\t${id} - Doesn't exist\n")
 
 			file.write("rangeend\n")
 
