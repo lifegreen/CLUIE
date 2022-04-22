@@ -84,6 +84,8 @@ def opTransform(size=None, pos=None, add=False):
 	elif size:
 		return resize
 
+#							OPERATION FACTORIES
+
 
 
 
@@ -229,6 +231,8 @@ class Directory():
 	def get(self, screenName):
 		return os.path.join(self.dir, screenName + ".screen")
 ################################################################################
+#									CLASSES
+
 
 
 
@@ -240,7 +244,8 @@ class Directory():
 # directory = r"C:\Users\Mark\Desktop\MUIEGA"
 # directory = r"/home/mfomenko/Desktop/MUIEGA"
 directory = r"$FERAL_SVN_ROOT/Feral/Development/Products/CompanyOfHeroes/Feral/OverrideData/art/ui/screens"
-screenName = "feral_skirmish_menu"
+datDirectory = r"/Volumes/DEVSSD14/feraldev/tools/UIeditor/BIA/Root/CoH/Locale/English"
+screenName = "feral_lobby_browser"
 outputName = "_" + screenName
 
 D = Directory(directory)
@@ -252,8 +257,9 @@ LOC_FILE_PATH = os.path.expandvars("$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/Co
 
 
 
-# E = Editor(filePath)
+E = Editor(filePath, datDirectory)
 
+#									SETUP
 
 
 
@@ -271,3 +277,5 @@ if __name__ == "__main__":
 	# widgets = Selection(root=E.screen['Screen'], rule=isNamed)
 
 	# print(widgets)
+
+#									MAIN

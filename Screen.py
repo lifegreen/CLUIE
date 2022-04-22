@@ -9,6 +9,7 @@ import weakref
 ################################################################################
 #									GLOBALS
 ################################################################################
+
 DEFAULT_LOCALE_PATH=r"/home/mfomenko/UIeditor/BIA/Root/CoH/Locale/English"
 
 
@@ -35,6 +36,8 @@ strEntryPattern = re.compile(r'^\t*' + string + ',\n')
 # Two-line
 listPattern   = re.compile(r'^\t*(\w+) =\s*\n\t*({)\n')
 widgetPattern = re.compile(r'^\t*( \n)\t*({)\n')
+
+#									GLOBALS
 
 
 
@@ -81,6 +84,7 @@ def printLine(i, line):
 def printConsecLine(i, line):
 	if DEBUG and LINES:
 		printLine(i, line)
+
 		if i != printConsecLine.counter+1:
 			warning = "Non consecutive lines"
 			warning += f" {lNum(printConsecLine.counter)}->{lNum(i)}\n"
@@ -97,12 +101,17 @@ def dispValue(value):
 	else:
 		return value
 
+#									FUNCTIONS
+
+
+
 
 
 
 ################################################################################
 #									CLASSES
 ################################################################################
+
 class List():
 	strings = []
 	IDs = []
@@ -472,13 +481,9 @@ class List():
 					string += f"{key}: {self.formatAttr(key, value)}\n"
 
 		return string
-################################################################################
-
-
-
-
 
 ################################################################################
+
 class Widget(List):
 	def parseSelf(self, lines, start):
 		if DEBUG and CCALL: print(f"New Widget @{lNum(start)}")
@@ -534,16 +539,13 @@ class Widget(List):
 
 	def hasEssntials(self):
 		return self.hasAttrs(['type', 'size', 'position'])
-################################################################################
-
-
-
 
 ################################################################################
+
 class Screen(Widget):
 	def __init__(self, filePath, VB=0, DB=DEBUG):
 		# Allow debugging to be enabled per screen
-		global DEBUG
+		global DEBUG # We have to use a global value since printline is a separate function
 		self.DBold = DEBUG
 		DEBUG = DB 
 
@@ -645,4 +647,5 @@ class Screen(Widget):
 				section.writeAttrs(file, LE)
 
 				file.write(f"}}{LE}")
-################################################################################
+
+#								CLASSES
