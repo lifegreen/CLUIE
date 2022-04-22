@@ -95,11 +95,13 @@ def opTransform(size=None, pos=None, add=False):
 ################################################################################
 class Editor():
 	def __init__(self, filePath=None, datPath=None):
+		self.screen = None
+		self.datPath = None
+
 		if filePath:
 			filePath = resolvePath(filePath)
 
 			if os.path.isfile(filePath):
-				self.filePath = os.path.basename(filePath)
 				self.screen = Screen(filePath, VB=1)
 				print(f"Starting Editor with {repr(self.screen)}")
 			else:
@@ -113,11 +115,8 @@ class Editor():
 			if os.path.isdir(datPath):
 				self.datPath = datPath
 			else:
-				err = f"Directory: '{filePath}' DOES NOT EXIST"
+				err = f"Directory: '{datPath}' DOES NOT EXIST"
 				raise Exception(err)
-
-		else: 
-			self.datPath = None
 
 	
 
@@ -165,9 +164,10 @@ class Editor():
 			header += f"// UI Screen: {self.screen.key}\n\n"
 			return header
 
+		if self.screen is None:
+			print("[Error] Editor doesn't have a screen")
+			return
 
-
-		ids, limits = getRange(List.IDs)
 
 		# TODO: Deal with bad lines
 		strings = pd.read_table(LOC_FILE_PATH
@@ -190,21 +190,22 @@ class Editor():
 					outName = os.path.basename(outPath)
 				else:
 					print(f"[Error] Invalid output path: '{outPath}'")
-					return None
+					return
 
 			elif self.datPath:
 				outDir = self.datPath
 
-			# Loop until we get a valid directory
+			# Get the directory from the user
 			if not outDir:
-				print(f"Please provide output directory: ", end='')
+				print(f"Please provide output directory or press 'Enter' to return\n>", end='')
 				newPath = input()
 
 				if newPath:	outPath = resolvePath(newPath)
-				else:		return None # If user entered and empty line return
-
+				else:		return # If user entered and empty line return
 
 		path = os.path.join(outDir, outName)
+
+		ids, limits = getRange(List.IDs)
 
 		with open(path, 'w') as file:
 			file.write(datFileHeader())
