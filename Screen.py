@@ -254,7 +254,12 @@ class List():
 	def addAttr(self, key, value, asList=False):
 		if key == 'text' and '$' in value:
 			List.strings.append((weakref.ref(self), value))
-			List.IDs.append(int(value[1:]))
+
+			ids = re.findall(r"\$(\d+)", value)
+			if DEBUG and CCAL: print(value, '=>', ids)
+
+			for i in ids:
+				List.IDs.append(int(i))
 
 
 		# If adding a new attribute value then add it as a single item
