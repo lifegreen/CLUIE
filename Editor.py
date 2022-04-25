@@ -118,6 +118,10 @@ class Editor():
 				err = f"Directory: '{datPath}' DOES NOT EXIST"
 				raise Exception(err)
 
+
+
+	def getSelection(self, rule):
+		return Selection(self.screen.search(rule), root=self.screen)
 	
 
 	def applyStyleToWidgets(self, styleSheet, style, widgets=None, RegEx=None):
