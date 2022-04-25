@@ -85,10 +85,10 @@ class Selection:
 
 
 	def __setitem__(self, i, value):
-		self.items[i] = value
+		self.items[i] = weakref.ref(value)
 
 	def __getitem__(self, i):
-		return self.items[i]
+		return self.items[i]() # Call 'item' to dereference weakref
 
 	def __delitem__(self, i):
 		del self.items[i]
@@ -116,8 +116,8 @@ class Selection:
 
 
 	def edit(self, operation):
-		for item in self:
-			operation(item()) # Call 'item' to dereference weakref
+		[operation(item) for item in self]
+
 
 	def subSelect(self, rule):
 		sub = []
