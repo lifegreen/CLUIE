@@ -13,30 +13,32 @@ from Screen import *
 def qNameMatch(name):
 	pattern = re.compile(name)
 	def nameMatch(item):
-		return issubclass (type(item), List) \
+		return isinstance(item, List) \
 				and item.hasName() \
 				and	pattern.search(item['name'])
 	return nameMatch
 
 def qAttrMatch(key, value):
 	def nameMatch(item):
-		return issubclass(type(item), List) \
+		return isinstance(item, List) \
 				and item.hassAttr(key) \
 				and item[key] == value
 
 
 def qList():
-	return lambda item: isinstance(item, List)
+	return lambda item: type(item) is List
 
 def qWidget():
-	return lambda item: isinstance(item, Widget)
+	return lambda item: type(item) is Widget
 
 def qNamedWidget():
 	return lambda item: qWidget()(item) and item.hasName()
 
 def qUIElement():
-	return lambda item: issubclass(type(item), List) and item.hasName()
+	return lambda item: isinstance(item, List) and item.hasName()
 
+def qNOT(query):
+	return lambda item: not query(item)
 
 def qAND(*queries):
 	def combo(item):
@@ -64,17 +66,17 @@ class Selection:
 	def __init__(self, sel=None, rule=None, root=None):
 		self.root = root
 		if sel is not None:
-			if isinstance(sel, Selection):
+			if type(sel) is Selection:
 				self.items = sel.items
 				self.root  = sel.root
 
-			elif isinstance(sel, list):
+			elif type(sel) is list:
 				self.items = sel
 
 			else:
 				raise Exception('Invalid Selection passed')
 
-		elif rule and root and issubclass(type(root), List):
+		elif rule and root and isinstance(root, List):
 			self.items = root.search(rule)
 
 		elif not any(sel, rule, root):
@@ -144,7 +146,7 @@ class Selection:
 		if not (selection or (rule and root)):
 			raise Exception("Not enough arguments specified")
 		else:
-			new = Selection(items=selection, rule=rule, root=root)
+			new = Selection(selection, rule, root)
 
 		self.items.extend(new.items)
 		return new

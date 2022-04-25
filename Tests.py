@@ -50,7 +50,7 @@ E = Editor(filePath)
 
 ax_dlc_00 = re.compile(r"upgrade_\d\d_btn_2")
 def rule(value):
-	C = issubclass(type(value), List)
+	C = isinstance(value, List)
 	N = value.hasName() if C else False
 	M = ax_dlc_00.search(value['name']) if N else False
 	# print(f"C:{C} N:{N} M:{M}\n")

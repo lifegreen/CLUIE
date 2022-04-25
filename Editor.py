@@ -40,7 +40,7 @@ def opRemoveItem():
 	return lambda item: item.remove()
 
 def opAddAttr(key, value):
-	asList = isinstance(value, Widget)
+	asList = type(value) is Widget
 	return lambda item: item.addAttr(key, value, asList)
 
 def opApplyStyle(styleSheet, style):
@@ -280,7 +280,7 @@ E = Editor(filePath, datDirectory)
 ################################################################################
 if __name__ == "__main__":
 	def isNamed(value):
-		C = issubclass(type(value), List)
+		C = isinstance(value, List)
 		N = value.hasName() if C else False
 		# print(f"C:{C} N:{N}")
 		return C and N

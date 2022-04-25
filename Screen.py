@@ -95,7 +95,7 @@ def printConsecLine(i, line):
 printConsecLine.counter = -1
 
 def dispValue(value):
-	if isinstance(value, float):
+	if type(value) is float:
 		if (value % 1) == 0:	return f"{value:g}" # Whole numbers
 		else: 					return f"{value:1.3f}"
 	else:
@@ -118,7 +118,7 @@ class List():
 	def __init__(self, parent=None, key=None, lines=None, start=None):
 		self.attrs 	= {}
 		self.parent = parent
-		self.key 	= key
+		self.key 	= key # The key under which this instance is stored in the parents dictionary
 
 		if None not in (lines, start):
 			self.parseSelf(lines, start)
@@ -266,20 +266,19 @@ class List():
 		# If further values are added then the attribute turns into a list
 		# If asList is set then attribute will always be a list
 		if key in self:
-			if isinstance(self[key], list):	self[key].append(value)
+			if type(self[key]) is list:	self[key].append(value)
 			else:							self[key] = [self[key], value]
 		else:
 			if asList:						self[key] = [value]
 			else:							self[key] = value
 
 
-
 	def attachChildren(self, key, children):
-		if not issubclass(type(children), List): raise Exception("Can only attach List subclasses")
-		if not isinstance(children, list): children = [ children ]
-		
+		if not isinstance(children, List): raise Exception("Can only attach List subclasses")
+		if not type(children) is list: children = [ children ]
+
 		for child in children:
-			asList = isinstance(child, Widget)
+			asList = type(child) is Widget
 			self.addAttr(key, child, asList)
 			child.parent = self
 			child.key = key
@@ -306,7 +305,7 @@ class List():
 
 		while(node.parent): node = node.parent
 
-		if not isinstance(node, Screen): raise Exception("Root is not a Screen")
+		if not type(node) is Screen: raise Exception("Root is not a Screen")
 
 		return node
 
@@ -333,12 +332,12 @@ class List():
 		# Search children
 		for value in self.attrs.values():
 
-			if issubclass(type(value), List):
+			if isinstance(value, List):
 				results.extend(value.search(rule))
 
-			elif isinstance(value, list):
+			elif type(value) is list:
 				for item in value:
-					if issubclass(type(item), List):
+					if isinstance(item, List):
 						results.extend(item.search(rule))
 
 		return results
@@ -361,11 +360,14 @@ class List():
 
 	def findWidgetWithName(self, name):
 		def isNameMatch(value):
-			return issubclass(type(value), List) \
+			return isinstance(value, List) \
 			and value.hasName() \
 			and value['name'] == name
 
 		return self.search(isNameMatch)
+
+
+
 
 
 # Outputting screen file 
@@ -384,19 +386,19 @@ class List():
 
 	def writeAttrs(self, file, LE='\n'):
 		for key, value in self.attrs.items():
-			if isinstance(value, list):
+			if type(value) is list:
 				file.write(f"{self.indent}{key} =  {LE}")
 				file.write(f"{self.indent}{{{LE}")
 
 				for item in value:
-					if issubclass(type(item), List):
+					if isinstance(item, List):
 						item.write(file, LE)
 					else:
 						file.write(f"{self.indent}\t{self.formatAttr(key, item)},{LE}")
 
 				file.write(f"{self.indent}}},{LE}")
 
-			elif issubclass(type(value), List):
+			elif isinstance(value, List):
 				value.write(file, LE)
 
 			elif value is None:
@@ -409,11 +411,11 @@ class List():
 				file.write(f"{self.indent}{key} = {self.formatAttr(key, value)},{LE}")
 
 	def formatAttr(self, key, value):
-		if isinstance(value, float):
+		if type(value) is float:
 			if (value % 1) == 0:	return f"{value:1.0f}" # Whole numbers
 			else: 					return f"{value:1.5f}"
 
-		elif isinstance(value, str):
+		elif type(value) is str:
 			if value == 'true' or value == 'false':	return value
 			else:									return f"\"{value}\""
 
@@ -459,7 +461,7 @@ class List():
 		string = self.__repr__()
 
 		if 'Children' in self:
-			if isinstance(self['Children'], list):
+			if type(self['Children']) is list:
 				childCount = len(self["Children"])
 			elif self['Children'] != None:
 				childCount = 1
@@ -472,12 +474,12 @@ class List():
 			for key, value in self.attrs.items():
 
 
-				if issubclass(type(value), List):
+				if isinstance(value, List):
 					objectStr = value.__str__()
 					string += key + ": " + objectStr.replace("\n", "\n\t")
 					string = string[:-1]
 
-				elif isinstance(value, list):
+				elif type(value) is list:
 					string += key
 
 					if key == 'Children':
@@ -520,7 +522,7 @@ class Widget(List):
 
 	def remove(self):
 		if self.parent:
-			if isinstance(self.parent[self.key], list):
+			if type(self.parent[self.key]) is list:
 				self.parent.remove(self)
 
 				widgetInfo = self.getWidgetInfo()
