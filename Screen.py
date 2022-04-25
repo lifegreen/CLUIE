@@ -284,6 +284,15 @@ class List():
 			child.parent = self
 			child.key = key
 
+
+	def rename(self, name):
+		if self.hasName():
+			self['name'] = name
+			self.dispName = name
+		else:
+			print("[Warning] Trying to rename a widget with no name")
+
+
 	def remove(self):
 		if self.parent:
 			del self.parent[self.key]

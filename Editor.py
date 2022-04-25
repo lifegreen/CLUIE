@@ -84,6 +84,12 @@ def opTransform(size=None, pos=None, add=False):
 	elif size:
 		return resize
 
+
+def opRename(newName, regex=None):
+	return lambda item: item.hasName() and item.rename(newName)
+
+
+
 #							OPERATION FACTORIES
 
 
