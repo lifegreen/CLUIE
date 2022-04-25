@@ -277,8 +277,7 @@ class List():
 		results = []
 
 		# Check for match
-		if rule(self):
-			results.append(weakref.ref(self))
+		if rule(self):	results.append(weakref.ref(self))
 
 		# Search children
 		for value in self.attrs.values():
@@ -292,6 +291,32 @@ class List():
 						results.extend(item.search(rule))
 
 		return results
+
+	def check(self, rule):
+		true = []
+		false = []
+
+		# Check for match
+		if rule(self):	true.append(weakref.ref(self))
+		else:			false.append(weakref.ref(self))
+
+		# Search children
+		for value in self.attrs.values():
+
+			if isinstance(value, List):
+				t, f = value.check(rule)
+				true.extend(t)
+				false.extend(f)
+
+			elif type(value) is list:
+				for item in value:
+					if isinstance(item, List):
+						t, f = item.check(rule)
+						true.extend(t)
+						false.extend(f)
+
+		return (true, false)
+
 
 	def searchAttrs(self, rule):
 		results = []
@@ -634,16 +659,24 @@ class Screen(Widget):
 		if self.VB: print("Done")
 
 		if 'Screen'   not in self:
-			print("Warning: 'Screen' missing")
+			print("[Warning] 'Screen' missing")
 
 		if 'ToolInfo' not in self:
-			print("Warning: 'ToolInfo' missing")
+			print("[Warning] 'ToolInfo' missing")
 
 		if len(self.attrs) != 2:
 			warning = f"Unexpected number of lists {list(self.attrs.keys())}\n"
 			raise Exception(warning)
-			print("Warning:", warning)
+			print("[Warning]", warning)
 
+
+
+	def check(self, rule, true=[], false=[]):
+		true, false = super().check(rule)
+
+		if 	len(false) == 0: return True
+		elif len(true) == 0: return False
+		else: print("[Error]: WTF... empty screen?")
 
 
 
