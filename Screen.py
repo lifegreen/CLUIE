@@ -250,55 +250,6 @@ class List():
 
 
 
-# Manipulating data
-	def addAttr(self, key, value, asList=False):
-		if key == 'text' and '$' in value:
-			List.strings.append((weakref.ref(self), value))
-
-			ids = re.findall(r"\$(\d+)", value)
-			if DEBUG and CCAL: print(value, '=>', ids)
-
-			for i in ids:
-				List.IDs.append(int(i))
-
-
-		# If adding a new attribute value then add it as a single item
-		# If further values are added then the attribute turns into a list
-		# If asList is set then attribute will always be a list
-		if key in self:
-			if type(self[key]) is list:	self[key].append(value)
-			else:							self[key] = [self[key], value]
-		else:
-			if asList:						self[key] = [value]
-			else:							self[key] = value
-
-
-	def attachChildren(self, key, children):
-		if not isinstance(children, List): raise Exception("Can only attach List subclasses")
-		if not type(children) is list: children = [ children ]
-
-		for child in children:
-			asList = type(child) is Widget
-			self.addAttr(key, child, asList)
-			child.parent = self
-			child.key = key
-
-
-	def rename(self, name):
-		if self.hasName():
-			self['name'] = name
-			self.dispName = name
-		else:
-			print("[Warning] Trying to rename a widget with no name")
-
-
-	def remove(self):
-		if self.parent:
-			del self.parent[self.key]
-		else:
-			raise Exception("Removing List with no parent")
-
-
 # Utility methods
 	def getScreen(self):
 		node = self
@@ -366,6 +317,55 @@ class List():
 
 		return self.search(isNameMatch)
 
+
+
+# Manipulating data
+	def addAttr(self, key, value, asList=False):
+		if key == 'text' and '$' in value:
+			List.strings.append((weakref.ref(self), value))
+
+			ids = re.findall(r"\$(\d+)", value)
+			if DEBUG and CCAL: print(value, '=>', ids)
+
+			for i in ids:
+				List.IDs.append(int(i))
+
+
+		# If adding a new attribute value then add it as a single item
+		# If further values are added then the attribute turns into a list
+		# If asList is set then attribute will always be a list
+		if key in self:
+			if type(self[key]) is list:	self[key].append(value)
+			else:							self[key] = [self[key], value]
+		else:
+			if asList:						self[key] = [value]
+			else:							self[key] = value
+
+
+	def rename(self, name):
+		if self.hasName():
+			self['name'] = name
+			self.dispName = name
+		else:
+			print("[Warning] Trying to rename a widget with no name")
+
+
+	def remove(self):
+		if self.parent:
+			del self.parent[self.key]
+		else:
+			raise Exception("Removing List with no parent")
+
+
+	def attachChildren(self, key, children):
+		if not isinstance(children, List): raise Exception("Can only attach List subclasses")
+		if not type(children) is list: children = [ children ]
+
+		for child in children:
+			asList = type(child) is Widget
+			self.addAttr(key, child, asList)
+			child.parent = self
+			child.key = key
 
 
 
