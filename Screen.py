@@ -584,25 +584,33 @@ class Widget(List):
 ################################################################################
 
 class Screen(Widget):
-	def __init__(self, filePath, VB=0, DB=DEBUG):
-		# Allow debugging to be enabled per screen
-		global DEBUG # We have to use a global value since printline is a separate function
-		self.DBold = DEBUG
-		DEBUG = DB 
-
-		self.VB = VB # Verbose level (currently used as a bool)
-
-		self.parent = None
-		self.filePath = filePath
-		self.indentLvl = 0
-		self.indent = '\t'
+	def __new__(cls, filePath, VB=0, DB=DEBUG):
+		sceen = super().__new__(cls)
 
 		if match := re.match(r"([\w\s_-]+)\.screen", os.path.basename(filePath)):
-			self.key = match[1]
+			sceen.key = match[1]
 		else:
-			raise Exception("Invalid screen file name")
+			print(f"[Error] Invalid screen file name: {filePath}")
+			return None
+
+		sceen.VB = VB # Verbose level (currently used as a bool)
+
+		sceen.parent = None
+		sceen.filePath = filePath
+		sceen.indentLvl = 0
+		sceen.indent = '\t'
+
+		return sceen
+
+
+	def __init__(self, filePath, VB=0, DB=DEBUG):
+		 # Allow debugging to be enabled per screen
+		global DEBUG # We have to use a global value since printline is a separate function
+		self.DBold = DEBUG
+		DEBUG = DB
 
 		self.openScreen(filePath)
+
 		DEBUG = self.DBold
 
 	def __repr__(self):
