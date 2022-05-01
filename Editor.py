@@ -16,6 +16,21 @@ def resolvePath(path):
 	return os.path.realpath(os.path.abspath(os.path.expandvars(os.path.expanduser(path))))
 
 
+def GenerateDatFile(filePath, datPath):
+	Editor(filePath, datPath).generateDatFile()
+
+def GenerateDatFiles(directory, datPath):
+	editor = Editor(datPath=datPath)
+	if os.path.isdir(directory):
+		for entry in os.scandir(directory):
+			if entry.is_file() and entry.name.endswith('.screen'):
+				screen = Screen(entry.path)
+				if screen:
+					editor.screen = screen
+					editor.generateDatFile()
+
+
+
 
 
 ################################################################################
@@ -108,8 +123,10 @@ class Editor():
 			filePath = resolvePath(filePath)
 
 			if os.path.isfile(filePath):
-				self.screen = Screen(filePath, VB=1)
-				print(f"Starting Editor with {repr(self.screen)}")
+				screen = Screen(filePath, VB=1)
+				if screen:
+					print(f"Starting Editor with {repr(screen)}")
+					self.screen = screen
 			else:
 				err = f"File: '{filePath}' DOES NOT EXIST"
 				raise Exception(err)
@@ -185,7 +202,7 @@ class Editor():
 								, delimiter='\t'
 								, index_col=0
 								, names=['ID', 'String']
-								, on_bad_lines='warn'
+								, on_bad_lines='skip'
 								)
 
 		# Make sure we have an output directory
@@ -227,6 +244,8 @@ class Editor():
 
 			file.write("rangeend\n")
 
+		print(f"Generated: {path}")
+
 		return path
 ################################################################################
 
@@ -252,10 +271,14 @@ class Directory():
 ################################################################################
 #									SETUP
 ################################################################################
-# directory = r"C:\Users\Mark\Desktop\MUIEGA"
-# directory = r"/home/mfomenko/Desktop/MUIEGA"
+# directory = r"C:\Users\Mark\Google Drive\Coding\CLUIE\test files"
+# datDirectory = r"C:\Users\Mark\Google Drive\Coding\CLUIE\test files\dat files"
+# locFilePath = r"C:\Users\Mark\Google Drive\Coding\CLUIE\test files\reliccoh.english.ucs"
+
 directory = r"$FERAL_SVN_ROOT/Feral/Development/Products/CompanyOfHeroes/Feral/OverrideData/art/ui/screens"
 datDirectory = r"/Volumes/DEVSSD14/feraldev/tools/UIeditor/BIA/Root/CoH/Locale/English"
+locFilePath = r"$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/CompanyOfHeroesData/Data/coh/engine/locale/english/reliccoh.english.ucs"
+
 screenName = "feral_lobby_browser"
 outputName = "_" + screenName
 
@@ -264,11 +287,8 @@ D = Directory(directory)
 filePath   = D.get(screenName)
 outputPath = D.get(outputName)
 
-LOC_FILE_PATH = os.path.expandvars("$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/CompanyOfHeroesData/Data/coh/engine/locale/english/reliccoh.english.ucs")
+LOC_FILE_PATH = os.path.expandvars(locFilePath)
 
-
-
-E = Editor(filePath, datDirectory)
 
 #									SETUP
 
@@ -279,6 +299,9 @@ E = Editor(filePath, datDirectory)
 #									MAIN
 ################################################################################
 if __name__ == "__main__":
+	# E = Editor(filePath, datDirectory)
+
+
 	def isNamed(value):
 		C = isinstance(value, List)
 		N = value.hasName() if C else False
@@ -286,7 +309,8 @@ if __name__ == "__main__":
 		return C and N
 
 	# widgets = Selection(root=E.screen['Screen'], rule=isNamed)
-
 	# print(widgets)
+
+	GenerateDatFiles(directory, datDirectory)
 
 #									MAIN
