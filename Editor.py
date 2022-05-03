@@ -159,6 +159,24 @@ class Editor():
 
 	def getSelection(self, rule):
 		return Selection(self.screen.search(rule), root=self.screen)
+
+
+	def check(self, rule, cond, true=[], false=[]):
+		if cond != "any" and cond != "all":
+			print(f"[Error] Invalid argument '{cond}'")
+			return
+
+		t, f = self.screen.check(rule)
+		true.extend(t)
+		false.extend(f)
+
+		tCount = len(true)
+		fCount = len(false)
+
+		print(f"{tCount}/{tCount+fCount} follow the rule")
+
+		if cond == "any":	return     bool(tCount)
+		else:				return not bool(fCount)
 	
 
 	def applyStyleToWidgets(self, styleSheet, style, widgets=None, RegEx=None):
@@ -310,7 +328,7 @@ outputPath = D.get(outputName)
 #									MAIN
 ################################################################################
 if __name__ == "__main__":
-	# E = Editor(filePath, datDirectory)
+	E = Editor(filePath, datDirectory)
 
 
 	def isNamed(value):
@@ -318,6 +336,21 @@ if __name__ == "__main__":
 		N = value.hasName() if C else False
 		# print(f"C:{C} N:{N}")
 		return C and N
+
+
+	def widgetWithoutType(item):
+		return (type(item) is Widget) and not item.isValid()
+
+
+
+
+
+	a = Selection()
+	b = Selection()
+	print("All Widgets have a type -", E.check(widgetWithoutType, "all", a, b))
+
+
+
 
 	# widgets = Selection(root=E.screen['Screen'], rule=isNamed)
 	# print(widgets)

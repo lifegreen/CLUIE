@@ -679,15 +679,6 @@ class Screen(Widget):
 
 
 
-	def check(self, rule, true=[], false=[]):
-		true, false = super().check(rule)
-
-		if 	len(false) == 0: return True
-		elif len(true) == 0: return False
-		else: print("[Error]: WTF... empty screen?")
-
-
-
 	def write(self, outputPath, DOS=False):
 		if DOS: LE = '\r\n'
 		else:   LE = '\n'
