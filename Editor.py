@@ -8,6 +8,14 @@ from Selection import *
 
 
 
+################################################################################
+#							CONSTANTS
+################################################################################
+LOC_FILE_PATH = r"$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/CompanyOfHeroesData/Data/coh/engine/locale/english/reliccoh.english.ucs"
+# LOC_FILE_PATH = r"C:\Users\Mark\Google Drive\Coding\CLUIE\test files\reliccoh.english.ucs"
+
+
+
 
 ################################################################################
 #								FUNCTIONS
@@ -16,18 +24,24 @@ def resolvePath(path):
 	return os.path.realpath(os.path.abspath(os.path.expandvars(os.path.expanduser(path))))
 
 
-def GenerateDatFile(filePath, datPath):
-	Editor(filePath, datPath).generateDatFile()
+def GenerateDatFile(screenFile, outPath, locFile=LOC_FILE_PATH):
+	Editor(screenFile, outPath).generateDatFile(locFilePath=locFile)
 
-def GenerateDatFiles(directory, datPath):
-	editor = Editor(datPath=datPath)
+def GenerateDatFiles(directory, outPath, locFile=LOC_FILE_PATH):
+	directory = resolvePath(directory)
+
 	if os.path.isdir(directory):
+		editor = Editor(datPath=outPath)
+
 		for entry in os.scandir(directory):
 			if entry.is_file() and entry.name.endswith('.screen'):
 				screen = Screen(entry.path)
+
 				if screen:
 					editor.screen = screen
-					editor.generateDatFile()
+					editor.generateDatFile(locFilePath=locFile)
+
+	else: print(f"[Error] \"{directory}\" is not a directory")
 
 
 
@@ -165,7 +179,7 @@ class Editor():
 		return widgets
 
 
-	def generateDatFile(self, outPath=None):
+	def generateDatFile(self, outPath=None, locFilePath=LOC_FILE_PATH):
 		def getRange(ids):
 			ids = list(set(ids))
 			ids.sort()
@@ -197,7 +211,7 @@ class Editor():
 
 
 		# TODO: Deal with bad lines
-		strings = pd.read_table(LOC_FILE_PATH
+		strings = pd.read_table(resolvePath(locFilePath)
 								, encoding='utf-16'
 								, delimiter='\t'
 								, index_col=0
@@ -287,9 +301,6 @@ D = Directory(directory)
 filePath   = D.get(screenName)
 outputPath = D.get(outputName)
 
-LOC_FILE_PATH = os.path.expandvars(locFilePath)
-
-
 #									SETUP
 
 
@@ -311,6 +322,5 @@ if __name__ == "__main__":
 	# widgets = Selection(root=E.screen['Screen'], rule=isNamed)
 	# print(widgets)
 
-	GenerateDatFiles(directory, datDirectory)
 
 #									MAIN
