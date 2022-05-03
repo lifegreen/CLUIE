@@ -79,7 +79,8 @@ class Selection:
 		elif rule and root and isinstance(root, List):
 			self.items = root.search(rule)
 
-		elif not any(sel, rule, root):
+		elif not any((sel, rule, root)):
+			# Empty Selection
 			self.items = []
 
 		else:
