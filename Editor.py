@@ -166,6 +166,9 @@ class Editor():
 			print(f"[Error] Invalid argument '{cond}'")
 			return
 
+		if len(true) or len(false):
+			print("[Warning] The passed in containers are not empty")
+
 		t, f = self.screen.check(rule)
 		true.extend(t)
 		false.extend(f)
