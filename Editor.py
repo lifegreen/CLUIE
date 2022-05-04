@@ -129,22 +129,22 @@ def opRename(newName, regex=None):
 #									CLASSES
 ################################################################################
 class Editor():
-	def __init__(self, filePath=None, datPath=None):
+	def __init__(self, screen=None, datPath=None):
 		self.screen = None
 		self.datPath = None
 
-		if filePath:
-			filePath = resolvePath(filePath)
+		if screen:
+			if type(screen) is Screen:
+				self.screen = screen
 
-			if os.path.isfile(filePath):
-				screen = Screen(filePath, VB=1)
-				if screen:
-					print(f"Starting Editor with {repr(screen)}")
-					self.screen = screen
 			else:
-				err = f"File: '{filePath}' DOES NOT EXIST"
-				raise Exception(err)
+				filePath = resolvePath(screen)
 
+				if os.path.isfile(filePath):
+					self.screen = Screen(filePath)
+				else:
+					err = f"File: '{filePath}' DOES NOT EXIST"
+					raise Exception(err)
 
 		if datPath:
 			datPath = resolvePath(datPath)
@@ -156,6 +156,11 @@ class Editor():
 				raise Exception(err)
 
 
+		contents = ""
+		if self.screen: contents += repr(self.screen) + "\n"
+		if self.datPath: contents += "datPath:" + (self.datPath) + "\n"
+
+		if contents: print("Starting Editor with", contents, end="")
 
 	def getSelection(self, rule):
 		return Selection(self.screen.search(rule), root=self.screen)
