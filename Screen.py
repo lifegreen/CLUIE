@@ -585,22 +585,22 @@ class Widget(List):
 
 class Screen(Widget):
 	def __new__(cls, filePath, VB=0, DB=DEBUG):
-		sceen = super().__new__(cls)
+		screen = super().__new__(cls)
 
 		if match := re.match(r"([\w\s_-]+)\.screen", os.path.basename(filePath)):
-			sceen.key = match[1]
+			screen.key = match[1]
 		else:
 			print(f"[Error] Invalid screen file name: {filePath}")
 			return None
 
-		sceen.VB = VB # Verbose level (currently used as a bool)
+		screen.VB = VB # Verbose level (currently used as a bool)
 
-		sceen.parent = None
-		sceen.filePath = filePath
-		sceen.indentLvl = 0
-		sceen.indent = '\t'
+		screen.parent = None
+		screen.filePath = filePath
+		screen.indentLvl = 0
+		screen.indent = '\t'
 
-		return sceen
+		return screen
 
 
 	def __init__(self, filePath, VB=0, DB=DEBUG):
