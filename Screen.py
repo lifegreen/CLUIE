@@ -260,7 +260,7 @@ class List():
 
 		return node
 
-	def isValid(self):
+	def hasType(self):
 		return 'type' in self
 
 	def hasName(self):
