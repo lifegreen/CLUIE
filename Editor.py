@@ -334,29 +334,7 @@ if __name__ == "__main__":
 	E = Editor(filePath, datDirectory)
 
 
-	def isNamed(value):
-		C = isinstance(value, List)
-		N = value.hasName() if C else False
-		# print(f"C:{C} N:{N}")
-		return C and N
 
-
-	def widgetWithoutType(item):
-		return (type(item) is Widget) and not item.isValid()
-
-
-
-
-
-	a = Selection()
-	b = Selection()
-	print("All Widgets have a type -", E.check(widgetWithoutType, "all", a, b))
-
-
-
-
-	# widgets = Selection(root=E.screen['Screen'], rule=isNamed)
-	# print(widgets)
 
 
 #									MAIN

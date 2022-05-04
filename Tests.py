@@ -103,3 +103,25 @@ for c in check:
 # print('version' in S['Screen'])
 
 # S.write(outputPath)
+
+
+
+def checkAssumtions(filePath):
+	E = Editor(filePath)
+
+	widgetWithoutType = lambda item: (type(item) is Widget) and not item.hasType()
+	listWithType = lambda item: (type(item) is List) and item.hasType()
+
+	a = Selection()
+	b = Selection()
+	print("All Widgets have a type -", E.check(widgetWithoutType, "all", a, b))
+	a = Selection()
+	b = Selection()
+	print("Lists may have a type -", E.check(listWithType, "any", a, b))
+
+
+	for item in a:
+		if item.hasType():
+			print(item['type'], item.__repr__())
+		else:
+			print("Exception:", item.__repr__())
