@@ -125,3 +125,59 @@ def checkAssumtions(filePath):
 			print(item['type'], item.__repr__())
 		else:
 			print("Exception:", item.__repr__())
+
+
+def getAllTypesInFile(file):
+	file = resolvePath(file)
+
+	types = set()
+
+	# sel = Editor(file).getSelection(lambda x: x.hasType() and types.add(x['type']))
+	sel = Editor(file).getSelection(lambda item: item.hasType())
+	sel.edit(lambda item: types.add(item['type']))
+
+	return types
+
+def fetAllTypesInFolder(folder):
+	folder = resolvePath(folder)
+
+	if os.path.isdir(folder):
+		types = set()
+
+		for entry in os.scandir(folder):
+			if entry.is_file() and entry.name.endswith('.screen'):
+					types.update(getAllTypesInFile(entry.path))
+
+
+		return types
+
+
+	else: print(f"[Error] \"{directory}\" is not a directory")
+
+def testTypes(directory):
+	types = fetAllTypesInFolder(directory)
+	print(types)
+
+	# All types from feral_lobby_browser
+	allTypes = {'RadioButton',
+				'ScrollBar',
+				'Button',
+				'ArtLabel',
+				'Group',
+				'Graphic',
+				'Component',
+				'CustomListBoxItem',
+				'CheckButton',
+				'CustomListBox',
+				'Rectangle',
+				'TextLabel',
+				'Text'}
+
+	if allTypes == types:
+		print("[PASS] All types have been found")
+
+	elif allTypes > types:
+		print(f"[FAIL] Failed to find the following types: {allTypes - types}")
+
+	else:
+		print(f"[UNEXPECTED] Found new types: {types - allTypes}")
