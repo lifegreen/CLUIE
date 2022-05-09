@@ -13,7 +13,6 @@ def GenerateDatFile(screen, locFile=None, outPath=None):
 	if outPath: path = os.path.join(outPath, path)
 
 	with open(path, 'w') as file:
-		print(file)
 		file.write(datFileHeader(name, limits))
 
 		file.write(f"rangestart {limits[0]} {limits[1]}\n")

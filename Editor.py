@@ -276,12 +276,11 @@ class Editor():
 
 		with open(path, 'w') as file:
 			file.write(datFileHeader())
-			file.write(f"rangestart {limits[0]} {limits[1]}\n")
 
+			file.write(f"rangestart {limits[0]} {limits[1]}\n")
 			for id in ids:
 				if id in strings.index:	file.write(f"{id}\t{strings.loc[id].item()}\n")
 				else:					file.write(f"{id}\t${id} - Doesn't exist\n")
-
 			file.write("rangeend\n")
 
 		print(f"Generated: {path}")
