@@ -133,6 +133,19 @@ class Editor():
 		self.screen = None
 		self.datPath = None
 
+		self.__call__(screen, datPath)
+
+
+		contents = ""
+		if self.screen: contents += repr(self.screen) + "\n"
+		if self.datPath: contents += "datPath:" + (self.datPath) + "\n"
+
+		if contents: print("Starting Editor with", contents, end="")
+
+	def __call__(self, screen, datPath=None):
+		self.openScreen(screen, datPath)
+
+	def openScreen(self, screen, datPath=None):
 		if screen:
 			if type(screen) is Screen:
 				self.screen = screen
@@ -154,13 +167,6 @@ class Editor():
 			else:
 				err = f"Directory: '{datPath}' DOES NOT EXIST"
 				raise Exception(err)
-
-
-		contents = ""
-		if self.screen: contents += repr(self.screen) + "\n"
-		if self.datPath: contents += "datPath:" + (self.datPath) + "\n"
-
-		if contents: print("Starting Editor with", contents, end="")
 
 	def getSelection(self, rule):
 		return Selection(self.screen.search(rule), root=self.screen)
