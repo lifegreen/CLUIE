@@ -41,18 +41,28 @@ def GenerateDatFile(screen, locFile=None, outPath=None):
 		file.write("rangeend\n")
 
 
-def getStringIDs(screen):
-	textEntry = re.compile(r'\s*text = "(.+)"')
+def getStringIDs(screen, strings=None):
+	textEntry = re.compile(r'(\s*)text = "(.+)"')
 	stringID = re.compile(r'\$(\d+)')
 
+	with open(screen) as file:
+		lines = file.readlines()
+
 	ids = []
-	for i, line in enumerate(open(screen)):
-		if lineMatch := textEntry.match(line):
-			if stringMatch := stringID.match(lineMatch[1]):
-				ids.append(int(stringMatch[1]))
+	for i, line in enumerate(lines):
+		if textMatch := textEntry.match(line):
+			if idMatch := stringID.match(textMatch[2]):
+				ids.append(int(idMatch[1]))
 			else:
 				# This can cause issues when using UI editor (I think)
-				print(f'[Warning] String literal in text entry on line {i}: {lineMatch[0]}')
+				print(f'[Warning] String literal in text entry on line {i}: {textMatch.[0]}')
+
+				if strings:
+					if textMatch[2] in strings.Strings:
+						lines[i] = re.sub(textEntry, rf'\1text = "\${newID}"', line)
+					else:
+						# Make a note of the string and add it to the end of dat file
+
 
 	return ids
 
