@@ -220,12 +220,14 @@ class Editor():
 
 		def roundRange(_min, _max):
 			# Round down to nearest fifty
-			start = (_min // 50) * 50 
-			end = (_max // 50) * 50
+			start = (_min // 50) * 50
+			end   = (_max // 50) * 50
 
-			# Round up unless it divides equally or if we only have a single value
-			if (_max % 50) or (_max == _min) : end += 50 
-			end -= 1 # The range has to end on 1 less than a multiple of 50
+			# Round up unless it divides equally
+			if (_max % 50) != 0: end += 50
+
+			# The range has to end on 1 less than a multiple of 50
+			end -= 1
 			return (start, end)
 
 		def datFileHeader():

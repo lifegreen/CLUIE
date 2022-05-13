@@ -79,7 +79,7 @@ def roundRange(_min, _max):
 	end   = (_max // 50) * 50
 
 	# Round up unless it divides equally
-	if (_max % 50) == 0: end += 50
+	if (_max % 50) != 0: end += 50
 
 	# The range has to end on 1 less than a multiple of 50
 	end -= 1
