@@ -1,0 +1,4701 @@
+Screen =  
+{
+	version = 4,
+	native_aspect = 1.77778,
+	TooltipWidgets =  
+	{
+		type = "Group",
+		name = "grp_tooltips",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				visible = false,
+				type = "Group",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "TooltipBase",
+				position =  
+				{
+					0.45000,
+					0.48500,
+				},
+				Children =  
+				{
+					 
+					{
+						type = "TextLabel",
+						name = "basic_tooltip",
+						position =  
+						{
+							0.00136,
+							0.00053,
+						},
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						text = "",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									multiline = false,
+									ID = 197572,
+									horzAlign = "Centre",
+									fontname = "trebuchet ms bold 10",
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.09762,
+							0.02671,
+						},
+					},
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Rectangle",
+							shadermode = 0,
+							colour =  
+							{
+								0,
+								0,
+								0,
+								200,
+							},
+							ID = 197534,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+						 
+						{
+							type = "Rectangle",
+							colour =  
+							{
+								255,
+								255,
+								255,
+								150,
+							},
+							shadermode = 0,
+							rectangleType = "Border",
+							ID = 197535,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.10000,
+					0.03000,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+	Widgets =  
+	{
+		type = "Group",
+		name = "grp_screen",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				type = "ArtLabel",
+				style =  
+				{
+					"DefaultEngineStyles",
+					"defStyleLabel",
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "bg_new",
+				Presentation =  
+				{
+				},
+				size =  
+				{
+					1,
+					1,
+				},
+			},
+			 
+			{
+				type = "ArtLabel",
+				baseAspectFixed = true,
+				aspectChangeWidth = false,
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "art_Brits",
+				position =  
+				{
+					0.40762,
+					0.07643,
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							position =  
+							{
+								0,
+								0.00513,
+							},
+							shadermode = 0,
+							texture = "art\\ui\\textures\\textures_fe\\fe_brits",
+							ID = 2187750,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.58845,
+					1.07648,
+				},
+			},
+			 
+			{
+				type = "ArtLabel",
+				baseAspectFixed = true,
+				aspectChangeWidth = false,
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "art_USA",
+				position =  
+				{
+					0.39016,
+					-0.06352,
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							size =  
+							{
+								0.96713,
+								0.96831,
+							},
+							position =  
+							{
+								0.03287,
+								0.02828,
+							},
+							shadermode = 0,
+							texture = "art\\ui\\textures\\textures_fe\\fe_usa",
+							ID = 2187750,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.47507,
+					1.11218,
+				},
+			},
+			 
+			{
+				visible = false,
+				type = "ArtLabel",
+				baseAspectFixed = true,
+				aspectChangeWidth = false,
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "art_German",
+				position =  
+				{
+					0.32650,
+					0.03646,
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							size =  
+							{
+								0.99450,
+								0.99653,
+							},
+							position =  
+							{
+								0.00368,
+								0.02911,
+							},
+							shadermode = 0,
+							texture = "art\\ui\\textures\\textures_fe\\fe_german",
+							ID = 2187750,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.53469,
+					1.04867,
+				},
+			},
+			 
+			{
+				visible = false,
+				type = "ArtLabel",
+				baseAspectFixed = true,
+				aspectChangeWidth = false,
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "art_DLC2_usa",
+				position =  
+				{
+					0.40762,
+					-0.00437,
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							size =  
+							{
+								0.97787,
+								0.96861,
+							},
+							position =  
+							{
+								0.00189,
+								0.06957,
+							},
+							shadermode = 0,
+							texture = "art\\ui\\textures\\textures_fe\\fe_dlc2_usa",
+							ID = 2187750,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.56384,
+					1.10240,
+				},
+			},
+			 
+			{
+				visible = false,
+				type = "ArtLabel",
+				baseAspectFixed = true,
+				aspectChangeWidth = false,
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "art_DLC3_german",
+				position =  
+				{
+					0.41681,
+					0.00084,
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							size =  
+							{
+								0.90072,
+								0.96671,
+							},
+							position =  
+							{
+								-0.00340,
+								0.06926,
+							},
+							shadermode = 0,
+							texture = "art\\ui\\textures\\textures_fe\\fe_dlc3_german",
+							ID = 2187750,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.52181,
+					1.10240,
+				},
+			},
+			 
+			{
+				visible = false,
+				type = "ArtLabel",
+				baseAspectFixed = true,
+				aspectChangeWidth = false,
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "art_character_TOV",
+				position =  
+				{
+					0.45113,
+					0.01069,
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							size =  
+							{
+								0.89938,
+								0.96927,
+							},
+							position =  
+							{
+								-0.02624,
+								0.07114,
+							},
+							shadermode = 0,
+							texture = "art\\ui\\textures\\textures_fe\\fe_character_tov",
+							ID = 2187750,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.49315,
+					1.06368,
+				},
+			},
+			 
+			{
+				type = "Custom",
+				name = "background",
+				position =  
+				{
+					0.16912,
+					0.05176,
+				},
+				customProperties = "",
+				HitArea =  
+				{
+				},
+				size =  
+				{
+					0.67115,
+					0.90651,
+				},
+			},
+			 
+			{
+				type = "ArtLabel",
+				baseAspectFixed = true,
+				aspectChangeWidth = true,
+				HitArea =  
+				{
+				},
+				name = "CoH_logo",
+				position =  
+				{
+					0.01978,
+					0.02853,
+				},
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							shadermode = 0,
+							texture = "art\\ui\\textures\\textures_fe\\title",
+							ID = 2190070,
+							states =  
+							{
+								"Normal",
+								"Disabled",
+								"Active",
+								"Hover",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.50000,
+					0.22000,
+				},
+			},
+			 
+			{
+				type = "Group",
+				baseAspectFixed = true,
+				aspectChangeWidth = false,
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "grp_dock",
+				position =  
+				{
+					0,
+					0.83569,
+				},
+				Children =  
+				{
+					 
+					{
+						type = "Button",
+						text = "$713510",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "bttn_support",
+						position =  
+						{
+							0.84500,
+							0.02200,
+						},
+						style =  
+						{
+							"feral",
+							"mainMenuDockButton",
+						},
+						tooltip_name = "basic_tooltip",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "bg_on",
+									ID = 3129931,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "bg",
+									ID = 3129930,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129650,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129651,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									caretColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129652,
+									nameID = "Text",
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "UI\\\\FRONTEND\\\\UI_07",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.14500,
+							0.13000,
+						},
+					},
+					 
+					{
+						type = "Button",
+						text = "$713502",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "bttn_achievements",
+						position =  
+						{
+							0.67800,
+							0.02200,
+						},
+						style =  
+						{
+							"feral",
+							"mainMenuDockButton",
+						},
+						tooltip_name = "basic_tooltip",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "bg_on",
+									ID = 3129917,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "bg",
+									ID = 3129916,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129655,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129656,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									caretColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129657,
+									nameID = "Text",
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "UI\\\\FRONTEND\\\\UI_07",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.14500,
+							0.13000,
+						},
+					},
+					 
+					{
+						type = "Button",
+						text = "$713521",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "bttn_options",
+						position =  
+						{
+							0.51100,
+							0.02200,
+						},
+						style =  
+						{
+							"feral",
+							"mainMenuDockButton",
+						},
+						tooltip_name = "basic_tooltip",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "bg_on",
+									ID = 3129903,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "bg",
+									ID = 3129902,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129660,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129661,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									caretColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129662,
+									nameID = "Text",
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "UI\\\\FRONTEND\\\\UI_07",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.14500,
+							0.13000,
+						},
+					},
+					 
+					{
+						type = "Button",
+						text = "$713002",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "bttn_load",
+						position =  
+						{
+							0.34400,
+							0.02200,
+						},
+						style =  
+						{
+							"feral",
+							"mainMenuDockButton",
+						},
+						tooltip_name = "basic_tooltip",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "bg_on",
+									ID = 3129889,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "bg",
+									ID = 3129888,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									nameID = "Text_on",
+									shadermode = 0,
+									textColourTop =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									size =  
+									{
+										0.82000,
+										1,
+									},
+									position =  
+									{
+										0.09000,
+										0,
+									},
+									ID = 3129665,
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									nameID = "Text_on",
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									size =  
+									{
+										0.82000,
+										1,
+									},
+									position =  
+									{
+										0.09000,
+										0,
+									},
+									ID = 3129666,
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									nameID = "Text",
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									fontname = "impact_24",
+									horzAlign = "Centre",
+									caretColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									size =  
+									{
+										0.82000,
+										1,
+									},
+									position =  
+									{
+										0.09000,
+										0,
+									},
+									ID = 3129667,
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "UI\\\\FRONTEND\\\\UI_07",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.14500,
+							0.13000,
+						},
+					},
+					 
+					{
+						type = "Button",
+						text = "$713500",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "bttn_continue",
+						position =  
+						{
+							0.17700,
+							0.02200,
+						},
+						style =  
+						{
+							"feral",
+							"mainMenuDockButton",
+						},
+						tooltip_name = "basic_tooltip",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "bg_on",
+									ID = 3129693,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "bg",
+									ID = 3129692,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129675,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129676,
+									nameID = "Text_on",
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									caretColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									ID = 3129677,
+									nameID = "Text",
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "UI\\\\FRONTEND\\\\UI_07",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.14500,
+							0.13000,
+						},
+					},
+					 
+					{
+						type = "Button",
+						text = "$713512",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "bttn_campaign",
+						position =  
+						{
+							0.01000,
+							0.02172,
+						},
+						style =  
+						{
+							"feral",
+							"mainMenuDockButton",
+						},
+						tooltip_name = "basic_tooltip",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "bg_on",
+									ID = 3129865,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "bg",
+									ID = 3129864,
+									texture = "art\\ui\\textures\\textures_fe\\main_menu_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									nameID = "Text",
+									shadermode = 0,
+									textColourTop =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									size =  
+									{
+										0.80000,
+										1,
+									},
+									position =  
+									{
+										0.10000,
+										0,
+									},
+									ID = 3129670,
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Text",
+									nameID = "Text_on",
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									horzAlign = "Centre",
+									fontname = "impact_24",
+									size =  
+									{
+										0.80000,
+										1,
+									},
+									position =  
+									{
+										0.10000,
+										0,
+									},
+									ID = 3129671,
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									nameID = "Text",
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									fontname = "impact_24",
+									horzAlign = "Centre",
+									caretColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									size =  
+									{
+										0.80000,
+										1,
+									},
+									position =  
+									{
+										0.10000,
+										0,
+									},
+									ID = 3129672,
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "UI\\\\FRONTEND\\\\UI_07",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.14500,
+							0.12996,
+						},
+					},
+				},
+				xAlignToParent = "Middle",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							nameID = "background",
+							ID = 3120014,
+							texture = "art\\ui\\textures\\textures_fe\\main_menu_bottom",
+							shadermode = 0,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					1,
+					0.18000,
+				},
+			},
+			 
+			{
+				type = "Button",
+				name = "dlc_alert",
+				position =  
+				{
+					0.02367,
+					0.26253,
+				},
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				text = "",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							nameID = "dlc_alert_pressed",
+							ID = 3499088,
+							texture = "art\\ui\\feral\\dlc_of_alert_icon_pressed",
+							shadermode = 0,
+							states =  
+							{
+								"Active",
+								"Hover",
+							},
+						},
+						 
+						{
+							type = "Graphic",
+							nameID = "dlc_alert",
+							ID = 3484015,
+							texture = "art\\ui\\feral\\dlc_of_alert_icon",
+							shadermode = 0,
+							states =  
+							{
+								"Normal",
+								"Disabled",
+							},
+						},
+						 
+						{
+							type = "Text",
+							nameID = "Text",
+							shadermode = 0,
+							textColourTop =  
+							{
+								255,
+								255,
+								255,
+								255,
+							},
+							multiline = false,
+							horzAlign = "Centre",
+							fontname = "impact_36",
+							size =  
+							{
+								0.74000,
+								0.13000,
+							},
+							position =  
+							{
+								0.12700,
+								0.74000,
+							},
+							ID = 3499466,
+							textColourBottom =  
+							{
+								255,
+								255,
+								255,
+								255,
+							},
+							dropShadow = true,
+							states =  
+							{
+								"Active",
+								"Hover",
+							},
+						},
+						 
+						{
+							type = "Text",
+							nameID = "Text",
+							shadermode = 0,
+							textColourTop =  
+							{
+								248,
+								248,
+								248,
+								255,
+							},
+							multiline = false,
+							horzAlign = "Centre",
+							fontname = "impact_36",
+							size =  
+							{
+								0.74000,
+								0.13000,
+							},
+							position =  
+							{
+								0.12700,
+								0.74000,
+							},
+							ID = 3499360,
+							textColourBottom =  
+							{
+								148,
+								148,
+								148,
+								255,
+							},
+							dropShadow = true,
+							states =  
+							{
+								"Normal",
+								"Active",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.32600,
+					0.53200,
+				},
+			},
+			 
+			{
+				type = "Group",
+				Children =  
+				{
+					 
+					{
+						type = "Group",
+						Children =  
+						{
+							 
+							{
+								type = "TextLabel",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "dlc_descr",
+								position =  
+								{
+									0.03661,
+									0.12519,
+								},
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483895,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms regular 30",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.63806,
+									0.30783,
+								},
+							},
+							 
+							{
+								type = "TextLabel",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "dlc_name",
+								position =  
+								{
+									0.02494,
+									0,
+								},
+								yAlignToParent = "SideA",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483574,
+											horzAlign = "Centre",
+											fontname = "impact_36",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.66139,
+									0.11823,
+								},
+							},
+							 
+							{
+								type = "Button",
+								buttonType = "ClickOnRelease",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleButton",
+								},
+								position =  
+								{
+									0.01334,
+									0.46258,
+								},
+								name = "dlc_btn_back",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\downloads_panel_button_unselected_phone",
+											ID = 3483732,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483887,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms bold 24",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.20495,
+									0.10727,
+								},
+							},
+							 
+							{
+								type = "Button",
+								buttonType = "ClickOnRelease",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleButton",
+								},
+								position =  
+								{
+									0.25316,
+									0.46258,
+								},
+								name = "dlc_btn_hide",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\downloads_panel_button_unselected_phone",
+											ID = 3483808,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483851,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms bold 24",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.20495,
+									0.10727,
+								},
+							},
+							 
+							{
+								type = "Button",
+								buttonType = "ClickOnRelease",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleButton",
+								},
+								position =  
+								{
+									0.49460,
+									0.46258,
+								},
+								name = "dlc_btn_store",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\downloads_panel_button_unselected_phone",
+											ID = 3483824,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483840,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms bold 24",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.20495,
+									0.10727,
+								},
+							},
+						},
+						name = "bg",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"DefaultStyles",
+							"defStyleGroup",
+						},
+						position =  
+						{
+							0.14437,
+							0.19481,
+						},
+						yAlignToParent = "Middle",
+						xAlignToParent = "Middle",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\downloads_panel_bg_2_phone",
+									ID = 3483306,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									size =  
+									{
+										1,
+										0.56767,
+									},
+									position =  
+									{
+										0,
+										0.17481,
+									},
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\skirmish_panel_team",
+									ID = 3483319,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.71127,
+							0.61038,
+						},
+					},
+				},
+				name = "dlc_popup",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+				yAlignToParent = "Stretch",
+				xAlignToParent = "Stretch",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Rectangle",
+							shadermode = 0,
+							colour =  
+							{
+								10,
+								10,
+								10,
+								162,
+							},
+							ID = 3483291,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					1,
+					1,
+				},
+			},
+			 
+			{
+				visible = false,
+				type = "Group",
+				Children =  
+				{
+					 
+					{
+						type = "Group",
+						Children =  
+						{
+							 
+							{
+								type = "Button",
+								buttonType = "ClickOnRelease",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleButton",
+								},
+								position =  
+								{
+									0.25302,
+									0.56974,
+								},
+								name = "patch_notes_btn_dismiss",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\downloads_panel_button_unselected_phone",
+											ID = 3483808,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483851,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms bold 24",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.20495,
+									0.10700,
+								},
+							},
+							 
+							{
+								type = "TextListBox",
+								maxItems = -1,
+								ItemTemplate =  
+								{
+									type = "TextListBoxItem",
+									name = "itemTmplt_patch_notes_descr",
+									position =  
+									{
+										0,
+										0,
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									text = "",
+									Presentation =  
+									{
+										Art =  
+										{
+											 
+											{
+												type = "Text",
+												textColourBottom =  
+												{
+													255,
+													255,
+													255,
+													192,
+												},
+												shadermode = 0,
+												textColourTop =  
+												{
+													255,
+													255,
+													255,
+													192,
+												},
+												position =  
+												{
+													0.01000,
+													0,
+												},
+												ID = 3484368,
+												fontname = "trebuchet ms regular 30",
+												size =  
+												{
+													0.99000,
+													1,
+												},
+												states =  
+												{
+													"Normal",
+													"Disabled",
+													"Active",
+													"Hover",
+													"Checked",
+													"CheckedDisabled",
+													"CheckedActive",
+													"CheckedHover",
+												},
+											},
+										},
+									},
+									size =  
+									{
+										0.68500,
+										0.42500,
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleListBox",
+								},
+								ItemsGroup =  
+								{
+									type = "Group",
+									name = "items_patch_notes_descr",
+									position =  
+									{
+										0,
+										0,
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									Presentation =  
+									{
+									},
+									size =  
+									{
+										0.68500,
+										0.42510,
+									},
+								},
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "patch_notes_descr",
+								position =  
+								{
+									0.01300,
+									0.12490,
+								},
+								ScrollBar =  
+								{
+									visible = false,
+									type = "ScrollBar",
+									range =  
+									{
+										0,
+										0,
+									},
+									ButtonDecrement =  
+									{
+										type = "Button",
+										buttonType = "ClickOnPress",
+										text = "",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnDec_scrlBar_patch_notes_descr",
+										position =  
+										{
+											0,
+											0,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													colour = "White",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_up",
+													ID = 3484360,
+													states =  
+													{
+														"Normal",
+														"Disabled",
+														"Active",
+														"Hover",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.01500,
+											0.02500,
+										},
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									name = "scrlBar_patch_notes_descr",
+									position =  
+									{
+										0.68500,
+										0,
+									},
+									ButtonTrack =  
+									{
+										type = "Button",
+										name = "btnTrk_scrlBar_patch_notes_descr",
+										position =  
+										{
+											0,
+											0.02500,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													nameID = "Graphic",
+													ID = 3484605,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_slider",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.01500,
+											0.37510,
+										},
+									},
+									ButtonIncrement =  
+									{
+										type = "Button",
+										buttonType = "ClickOnPress",
+										text = "",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnInc_scrlBar_patch_notes_descr",
+										position =  
+										{
+											0,
+											0.40010,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													colour = "White",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
+													ID = 3484363,
+													states =  
+													{
+														"Normal",
+														"Disabled",
+														"Active",
+														"Hover",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.01500,
+											0.02500,
+										},
+									},
+									Presentation =  
+									{
+										Art =  
+										{
+											 
+											{
+												type = "Graphic",
+												shadermode = 0,
+												texture = "art\\ui\\textures\\textures_fe\\scrollbar_background",
+												ID = 3484730,
+												states =  
+												{
+													"Normal",
+													"Active",
+													"Hover",
+													"Disabled",
+												},
+											},
+										},
+									},
+									size =  
+									{
+										0.01500,
+										0.42510,
+									},
+								},
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+								},
+								size =  
+								{
+									0.68500,
+									0.42510,
+								},
+							},
+							 
+							{
+								type = "TextLabel",
+								text = "",
+								HitArea =  
+								{
+								},
+								name = "patch_notes_title",
+								position =  
+								{
+									0.02480,
+									0,
+								},
+								yAlignToParent = "SideA",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483574,
+											horzAlign = "Centre",
+											fontname = "impact_36",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.66139,
+									0.12478,
+								},
+							},
+						},
+						name = "patch_notes_bg",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"DefaultStyles",
+							"defStyleGroup",
+						},
+						position =  
+						{
+							0.14450,
+							0.15000,
+						},
+						yAlignToParent = "Middle",
+						xAlignToParent = "Middle",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\large_popup_background",
+									ID = 3483306,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									size =  
+									{
+										1,
+										0.67252,
+									},
+									position =  
+									{
+										0,
+										0.14348,
+									},
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\skirmish_panel_team",
+									ID = 3483319,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.71100,
+							0.70000,
+						},
+					},
+				},
+				name = "patch_notes_popup",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+				yAlignToParent = "Stretch",
+				xAlignToParent = "Stretch",
+				Presentation =  
+				{
+				},
+				size =  
+				{
+					1,
+					1,
+				},
+			},
+			 
+			{
+				visible = false,
+				type = "Group",
+				Children =  
+				{
+					 
+					{
+						type = "Group",
+						Children =  
+						{
+							 
+							{
+								type = "TextListBox",
+								maxItems = -1,
+								ItemTemplate =  
+								{
+									type = "TextListBoxItem",
+									name = "itemTmplt_dlc_notes_descr",
+									position =  
+									{
+										0,
+										0,
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									text = "",
+									Presentation =  
+									{
+										Art =  
+										{
+											 
+											{
+												type = "Text",
+												textColourBottom =  
+												{
+													255,
+													255,
+													255,
+													192,
+												},
+												shadermode = 0,
+												textColourTop =  
+												{
+													255,
+													255,
+													255,
+													192,
+												},
+												position =  
+												{
+													0.00857,
+													0,
+												},
+												ID = 3484368,
+												fontname = "trebuchet ms regular 30",
+												size =  
+												{
+													0.99000,
+													1,
+												},
+												states =  
+												{
+													"Normal",
+													"Disabled",
+													"Active",
+													"Hover",
+													"Checked",
+													"CheckedDisabled",
+													"CheckedActive",
+													"CheckedHover",
+												},
+											},
+										},
+									},
+									size =  
+									{
+										0.68500,
+										0.32700,
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleListBox",
+								},
+								ItemsGroup =  
+								{
+									type = "Group",
+									name = "items_dlc_notes_descr",
+									position =  
+									{
+										0,
+										0,
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									Presentation =  
+									{
+									},
+									size =  
+									{
+										0.68500,
+										0.32695,
+									},
+								},
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "dlc_notes_descr",
+								position =  
+								{
+									0.01300,
+									0.53280,
+								},
+								ScrollBar =  
+								{
+									visible = false,
+									type = "ScrollBar",
+									range =  
+									{
+										0,
+										0.42510,
+									},
+									ButtonDecrement =  
+									{
+										type = "Button",
+										buttonType = "ClickOnPress",
+										text = "",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnDec_scrlBar_dlc_notes_descr",
+										position =  
+										{
+											0,
+											0,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													colour = "White",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_up",
+													ID = 3484360,
+													states =  
+													{
+														"Normal",
+														"Disabled",
+														"Active",
+														"Hover",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.01500,
+											0.02500,
+										},
+									},
+									ButtonTrack =  
+									{
+										type = "Button",
+										name = "btnTrk_scrlBar_dlc_notes_descr",
+										position =  
+										{
+											0,
+											0.02500,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													nameID = "Graphic",
+													ID = 3484605,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_slider",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.01500,
+											0,
+										},
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									name = "scrlBar_dlc_notes_descr",
+									position =  
+									{
+										0.68500,
+										0,
+									},
+									stepSize = 0,
+									ButtonIncrement =  
+									{
+										type = "Button",
+										buttonType = "ClickOnPress",
+										text = "",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnInc_scrlBar_dlc_notes_descr",
+										position =  
+										{
+											0,
+											0.30195,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													colour = "White",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
+													ID = 3484363,
+													states =  
+													{
+														"Normal",
+														"Disabled",
+														"Active",
+														"Hover",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.01500,
+											0.02500,
+										},
+									},
+									Presentation =  
+									{
+										Art =  
+										{
+											 
+											{
+												type = "Graphic",
+												shadermode = 0,
+												texture = "art\\ui\\textures\\textures_fe\\scrollbar_background",
+												ID = 3484730,
+												states =  
+												{
+													"Normal",
+													"Active",
+													"Hover",
+													"Disabled",
+												},
+											},
+										},
+									},
+									size =  
+									{
+										0.01500,
+										0.32695,
+									},
+								},
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+								},
+								size =  
+								{
+									0.68500,
+									0.32695,
+								},
+							},
+							 
+							{
+								type = "ArtLabel",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleLabel",
+								},
+								position =  
+								{
+									0.01150,
+									0.09100,
+								},
+								name = "dlc_notes_img",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											nameID = "Graphic",
+											ID = 3484940,
+											texture = "art\\ui\\textures\\textures_fe\\tov_dlc_banner",
+											shadermode = 0,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Graphic",
+											nameID = "Graphic",
+											ID = 3484941,
+											texture = "art\\ui\\feral\\campaign_selection\\shadow",
+											shadermode = 0,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.68800,
+									0.42400,
+								},
+							},
+							 
+							{
+								type = "TextLabel",
+								text = "",
+								HitArea =  
+								{
+								},
+								name = "dlc_notes_title",
+								position =  
+								{
+									0.02480,
+									0,
+								},
+								yAlignToParent = "SideA",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483574,
+											horzAlign = "Centre",
+											fontname = "impact_36",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.66139,
+									0.09944,
+								},
+							},
+							 
+							{
+								type = "Button",
+								buttonType = "ClickOnRelease",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleButton",
+								},
+								position =  
+								{
+									0.27850,
+									0.86837,
+								},
+								name = "dlc_notes_btn_dismiss",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\downloads_panel_button_unselected_phone",
+											ID = 3483808,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483851,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms bold 24",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.15400,
+									0.08000,
+								},
+							},
+						},
+						name = "dlc_notes_bg",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"DefaultStyles",
+							"defStyleGroup",
+						},
+						position =  
+						{
+							0.14450,
+							0.01709,
+						},
+						yAlignToParent = "Middle",
+						xAlignToParent = "Middle",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									position =  
+									{
+										-0.00137,
+										0,
+									},
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\large_popup_background",
+									ID = 3483306,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									size =  
+									{
+										1,
+										0.37200,
+									},
+									position =  
+									{
+										0,
+										0.53466,
+									},
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\skirmish_panel_team",
+									ID = 3483319,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									size =  
+									{
+										1,
+										0.48078,
+									},
+									position =  
+									{
+										0,
+										0.07414,
+									},
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\skirmish_panel_team",
+									ID = 3508569,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.71100,
+							0.96583,
+						},
+					},
+				},
+				name = "dlc_notes_popup",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+				yAlignToParent = "Stretch",
+				xAlignToParent = "Stretch",
+				Presentation =  
+				{
+				},
+				size =  
+				{
+					1,
+					1,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+}
+ToolInfo =  
+{
+	version = 3,
+	WidgetInfo =  
+	{
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_screen",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bg_new",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "art_Brits",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "art_USA",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "art_German",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "art_DLC2_usa",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "art_DLC3_german",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "art_character_TOV",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "background",
+			HitAreaGuides =  
+			{
+			},
+			type = "Custom",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "CoH_logo",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_dock",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bttn_support",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bttn_achievements",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bttn_options",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bttn_load",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bttn_continue",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bttn_campaign",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_alert",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			type = "Group",
+			name = "dlc_popup",
+			HitAreaGuides =  
+			{
+			},
+			hidden = true,
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_name",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_btn_back",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_btn_hide",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_btn_store",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			type = "Group",
+			name = "patch_notes_popup",
+			HitAreaGuides =  
+			{
+			},
+			hidden = true,
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "patch_notes_bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "patch_notes_btn_dismiss",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			type = "TextListBox",
+			autoPopulate = true,
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+			name = "patch_notes_descr",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "items_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "scrlBar_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnDec_scrlBar_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnInc_scrlBar_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnTrk_scrlBar_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgDn_scrlBar_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgUp_scrlBar_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "itemTmplt_patch_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "patch_notes_title",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			type = "Group",
+			name = "dlc_notes_popup",
+			HitAreaGuides =  
+			{
+			},
+			hidden = true,
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_notes_bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			type = "TextListBox",
+			autoPopulate = true,
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+			name = "dlc_notes_descr",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "items_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "scrlBar_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnDec_scrlBar_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnInc_scrlBar_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnTrk_scrlBar_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgDn_scrlBar_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgUp_scrlBar_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "itemTmplt_dlc_notes_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_notes_img",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_notes_title",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_notes_btn_dismiss",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_tooltips",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "TooltipBase",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "basic_tooltip",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+	},
+	Guides =  
+	{
+	},
+	ScreenInfo =  
+	{
+		LocaleRange =  
+		{
+			713500,
+			713749,
+		},
+	},
+}
