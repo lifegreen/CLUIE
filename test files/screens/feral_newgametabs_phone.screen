@@ -1,0 +1,1445 @@
+Screen =  
+{
+	version = 4,
+	native_aspect = 1.77778,
+	TooltipWidgets =  
+	{
+		type = "Group",
+		name = "grp_tooltips",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				visible = false,
+				type = "Group",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				position =  
+				{
+					0.00965,
+					0.01457,
+				},
+				Children =  
+				{
+					 
+					{
+						type = "TextLabel",
+						name = "TooltipLabel",
+						position =  
+						{
+							0.00019,
+							0.00025,
+						},
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						text = "",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									multiline = false,
+									ID = 197572,
+									horzAlign = "Centre",
+									fontname = "trebuchet ms bold 10",
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.09762,
+							0.01600,
+						},
+					},
+				},
+				name = "TooltipBase",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Rectangle",
+							shadermode = 0,
+							colour =  
+							{
+								0,
+								0,
+								0,
+								200,
+							},
+							ID = 197534,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+						 
+						{
+							type = "Rectangle",
+							colour =  
+							{
+								255,
+								255,
+								255,
+								150,
+							},
+							shadermode = 0,
+							rectangleType = "Border",
+							ID = 197535,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.09800,
+					0.01650,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+	Widgets =  
+	{
+		type = "Group",
+		name = "grp_screen",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				type = "Group",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"feral",
+					"tabGroup",
+				},
+				position =  
+				{
+					0.03750,
+					0.02000,
+				},
+				name = "TabGroup",
+				xAlignToParent = "Middle",
+				Children =  
+				{
+					 
+					{
+						type = "RadioButton",
+						text = "$620750",
+						style =  
+						{
+							"feral",
+							"tab",
+						},
+						tooltip_name = "TooltipLabel",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									0.90000,
+									0.75000,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "SkirmishTab",
+						position =  
+						{
+							0.70500,
+							0,
+						},
+						yAlignToParent = "Stretch",
+						xAlignToParent = "SideB",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_normal",
+									ID = 3338426,
+									texture = "art\\ui\\textures\\textures_fe\\tab",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_selected",
+									ID = 3338427,
+									texture = "art\\ui\\textures\\textures_fe\\tab_selected",
+									shadermode = 0,
+									states =  
+									{
+										"Checked",
+										"CheckedDisabled",
+										"CheckedActive",
+										"CheckedHover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									multiline = false,
+									horzAlign = "Centre",
+									fontname = "impact_36",
+									ID = 3338340,
+									nameID = "Text_checked",
+									dropShadow = true,
+									states =  
+									{
+										"Checked",
+										"CheckedActive",
+										"CheckedHover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										147,
+										148,
+										148,
+										255,
+									},
+									multiline = false,
+									horzAlign = "Centre",
+									fontname = "impact_36",
+									ID = 3338341,
+									nameID = "Text_normal",
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+										"CheckedDisabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.22000,
+							0.11700,
+						},
+					},
+					 
+					{
+						type = "RadioButton",
+						text = "$620758",
+						style =  
+						{
+							"feral",
+							"tab",
+						},
+						tooltip_name = "TooltipLabel",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									0.90000,
+									0.75000,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "GameSetupTab",
+						position =  
+						{
+							0.35250,
+							0,
+						},
+						yAlignToParent = "Stretch",
+						xAlignToParent = "Middle",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_normal",
+									ID = 3338414,
+									texture = "art\\ui\\textures\\textures_fe\\tab",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_selected",
+									ID = 3338415,
+									texture = "art\\ui\\textures\\textures_fe\\tab_selected",
+									shadermode = 0,
+									states =  
+									{
+										"Checked",
+										"CheckedDisabled",
+										"CheckedActive",
+										"CheckedHover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									multiline = false,
+									horzAlign = "Centre",
+									fontname = "impact_36",
+									ID = 3338345,
+									nameID = "Text_checked",
+									dropShadow = true,
+									states =  
+									{
+										"Checked",
+										"CheckedActive",
+										"CheckedHover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										147,
+										148,
+										148,
+										255,
+									},
+									multiline = false,
+									horzAlign = "Centre",
+									fontname = "impact_36",
+									ID = 3338346,
+									nameID = "Text_normal",
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+										"CheckedDisabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.22000,
+							0.11700,
+						},
+					},
+					 
+					{
+						type = "RadioButton",
+						text = "$620751",
+						style =  
+						{
+							"feral",
+							"tab",
+						},
+						tooltip_name = "TooltipLabel",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									0.90000,
+									0.75000,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "TutorialTab",
+						position =  
+						{
+							0,
+							0,
+						},
+						yAlignToParent = "Stretch",
+						xAlignToParent = "SideA",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_normal",
+									ID = 3338372,
+									texture = "art\\ui\\textures\\textures_fe\\tab",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_selected",
+									ID = 3338377,
+									texture = "art\\ui\\textures\\textures_fe\\tab_selected",
+									shadermode = 0,
+									states =  
+									{
+										"Checked",
+										"CheckedDisabled",
+										"CheckedActive",
+										"CheckedHover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										248,
+										248,
+										248,
+										255,
+									},
+									multiline = false,
+									horzAlign = "Centre",
+									fontname = "impact_36",
+									ID = 3338350,
+									nameID = "Text_checked",
+									dropShadow = true,
+									states =  
+									{
+										"Checked",
+										"CheckedActive",
+										"CheckedHover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										148,
+										148,
+										148,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										147,
+										148,
+										148,
+										255,
+									},
+									multiline = false,
+									horzAlign = "Centre",
+									fontname = "impact_36",
+									ID = 3338351,
+									nameID = "Text_normal",
+									dropShadow = true,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+										"CheckedDisabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.22000,
+							0.11700,
+						},
+					},
+				},
+				size =  
+				{
+					0.92500,
+					0.11700,
+				},
+			},
+			 
+			{
+				type = "Button",
+				text = "$620762",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "btnLogout",
+				position =  
+				{
+					0.05700,
+					0.86200,
+				},
+				style =  
+				{
+					"feral",
+					"backButton",
+				},
+				tooltip_name = "TooltipLabel",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							nameID = "bg_hover",
+							ID = 3338363,
+							texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+							shadermode = 0,
+							states =  
+							{
+								"Hover",
+							},
+						},
+						 
+						{
+							type = "Graphic",
+							nameID = "bg",
+							ID = 3338362,
+							texture = "art\\ui\\textures\\textures_fe\\nav_button",
+							shadermode = 0,
+							states =  
+							{
+								"Normal",
+								"Disabled",
+								"Active",
+							},
+						},
+						 
+						{
+							type = "Graphic",
+							nameID = "arrow",
+							shadermode = 0,
+							position =  
+							{
+								0.20000,
+								0,
+							},
+							ID = 3338353,
+							size =  
+							{
+								0.60000,
+								1,
+							},
+							texture = "art\\ui\\textures\\textures_fe\\nav_arrow",
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.09600,
+					0.09300,
+				},
+			},
+			 
+			{
+				type = "Group",
+				Children =  
+				{
+					 
+					{
+						type = "Group",
+						Children =  
+						{
+							 
+							{
+								type = "TextLabel",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "dlc_descr",
+								position =  
+								{
+									0.03661,
+									0.12519,
+								},
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483895,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms regular 30",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.63806,
+									0.30783,
+								},
+							},
+							 
+							{
+								type = "TextLabel",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "dlc_name",
+								position =  
+								{
+									0.02494,
+									0,
+								},
+								yAlignToParent = "SideA",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483574,
+											horzAlign = "Centre",
+											fontname = "impact_36",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.66139,
+									0.11823,
+								},
+							},
+							 
+							{
+								type = "Button",
+								buttonType = "ClickOnRelease",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleButton",
+								},
+								position =  
+								{
+									0.01334,
+									0.46258,
+								},
+								name = "dlc_btn_back",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\downloads_panel_button_unselected_phone",
+											ID = 3483732,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483887,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms bold 24",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.20495,
+									0.10727,
+								},
+							},
+							 
+							{
+								type = "Button",
+								buttonType = "ClickOnRelease",
+								text = "",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleButton",
+								},
+								position =  
+								{
+									0.49460,
+									0.46258,
+								},
+								name = "dlc_btn_store",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\downloads_panel_button_unselected_phone",
+											ID = 3483824,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											ID = 3483840,
+											horzAlign = "Centre",
+											fontname = "trebuchet ms bold 24",
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.20495,
+									0.10727,
+								},
+							},
+						},
+						name = "bg",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"DefaultStyles",
+							"defStyleGroup",
+						},
+						position =  
+						{
+							0.14437,
+							0.19481,
+						},
+						yAlignToParent = "Middle",
+						xAlignToParent = "Middle",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\downloads_panel_bg_2_phone",
+									ID = 3483306,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									size =  
+									{
+										1,
+										0.56767,
+									},
+									position =  
+									{
+										0,
+										0.17481,
+									},
+									shadermode = 0,
+									texture = "art\\ui\\textures\\textures_fe\\skirmish_panel_team",
+									ID = 3483319,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.71127,
+							0.61038,
+						},
+					},
+				},
+				name = "dlc_popup",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+				yAlignToParent = "Stretch",
+				xAlignToParent = "Stretch",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Rectangle",
+							shadermode = 0,
+							colour =  
+							{
+								10,
+								10,
+								10,
+								162,
+							},
+							ID = 3483291,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					1,
+					1,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+}
+ToolInfo =  
+{
+	version = 3,
+	WidgetInfo =  
+	{
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_screen",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "TabGroup",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "SkirmishTab",
+			HitAreaGuides =  
+			{
+			},
+			type = "RadioButton",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameSetupTab",
+			HitAreaGuides =  
+			{
+			},
+			type = "RadioButton",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "TutorialTab",
+			HitAreaGuides =  
+			{
+			},
+			type = "RadioButton",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnLogout",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			type = "Group",
+			name = "dlc_popup",
+			HitAreaGuides =  
+			{
+			},
+			hidden = true,
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_descr",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_name",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_btn_back",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dlc_btn_store",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_tooltips",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "TooltipBase",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "TooltipLabel",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+	},
+	Guides =  
+	{
+	},
+	ScreenInfo =  
+	{
+		LocaleRange =  
+		{
+			620750,
+			620999,
+		},
+	},
+}

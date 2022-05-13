@@ -1286,133 +1286,74 @@ StyleSheet =
 			name = "acceptButton",
 			buttonType = "ClickOnRelease",
 			Presentation =  
-			{
-				Art =  
 				{
-					 
+					Art =  
 					{
-						type = "Rectangle",
-						nameID = "Background",
-						ID = 2686459,
-						colour =  
+						 
 						{
-							27,
-							87,
-							0,
-							255,
+							type = "Graphic",
+							nameID = "Background_pressed",
+							ID = 3342250,
+							texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+							shadermode = 0,
+							states =  
+							{
+								"Hover",
+							},
 						},
-						shadermode = 0,
-						states =  
+						 
 						{
-							"Normal",
-							"Active",
-							"Hover",
-							"Disabled",
+							type = "Graphic",
+							nameID = "Background",
+							ID = 3342249,
+							texture = "art\\ui\\textures\\textures_fe\\nav_button",
+							shadermode = 0,
+							states =  
+							{
+								"Normal",
+								"Disabled",
+								"Active",
+							},
 						},
-					},
-					 
-					{
-						type = "Rectangle",
-						nameID = "Outline",
-						line_width = 0.00300,
-						ID = 2686460,
-						rectangleType = "WidthBorder",
-						shadermode = 0,
-						states =  
+						 
 						{
-							"Normal",
-							"Active",
-							"Hover",
-							"Disabled",
-						},
-					},
-					 
-					{
-						type = "Graphic",
-						shadermode = 0,
-						size =  
-						{
-							0.50000,
-							1,
-						},
-						position =  
-						{
-							0.25000,
-							0,
-						},
-						ID = 2686461,
-						texture = "art\\ui\\ingame\\targeting\\target_arrow_white",
-						flipHorizontal = true,
-						states =  
-						{
-							"Normal",
-							"Active",
-							"Hover",
-							"Disabled",
+							type = "Graphic",
+							shadermode = 0,
+							colour =  
+							{
+								4,
+								255,
+								0,
+								255,
+							},
+							size =  
+							{
+								0.60000,
+								1,
+							},
+							position =  
+							{
+								0.20000,
+								0,
+							},
+							ID = 3342240,
+							texture = "art\\ui\\textures\\textures_fe\\nav_arrow",
+							flipHorizontal = true,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
 						},
 					},
 				},
-			},
-			size =  
-			{
-				0.10000,
-				0.07000,
-			},
-		},
-		 
-		{
-			type = "ButtonStyle",
-			name = "backButton",
-			buttonType = "ClickOnRelease",
-			Presentation =  
-			{
-				Art =  
+				size =  
 				{
-					 
-					{
-						type = "Rectangle",
-						nameID = "Background",
-						ID = 2691591,
-						shadermode = 0,
-						states =  
-						{
-							"Normal",
-							"Active",
-							"Hover",
-							"Disabled",
-						},
-					},
-					 
-					{
-						type = "Graphic",
-						size =  
-						{
-							0.50000,
-							1,
-						},
-						position =  
-						{
-							0.25000,
-							0,
-						},
-						shadermode = 0,
-						texture = "art\\ui\\ingame\\targeting\\target_arrow_white",
-						ID = 2691592,
-						states =  
-						{
-							"Normal",
-							"Active",
-							"Hover",
-							"Disabled",
-						},
-					},
+					0.10000,
+					0.07000,
 				},
-			},
-			size =  
-			{
-				0.10000,
-				0.07000,
-			},
 		},
 		 
 		{
@@ -5587,6 +5528,142 @@ StyleSheet =
 			{
 				0.05059,
 				0.09778,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "backButton",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "bg_hover",
+						ID = 3701819,
+						texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+						shadermode = 0,
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bg",
+						ID = 3701820,
+						texture = "art\\ui\\textures\\textures_fe\\nav_button",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "arrow",
+						shadermode = 0,
+						position =  
+						{
+							0.20000,
+							0,
+						},
+						ID = 3701821,
+						size =  
+						{
+							0.60000,
+							1,
+						},
+						texture = "art\\ui\\textures\\textures_fe\\nav_arrow",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.10000,
+				0.07000,
+			},
+		},
+		 
+		{
+			type = "ButtonStyle",
+			name = "backButton_phone",
+			buttonType = "ClickOnRelease",
+			Presentation =  
+			{
+				Art =  
+				{
+					 
+					{
+						type = "Graphic",
+						nameID = "bg_hover",
+						ID = 3704171,
+						texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+						shadermode = 0,
+						states =  
+						{
+							"Hover",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "bg",
+						ID = 3704172,
+						texture = "art\\ui\\textures\\textures_fe\\nav_button",
+						shadermode = 0,
+						states =  
+						{
+							"Normal",
+							"Disabled",
+							"Active",
+						},
+					},
+					 
+					{
+						type = "Graphic",
+						nameID = "arrow",
+						shadermode = 0,
+						position =  
+						{
+							0.20000,
+							0,
+						},
+						ID = 3704173,
+						size =  
+						{
+							0.60000,
+							1,
+						},
+						texture = "art\\ui\\textures\\textures_fe\\nav_arrow",
+						states =  
+						{
+							"Normal",
+							"Active",
+							"Hover",
+							"Disabled",
+						},
+					},
+				},
+			},
+			size =  
+			{
+				0.09600,
+				0.09300,
 			},
 		},
 	},

@@ -88,10 +88,10 @@ def roundRange(_min, _max):
 def datFileHeader(name, limits):
 	# Dat file boiler plate
 	header = '/' * 69 + '\n'
-	header += "// Generated with CLUIE\n\n"
-	header += f"filerange {limits[0]} {limits[1]}\n\n"
+	header += '// Generated with CLUIE\n\n'
+	header += f'filerange {limits[0]} {limits[1]}\n\n'
 	header += '/' * 69 + '\n' # nice
-	header += f"// UI Screen: {name}\n\n"
+	header += f'// UI Screen: {name}\n\n'
 	return header
 
 
