@@ -6,7 +6,7 @@ import pandas as pd
 
 def lNum(i): return i + 1 # Convert line index to line number
 
-def GenerateDatFile(screen, locFile=None, outPath=None):
+def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 	strings = None
 	if locFile:
 		# TODO: Deal with bad lines
@@ -20,7 +20,7 @@ def GenerateDatFile(screen, locFile=None, outPath=None):
 
 
 	# Process the screen file
-	IDs, newStrings = getStringIDs(screen, strings)
+	IDs, newStrings = getStringIDs(screen, strings, fixScreen)
 	IDs, limits = getRange(IDs)
 
 	name = os.path.splitext(os.path.basename(args.path))[0]
@@ -50,7 +50,7 @@ def GenerateDatFile(screen, locFile=None, outPath=None):
 		file.write("rangeend\n")
 
 
-def getStringIDs(screen, strings=None):
+def getStringIDs(screen, strings=None, fixScreen=False):
 	textEntry = re.compile(r'(\s*)text = "(.+)"')
 	stringID = re.compile(r'\$(\d+)')
 
@@ -67,28 +67,35 @@ def getStringIDs(screen, strings=None):
 				# This can cause issues when using UI editor (I think)
 				print(f'[Warning] String literal in text entry on line {lNum(i)}: {textMatch[0].strip()}')
 
-				if strings is not None:
-					if textMatch[2] in strings['String'].values:
-						# This horrible looking line simply gets the index of the first occurrence
-						# of textMatch[2] (i.e. the text that's in-between " & ") in the 'strings' DataFrame
-						newID = strings.index.values[strings['String'] == textMatch[2]][0]
+				if fixScreen:
+					if strings is not None:
+						if textMatch[2] in strings['String'].values:
+							# This horrible looking line simply gets the index of the first occurrence
+							# of textMatch[2] (i.e. the text that's in-between " & ") in the 'strings' DataFrame
+							newID = strings.index.values[strings['String'] == textMatch[2]][0]
 
-						# Replace the string with an existing string ID
-						lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', line)
-
-						ids.append(int(newID))
-					else:
-						# Make a note of the string so that we can add it to the end of the dat file
-						newStrings.append((i, textMatch[2]))
+							print(f'Substituting "{textMatch[2]}" with ${newID}')
+							# Replace the string with an existing string ID
+							lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', line)
+							ids.append(int(newID))
+						else:
+							# Make a note of the string so that we can add it to the end of the dat file
+							newStrings.append((i, textMatch[2]))
 
 	if newStrings:
 		newID = max(ids)
 		for i, string in newStrings:
 			# Generate an ID for the new string
 			newID += 1
-			lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', line)
+			lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', lines[i])
 			ids.append(int(newID))
 
+			print(f'Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
+
+
+	if fixScreen:
+		with open(screen, 'w') as file:
+			file.writelines(lines)
 
 	return ids, newStrings
 
@@ -136,6 +143,11 @@ if __name__ == "__main__":
 						help='File containing original strings',
 						metavar='locFile')
 
+	parser.add_argument('--fix', '--auto-fix',
+						choices=[True, False],
+						default=True,
+						help='Whether to auto-fix the errors in the screen file')
+
 	args = parser.parse_args()
 
 
@@ -156,7 +168,7 @@ if __name__ == "__main__":
 
 	if os.path.isfile(args.path):
 		if args.path.endswith('.screen'):
-			GenerateDatFile(args.path, args.locFile, args.dest)
+			GenerateDatFile(args.path, args.locFile, args.dest, args.fix)
 		else:
 			print('[Error] Not a screen file: {args.path}')
 
