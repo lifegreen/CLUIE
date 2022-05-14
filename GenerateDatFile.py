@@ -4,6 +4,7 @@ import argparse
 import re
 import pandas as pd
 
+def lNum(i): return i + 1 # Convert line index to line number
 
 def GenerateDatFile(screen, locFile=None, outPath=None):
 	strings = None
@@ -64,7 +65,7 @@ def getStringIDs(screen, strings=None):
 				ids.append(int(idMatch[1]))
 			else:
 				# This can cause issues when using UI editor (I think)
-				print(f'[Warning] String literal in text entry on line {i}: {textMatch[0].strip()}')
+				print(f'[Warning] String literal in text entry on line {lNum(i)}: {textMatch[0].strip()}')
 
 				if strings is not None:
 					if textMatch[2] in strings['String'].values:
