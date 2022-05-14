@@ -141,7 +141,7 @@ if __name__ == "__main__":
 
 	# Validate parameters
 	if args.dest and not os.path.isdir(args.dest):
-		print(f"[Error] Is not a directory: {args.dest}")
+		print(f"[Error] Not a directory: {args.dest}")
 		sys.exit()
 
 	if args.locFile:
@@ -155,7 +155,10 @@ if __name__ == "__main__":
 
 
 	if os.path.isfile(args.path):
-		GenerateDatFile(args.path, args.locFile, args.dest)
+		if args.path.endswith('.screen'):
+			GenerateDatFile(args.path, args.locFile, args.dest)
+		else:
+			print('[Error] Not a screen file: {args.path}')
 
 	elif os.path.isdir(args.path):
 		print('DIR')
