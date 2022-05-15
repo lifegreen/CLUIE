@@ -147,9 +147,8 @@ class Selection:
 	def subSelect(self, rule):
 		sub = []
 		for ref in self.items:
-			item = ref()
-			if rule(item):
-				sub.append(item)
+			if rule(ref()):
+				sub.append(ref)
 		return Selection(sub)
 
 	# Remove items which DO NOT follow the rule
@@ -165,9 +164,10 @@ class Selection:
 		return Selection(removed)
 
 	def append(self, item):
-		if type(item) is weakref:
+		if type(item) is weakref.ReferenceType:
 			ref = item
 		else:
+			print(type(item))
 			ref = weakref.ref(item)
 
 		if isinstance(ref(), List):
