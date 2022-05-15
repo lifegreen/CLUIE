@@ -144,7 +144,8 @@ class List():
 		if DEBUG and CCALL: print(f"New List @{lNum(start)}")
 
 		if not (match := listPattern.match(''.join(lines[start:start+2]))):
-			printLine(start, ''.join(lines[start:start+2]))
+			printLine(start,   lines[start])
+			printLine(start+1, lines[start+1])
 			raise Exception("Invalid list starting line")
 
 		self.key 		= match[1]
@@ -530,9 +531,9 @@ class Widget(List):
 		if DEBUG and CCALL: print(f"New Widget @{lNum(start)}")
 
 		if not (match := widgetPattern.match(''.join(lines[start:start+2]))):
-			printConsecLine(start, ''.join(lines[start:start+2]))
-			errMsg = f"Invalid widget starting line:{start}"
-			raise Exception(errMsg)
+			printLine(start, lines[start])
+			printLine(start+1, lines[start+1])
+			raise Exception('Invalid widget starting line')
 
 		self.start 		= start
 		self.end 		= findMatchingBrace(lines, start)
