@@ -23,19 +23,20 @@ CCALL = 0	# Print names of classes when they are being created
 number 	= r'(-?\d+(\.\d\d\d\d\d)?)'
 string 	= r'"?([ !#-~]*)"?' # Any printable char except double quotes
 
-key 	= r'(\w+) = '
-brace 	= r'\t*({)\n'
+start	= r'^\t*' # Leading white space
+key		= r'(\w+) = '
+brace	= r'^\t*{\n'
 
 # Single-line
-numberPattern = re.compile(r'^\t*' + key + number + ',\n')
-stringPattern = re.compile(r'^\t*' + key + string + ',\n')
+numberPattern = re.compile(start + key + number + ',\n')
+stringPattern = re.compile(start + key + string + ',\n')
 
-numEntryPattern = re.compile(r'^\t*' + number + ',\n')
-strEntryPattern = re.compile(r'^\t*' + string + ',\n')
+numEntryPattern = re.compile(start + number + ',\n')
+strEntryPattern = re.compile(start + string + ',\n')
 
 # Two-line
-listPattern   = re.compile(r'^\t*(\w+) =\s*\n\t*({)\n')
-widgetPattern = re.compile(r'^\t*( \n)\t*({)\n')
+listPattern   = re.compile(r'(?m)' + start + key + '( \n)' + brace)
+widgetPattern = re.compile(r'(?m)' + start +       '( \n)' + brace)
 
 #									GLOBALS
 
