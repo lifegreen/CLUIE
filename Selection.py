@@ -122,6 +122,28 @@ class Selection:
 		[operation(item) for item in self]
 
 
+	def check(self, rule, cond, true=[], false=[]):
+		if cond != "any" and cond != "all":
+			print(f"[Error] Invalid argument '{cond}'")
+			return
+
+		if len(true) or len(false):
+			print("[Warning] The passed in containers are not empty")
+
+		for item in self:
+			# Check for match
+			if rule(item):	true.append(weakref.ref(item))
+			else:			false.append(weakref.ref(item))
+
+		tCount = len(true)
+		fCount = len(false)
+
+		print(f"{tCount}/{tCount+fCount} follow the rule")
+
+		if cond == "any":	return     bool(tCount)
+		else:				return not bool(fCount)
+
+
 	def subSelect(self, rule):
 		sub = []
 		for ref in self.items:
@@ -141,6 +163,17 @@ class Selection:
 
 		self.items 	= passed
 		return Selection(removed)
+
+	def append(self, item):
+		if type(item) is weakref:
+			ref = item
+		else:
+			ref = weakref.ref(item)
+
+		if isinstance(ref(), List):
+			self.items.append(ref)
+		else:
+			print("[Error] Can only append List subclasses")
 
 	# Add items which follow the rule
 	def extend(self, selection=None, rule=None, root=None):
