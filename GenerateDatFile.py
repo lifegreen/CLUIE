@@ -24,7 +24,7 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 	IDs, newStrings = getStringIDs(screen, strings, fixScreen)
 	IDs, limits = getRange(IDs)
 
-	name = os.path.splitext(os.path.basename(args.path))[0]
+	name = os.path.splitext(os.path.basename(screen))[0]
 	path = f"Text.UI.{name}.dat"
 
 	# Output the dat file in the current directory if no output path is specified
