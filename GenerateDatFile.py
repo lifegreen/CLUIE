@@ -138,8 +138,9 @@ def datFileHeader(name, limits):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='Generate .dat file (for UI editor) from a .screen file')
 
-	parser.add_argument('path',
-						help='Path to the screen file')
+	parser.add_argument('paths',
+						nargs='+',
+						help='Path to the screen file(s)')
 
 	parser.add_argument('-d', '--dest',
 						help='Destination for the .dat file',
@@ -171,19 +172,18 @@ if __name__ == "__main__":
 			print(f'[Error] Not a localisation (.ucs) file: {args.locFile}')
 			sys.exit()
 
+	for path in args.paths:
+		if os.path.isfile(path):
+			if path.endswith('.screen'):
+				GenerateDatFile(path, args.locFile, args.dest, args.fix)
+			else:
+				print('[Error] Not a screen file: {args.path}')
 
-	if os.path.isfile(args.path):
-		if args.path.endswith('.screen'):
-			GenerateDatFile(args.path, args.locFile, args.dest, args.fix)
+		elif os.path.isdir(path):
+			print('DIR')
+
 		else:
-			print('[Error] Not a screen file: {args.path}')
-
-	elif os.path.isdir(args.path):
-		print('DIR')
-
-	else:
-	    print('The path specified does not exist')
-	    sys.exit()
+			print('[Error] The path specified does not exist')
 
 
 
