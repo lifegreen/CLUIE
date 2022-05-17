@@ -59,6 +59,7 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 
 	ids = []
 	newStrings = []
+	needsFixing = False
 	for i, line in enumerate(lines):
 		if textMatch := textEntry.match(line):
 			if idMatch := stringID.match(textMatch[2]):
@@ -69,6 +70,7 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 
 				if fixScreen:
 					if strings is not None:
+						needsFixing = True
 						if textMatch[2] in strings['String'].values:
 							# This horrible looking line simply gets the index of the first occurrence
 							# of textMatch[2] (i.e. the text that's in-between " & ") in the 'strings' DataFrame
@@ -93,7 +95,7 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 			print(f'Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
 
 
-	if fixScreen:
+	if fixScreen and needsFixing:
 		with open(screen, 'w') as file:
 			file.writelines(lines)
 
