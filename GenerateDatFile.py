@@ -20,6 +20,7 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 
 
 	# Process the screen file
+	print(f'\n[INFO] Processing "{screen}"')
 	IDs, newStrings = getStringIDs(screen, strings, fixScreen)
 	IDs, limits = getRange(IDs)
 
@@ -48,6 +49,8 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 				file.write(f"{ID}\t${ID}\n")
 
 		file.write("rangeend\n")
+
+	print(f'[INFO] Generated "{path}"')
 
 
 def getStringIDs(screen, strings=None, fixScreen=False):
@@ -96,6 +99,7 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 
 
 	if fixScreen and needsFixing:
+		print(f'[INFO] Fixing "{screen}"')
 		with open(screen, 'w') as file:
 			file.writelines(lines)
 
