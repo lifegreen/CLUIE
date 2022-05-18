@@ -159,24 +159,24 @@ def getScreenFiles(paths):
 
 
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description='Generate .dat file (for UI editor) from a .screen file')
+	parser = argparse.ArgumentParser(description='Generates .dat file (for UI editor) from a .screen file. Also detects and fixes invalid strings in screen files.')
 
 	parser.add_argument('paths',
 						nargs='+',
 						help='Path(s) to the screen files or directory(ies) containing screen files')
 
 	parser.add_argument('-d', '--dest',
-						help='Destination for the .dat file',
+						help='Output directory for the .dat file',
 						metavar='outPath')
 
 	parser.add_argument('-l', '--locFile',
-						help='File containing original strings',
+						help='Localisation file containing original strings',
 						metavar='locFile')
 
 	parser.add_argument('--fix', '--auto-fix',
 						choices=[True, False],
 						default=True,
-						help='Whether to auto-fix the errors in the screen file')
+						help='Whether to fix the errors in the screen file (overrides original screen file)')
 
 	args = parser.parse_args()
 
