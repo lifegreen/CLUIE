@@ -135,12 +135,35 @@ def datFileHeader(name, limits):
 
 
 
+def getScreenFiles(paths):
+	# Get all valid screen file paths from command line arguments
+	screens = []
+	for path in paths:
+		if os.path.isfile(path):
+			if path.endswith('.screen'):
+				screens.append(path)
+			else:
+				print(f'[Error] Not a screen file: {path}')
+
+		elif os.path.isdir(path):
+			for entry in os.scandir(path):
+				if entry.name.endswith('.screen') and entry.is_file():
+					screens.append(entry.path)
+
+		else:
+			print(f'[Error] The path does not exist: {path}')
+
+	return screens
+
+
+
+
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='Generate .dat file (for UI editor) from a .screen file')
 
 	parser.add_argument('paths',
 						nargs='+',
-						help='Path to the screen file(s)')
+						help='Path(s) to the screen files or directory(ies) containing screen files')
 
 	parser.add_argument('-d', '--dest',
 						help='Destination for the .dat file',
@@ -172,18 +195,7 @@ if __name__ == "__main__":
 			print(f'[Error] Not a localisation (.ucs) file: {args.locFile}')
 			sys.exit()
 
-	for path in args.paths:
-		if os.path.isfile(path):
-			if path.endswith('.screen'):
-				GenerateDatFile(path, args.locFile, args.dest, args.fix)
-			else:
-				print('[Error] Not a screen file: {args.path}')
-
-		elif os.path.isdir(path):
-			print('DIR')
-
-		else:
-			print('[Error] The path specified does not exist')
-
+	for screen in getScreenFiles(args.paths):
+		GenerateDatFile(screen, args.locFile, args.dest, args.fix)
 
 
