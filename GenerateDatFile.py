@@ -183,8 +183,12 @@ if __name__ == "__main__":
 
 	# Validate parameters
 	if args.dest and not os.path.isdir(args.dest):
-		print(f"[Error] Not a directory: {args.dest}")
-		sys.exit()
+		if os.path.exists(os.path.dirname(args.dest)):
+			# Create a directory if it doesn't exist (but the rest of the path does)
+			os.mkdir(args.dest)
+		else:
+			print(f'[Error] Path does not exist:\n"{args.dest}"')
+			sys.exit()
 
 	if args.locFile:
 		if not os.path.isfile(args.locFile):
