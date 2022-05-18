@@ -17,6 +17,8 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 								names=['ID', 'String'],
 								on_bad_lines='skip')
 
+		assert strings is not None
+
 
 	# Process the screen file
 	print(f'\n[INFO] Processing: "{screen}"')
@@ -71,25 +73,24 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 				IDs.append(int(idMatch[1]))
 			else:
 				# This can cause issues when using UI editor (I think)
-				print(f'[Warning] String literal in text entry on line {lNum(i)}: {textMatch[0].strip()}')
+				print(f'[WARNING] String literal in text entry on line {lNum(i)}: {textMatch[0].strip()}')
+				needsFixing = True
 
 				if fixScreen:
-					if strings is not None:
-						needsFixing = True
+					if (strings is not None) and (textMatch[2] in strings['String'].values):
+						# This horrible looking line simply gets the index of the first occurrence
+						# of textMatch[2] (i.e. the text that's in-between " & ") in the 'strings' DataFrame
+						newID = strings.index.values[strings['String'] == textMatch[2]][0]
 
-						if textMatch[2] in strings['String'].values:
-							# This horrible looking line simply gets the index of the first occurrence
-							# of textMatch[2] (i.e. the text that's in-between " & ") in the 'strings' DataFrame
-							newID = strings.index.values[strings['String'] == textMatch[2]][0]
+						print(f'Substituting "{textMatch[2]}" with ${newID}')
 
-							print(f'Substituting "{textMatch[2]}" with ${newID}')
+						# Replace the string with an existing string ID
+						lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', line)
+						IDs.append(int(newID))
 
-							# Replace the string with an existing string ID
-							lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', line)
-							IDs.append(int(newID))
-						else:
-							# Make a note of the string so that we can add it to the end of the dat file
-							newStrings.append((i, textMatch[2]))
+					else:
+						# Make a note of the string so that we can add it to the end of the dat file
+						newStrings.append((i, textMatch[2]))
 
 	if newStrings:
 		newID = max(IDs)
@@ -102,9 +103,12 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 			print(f'Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
 
 
-	if fixScreen and needsFixing:
-		print(f'[INFO] Overwriting: "{screen}"')
-		with open(screen, 'w') as file: file.writelines(lines)
+	if needsFixing:
+		if fixScreen:
+			print(f'[INFO] Overwriting: "{screen}"')
+			with open(screen, 'w') as file: file.writelines(lines)
+		else:
+			print('[INFO] Errors detected in the screen file. You can fix them by passing "--fix" to this script.')
 
 
 
@@ -148,7 +152,7 @@ def getScreenFiles(paths):
 			if path.endswith('.screen'):
 				screens.append(path)
 			else:
-				print(f'[Error] Not a screen file: "{path}"')
+				print(f'[ERROR] Not a screen file: "{path}"')
 
 		elif os.path.isdir(path):
 			for entry in os.scandir(path):
@@ -156,7 +160,7 @@ def getScreenFiles(paths):
 					screens.append(entry.path)
 
 		else:
-			print(f'[Error] The path does not exist: "{path}"')
+			print(f'[ERROR] The path does not exist: "{path}"')
 
 	return screens
 
@@ -190,17 +194,22 @@ if __name__ == '__main__':
 			# Create a directory if it doesn't exist (but the rest of the path does)
 			os.mkdir(args.dest)
 		else:
-			print(f'[Error] Path does not exist: "{args.dest}"')
+			print(f'[ERROR] Path does not exist: "{args.dest}"')
 			sys.exit()
 
 	if args.locFile:
 		if not os.path.isfile(args.locFile):
-			print(f'[Error] File does not exist: "{args.locFile}"')
+			print(f'[ERROR] File does not exist: "{args.locFile}"')
 			sys.exit()
 
 		elif not args.locFile.endswith('.ucs'):
-			print(f'[Error] Not a localisation (.ucs) file: "{args.locFile}"')
+			print(f'[ERROR] Not a localisation (.ucs) file: "{args.locFile}"')
 			sys.exit()
+
+	if args.fix and not args.locFile:
+			print(f'[WARNING] Fixing screens without localisation file is not recommended (May result in the game displaying different string to the UI editor).')
+			sys.exit()
+
 
 	for screen in getScreenFiles(args.paths):
 		GenerateDatFile(screen, args.locFile, args.dest, args.fix)
