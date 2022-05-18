@@ -178,9 +178,8 @@ if __name__ == '__main__':
 						metavar='locFile')
 
 	parser.add_argument('--fix', '--auto-fix',
-						choices=[True, False],
-						default=True,
-						help='Whether to fix the errors in the screen file (overrides original screen file)')
+						action=argparse.BooleanOptionalAction,
+						help='Fix the errors in the screen file (overrides original screen file)')
 
 	args = parser.parse_args()
 
