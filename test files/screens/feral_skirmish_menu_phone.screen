@@ -3558,7 +3558,7 @@ Screen =
 							{
 								visible = false,
 								type = "TextLabel",
-								text = "600795",
+								text = "$600795",
 								HitArea =  
 								{
 									 

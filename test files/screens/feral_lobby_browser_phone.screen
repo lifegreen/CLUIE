@@ -1,0 +1,6053 @@
+Screen =  
+{
+	version = 4,
+	native_aspect = 1.77778,
+	TooltipWidgets =  
+	{
+		type = "Group",
+		name = "grp_tooltips",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				visible = false,
+				type = "Group",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				position =  
+				{
+					0.00965,
+					0.01457,
+				},
+				Children =  
+				{
+					 
+					{
+						type = "TextLabel",
+						name = "TooltipLabel",
+						position =  
+						{
+							0.00019,
+							0.00025,
+						},
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						text = "",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									multiline = false,
+									ID = 197572,
+									horzAlign = "Centre",
+									fontname = "trebuchet ms bold 10",
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.09762,
+							0.01600,
+						},
+					},
+				},
+				name = "TooltipBase",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Rectangle",
+							shadermode = 0,
+							colour =  
+							{
+								0,
+								0,
+								0,
+								200,
+							},
+							ID = 197534,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+						 
+						{
+							type = "Rectangle",
+							colour =  
+							{
+								255,
+								255,
+								255,
+								150,
+							},
+							shadermode = 0,
+							rectangleType = "Border",
+							ID = 197535,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.09800,
+					0.01650,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+	Widgets =  
+	{
+		type = "Group",
+		name = "grp_screen",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				type = "Group",
+				Children =  
+				{
+					 
+					{
+						type = "Button",
+						text = "$605039",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "SwitchInfo_btn",
+						tooltip_name = "TooltipLabel",
+						position =  
+						{
+							0.57775,
+							0.72456,
+						},
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "bttn_active",
+									ID = 1306048,
+									texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "bttn_normal",
+									colour =  
+									{
+										255,
+										255,
+										255,
+										220,
+									},
+									ID = 1306050,
+									texture = "art\\ui\\textures\\textures_fe\\nav_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									nameID = "text",
+									shadermode = 0,
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									multiline = false,
+									horzAlign = "Centre",
+									position =  
+									{
+										0,
+										-0.03049,
+									},
+									ID = 1306058,
+									fontname = "trebuchet ms regular 20",
+									textColourBottom =  
+									{
+										255,
+										255,
+										255,
+										255,
+									},
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "UI\\FRONTEND\\UI_13",
+									event = "OnHover",
+								},
+								 
+								{
+									sample = "UI\\FRONTEND\\UI_07",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.18000,
+							0.09300,
+						},
+					},
+					 
+					{
+						type = "Group",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "GamelList_grp",
+						position =  
+						{
+							0.01264,
+							0.01826,
+						},
+						Children =  
+						{
+							 
+							{
+								type = "CustomListBox",
+								ItemTemplate =  
+								{
+									type = "CustomListBoxItem",
+									name = "itemTmplt_LANGameList",
+									position =  
+									{
+										0,
+										0,
+									},
+									Children =  
+									{
+										 
+										{
+											type = "Group",
+											Children =  
+											{
+												 
+												{
+													type = "ArtLabel",
+													style =  
+													{
+														"DefaultStyles",
+														"defStyleLabel",
+													},
+													position =  
+													{
+														0.02677,
+														0.00319,
+													},
+													HitArea =  
+													{
+													},
+													name = "ProgressPerf5",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\buttons_icons\\ping_5",
+																ID = 274185,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.00400,
+														0.02810,
+													},
+												},
+												 
+												{
+													type = "ArtLabel",
+													style =  
+													{
+														"DefaultStyles",
+														"defStyleLabel",
+													},
+													position =  
+													{
+														0.02124,
+														0.00319,
+													},
+													HitArea =  
+													{
+													},
+													name = "ProgressPerf4",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\buttons_icons\\ping_4",
+																ID = 274185,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.00400,
+														0.02810,
+													},
+												},
+												 
+												{
+													type = "ArtLabel",
+													style =  
+													{
+														"DefaultStyles",
+														"defStyleLabel",
+													},
+													position =  
+													{
+														0.01571,
+														0.00319,
+													},
+													HitArea =  
+													{
+													},
+													name = "ProgressPerf3",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\buttons_icons\\ping_3",
+																ID = 274185,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.00400,
+														0.02810,
+													},
+												},
+												 
+												{
+													type = "ArtLabel",
+													style =  
+													{
+														"DefaultStyles",
+														"defStyleLabel",
+													},
+													position =  
+													{
+														0.01017,
+														0.00319,
+													},
+													HitArea =  
+													{
+													},
+													name = "ProgressPerf2",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\buttons_icons\\ping_2",
+																ID = 274185,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.00400,
+														0.02810,
+													},
+												},
+												 
+												{
+													type = "ArtLabel",
+													style =  
+													{
+														"DefaultStyles",
+														"defStyleLabel",
+													},
+													position =  
+													{
+														0.00464,
+														0.00319,
+													},
+													HitArea =  
+													{
+													},
+													name = "ProgressPerf1",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\buttons_icons\\ping_1",
+																ID = 274185,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.00400,
+														0.02810,
+													},
+												},
+											},
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "grpProgressIconsPerf",
+											position =  
+											{
+												0.45149,
+												0.01450,
+											},
+											yAlignToParent = "Middle",
+											style =  
+											{
+												"DefaultStyles",
+												"defStyleGroup",
+											},
+											Presentation =  
+											{
+											},
+											size =  
+											{
+												0.03411,
+												0.03100,
+											},
+										},
+										 
+										{
+											type = "ArtLabel",
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "LockIcon",
+											position =  
+											{
+												0.33000,
+												0.00025,
+											},
+											yAlignToParent = "Middle",
+											style =  
+											{
+												"DefaultStyles",
+												"defStyleLabel",
+											},
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Graphic",
+														nameID = "lock",
+														shadermode = 0,
+														position =  
+														{
+															0.18500,
+															0.20000,
+														},
+														ID = 2211721,
+														size =  
+														{
+															0.63000,
+															0.60000,
+														},
+														texture = "art\\ui\\textures\\chat_icons\\padlock_locked",
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.05000,
+												0.05950,
+											},
+										},
+										 
+										{
+											type = "ArtLabel",
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "LockIconGame",
+											position =  
+											{
+												0.33000,
+												0.00025,
+											},
+											yAlignToParent = "Middle",
+											style =  
+											{
+												"DefaultStyles",
+												"defStyleLabel",
+											},
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Graphic",
+														nameID = "lock",
+														shadermode = 0,
+														colour =  
+														{
+															255,
+															50,
+															10,
+															255,
+														},
+														position =  
+														{
+															0.18500,
+															0.20000,
+														},
+														ID = 2211721,
+														size =  
+														{
+															0.63000,
+															0.60000,
+														},
+														texture = "art\\ui\\textures\\chat_icons\\padlock_locked",
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.05000,
+												0.05950,
+											},
+										},
+										 
+										{
+											type = "Group",
+											Children =  
+											{
+												 
+												{
+													type = "TextLabel",
+													text = "$60944",
+													HitArea =  
+													{
+													},
+													name = "MaxNumPlayers",
+													position =  
+													{
+														0.02913,
+														0.00754,
+													},
+													yAlignToParent = "Middle",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Text",
+																textColourBottom =  
+																{
+																	255,
+																	255,
+																	255,
+																	200,
+																},
+																shadermode = 0,
+																textColourTop =  
+																{
+																	255,
+																	255,
+																	255,
+																	200,
+																},
+																multiline = false,
+																ID = 759772,
+																fontname = "trebuchet ms regular 16",
+																dropShadow = true,
+																states =  
+																{
+																	"Normal",
+																	"Disabled",
+																	"Active",
+																	"Hover",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.01718,
+														0.04000,
+													},
+												},
+												 
+												{
+													type = "TextLabel",
+													text = "$605001",
+													HitArea =  
+													{
+													},
+													name = "slash",
+													position =  
+													{
+														0.01707,
+														0.00754,
+													},
+													yAlignToParent = "Middle",
+													xAlignToParent = "Middle",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Text",
+																textColourBottom =  
+																{
+																	255,
+																	255,
+																	255,
+																	200,
+																},
+																shadermode = 0,
+																textColourTop =  
+																{
+																	255,
+																	255,
+																	255,
+																	200,
+																},
+																multiline = false,
+																horzAlign = "Centre",
+																ID = 759772,
+																fontname = "trebuchet ms regular 16",
+																dropShadow = true,
+																states =  
+																{
+																	"Normal",
+																	"Disabled",
+																	"Active",
+																	"Hover",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.01718,
+														0.04000,
+													},
+												},
+												 
+												{
+													type = "TextLabel",
+													text = "$60941",
+													HitArea =  
+													{
+													},
+													name = "NumPlayers",
+													position =  
+													{
+														0.00410,
+														0.00754,
+													},
+													yAlignToParent = "Middle",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Text",
+																textColourBottom =  
+																{
+																	255,
+																	255,
+																	255,
+																	200,
+																},
+																shadermode = 0,
+																textColourTop =  
+																{
+																	255,
+																	255,
+																	255,
+																	200,
+																},
+																multiline = false,
+																horzAlign = "Right",
+																ID = 759772,
+																fontname = "trebuchet ms regular 16",
+																dropShadow = true,
+																states =  
+																{
+																	"Normal",
+																	"Disabled",
+																	"Active",
+																	"Hover",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.01718,
+														0.04000,
+													},
+												},
+											},
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "NumPlayers_grp",
+											position =  
+											{
+												0.29251,
+												0.00246,
+											},
+											yAlignToParent = "Middle",
+											style =  
+											{
+												"DefaultStyles",
+												"defStyleGroup",
+											},
+											Presentation =  
+											{
+											},
+											size =  
+											{
+												0.05131,
+												0.05509,
+											},
+										},
+										 
+										{
+											type = "TextLabel",
+											text = "$500302",
+											HitArea =  
+											{
+											},
+											name = "MapName",
+											position =  
+											{
+												0.14017,
+												0.01000,
+											},
+											yAlignToParent = "Middle",
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Text",
+														textColourBottom =  
+														{
+															255,
+															255,
+															255,
+															200,
+														},
+														shadermode = 0,
+														textColourTop =  
+														{
+															255,
+															255,
+															255,
+															200,
+														},
+														ID = 759772,
+														fontname = "trebuchet ms regular 16",
+														dropShadow = true,
+														states =  
+														{
+															"Normal",
+															"Active",
+														},
+													},
+													 
+													{
+														type = "Text",
+														textColourBottom =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														shadermode = 0,
+														textColourTop =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														ID = 759773,
+														fontname = "trebuchet ms bold 18",
+														dropShadow = true,
+														states =  
+														{
+															"Hover",
+														},
+													},
+													 
+													{
+														type = "Text",
+														textColourBottom =  
+														{
+															255,
+															255,
+															255,
+															65,
+														},
+														shadermode = 0,
+														textColourTop =  
+														{
+															255,
+															255,
+															255,
+															65,
+														},
+														multiline = false,
+														ID = 759774,
+														fontname = "trebuchet ms bold 18",
+														dropShadow = true,
+														states =  
+														{
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.13356,
+												0.04000,
+											},
+										},
+										 
+										{
+											type = "TextLabel",
+											text = "$500301",
+											HitArea =  
+											{
+											},
+											name = "GameName",
+											position =  
+											{
+												0.00500,
+												0.01000,
+											},
+											yAlignToParent = "Middle",
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Text",
+														textColourBottom =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														shadermode = 0,
+														textColourTop =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														multiline = false,
+														ID = 759773,
+														fontname = "trebuchet ms regular 18",
+														dropShadow = true,
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+														},
+													},
+													 
+													{
+														type = "Text",
+														textColourBottom =  
+														{
+															255,
+															255,
+															255,
+															65,
+														},
+														shadermode = 0,
+														textColourTop =  
+														{
+															255,
+															255,
+															255,
+															65,
+														},
+														multiline = false,
+														ID = 759774,
+														fontname = "trebuchet ms bold 18",
+														dropShadow = true,
+														states =  
+														{
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.13356,
+												0.04000,
+											},
+										},
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									Presentation =  
+									{
+										Art =  
+										{
+											 
+											{
+												type = "Graphic",
+												nameID = "selected",
+												ID = 3362305,
+												texture = "art\\ui\\textures\\textures_fe\\medals_selected",
+												shadermode = 0,
+												states =  
+												{
+													"Checked",
+													"CheckedDisabled",
+													"CheckedActive",
+													"CheckedHover",
+												},
+											},
+											 
+											{
+												type = "Graphic",
+												nameID = "unselected",
+												ID = 3362307,
+												texture = "art\\ui\\textures\\textures_fe\\medals_unselected",
+												shadermode = 0,
+												states =  
+												{
+													"Normal",
+													"Active",
+													"Hover",
+													"Disabled",
+												},
+											},
+											 
+											{
+												type = "Text",
+												textColourBottom =  
+												{
+													255,
+													255,
+													255,
+													192,
+												},
+												shadermode = 0,
+												textColourTop =  
+												{
+													255,
+													255,
+													255,
+													192,
+												},
+												ID = 532624,
+												fontname = "trebuchet ms regular 16",
+												dropShadow = true,
+												states =  
+												{
+													"Normal",
+													"Active",
+													"Disabled",
+												},
+											},
+											 
+											{
+												type = "Text",
+												textColourBottom =  
+												{
+													255,
+													255,
+													255,
+													255,
+												},
+												shadermode = 0,
+												textColourTop =  
+												{
+													255,
+													255,
+													255,
+													255,
+												},
+												ID = 532625,
+												fontname = "trebuchet ms regular 16",
+												dropShadow = true,
+												states =  
+												{
+													"Hover",
+													"Checked",
+													"CheckedActive",
+													"CheckedHover",
+													"CheckedDisabled",
+												},
+											},
+										},
+									},
+									size =  
+									{
+										0.49958,
+										0.06000,
+									},
+								},
+								ItemsGroup =  
+								{
+									type = "Group",
+									name = "items_LANGameList",
+									position =  
+									{
+										0,
+										0,
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									Presentation =  
+									{
+									},
+									size =  
+									{
+										0.49958,
+										0.60500,
+									},
+								},
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "LANGameList",
+								position =  
+								{
+									0.02021,
+									0.09500,
+								},
+								ScrollBar =  
+								{
+									visible = false,
+									type = "ScrollBar",
+									range =  
+									{
+										0,
+										0.62938,
+									},
+									ButtonDecrement =  
+									{
+										type = "Button",
+										buttonType = "ClickOnPress",
+										text = "",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnDec_scrlBar_LANGameList",
+										position =  
+										{
+											0,
+											0,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_up",
+													ID = 3362211,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.02000,
+											0.02500,
+										},
+									},
+									ButtonTrack =  
+									{
+										type = "Button",
+										name = "btnTrk_scrlBar_LANGameList",
+										position =  
+										{
+											0,
+											0.02500,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_slider",
+													ID = 3362214,
+													states =  
+													{
+														"Normal",
+														"Disabled",
+														"Active",
+														"Hover",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.02000,
+											0,
+										},
+									},
+									HitArea =  
+									{
+										 
+										{
+											type = "Rectangle",
+											size =  
+											{
+												1,
+												1,
+											},
+											position =  
+											{
+												0,
+												0,
+											},
+										},
+									},
+									name = "scrlBar_LANGameList",
+									position =  
+									{
+										0.49958,
+										0,
+									},
+									stepSize = 0,
+									ButtonIncrement =  
+									{
+										type = "Button",
+										buttonType = "ClickOnPress",
+										text = "",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnInc_scrlBar_LANGameList",
+										position =  
+										{
+											0,
+											0.58000,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
+													ID = 3362205,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.02000,
+											0.02500,
+										},
+									},
+									Presentation =  
+									{
+										Art =  
+										{
+											 
+											{
+												type = "Graphic",
+												shadermode = 0,
+												texture = "art\\ui\\textures\\textures_fe\\scrollbar_background",
+												ID = 3362199,
+												states =  
+												{
+													"Normal",
+													"Active",
+													"Hover",
+													"Disabled",
+												},
+											},
+										},
+									},
+									size =  
+									{
+										0.02000,
+										0.60500,
+									},
+								},
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+								},
+								size =  
+								{
+									0.49958,
+									0.60500,
+								},
+							},
+							 
+							{
+								type = "Button",
+								text = "$605039",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "Filters_btn",
+								tooltip_name = "TooltipLabel",
+								position =  
+								{
+									0.13102,
+									0.70627,
+								},
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											nameID = "bttn_active",
+											ID = 1306048,
+											texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+											shadermode = 0,
+											states =  
+											{
+												"Active",
+											},
+										},
+										 
+										{
+											type = "Graphic",
+											nameID = "bttn_normal",
+											colour =  
+											{
+												255,
+												255,
+												255,
+												220,
+											},
+											ID = 1306050,
+											texture = "art\\ui\\textures\\textures_fe\\nav_button",
+											shadermode = 0,
+											states =  
+											{
+												"Normal",
+												"Disabled",
+												"Hover",
+											},
+										},
+										 
+										{
+											type = "Text",
+											nameID = "text",
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											multiline = false,
+											horzAlign = "Centre",
+											position =  
+											{
+												0,
+												-0.03049,
+											},
+											ID = 1306058,
+											fontname = "trebuchet ms regular 20",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											states =  
+											{
+												"Normal",
+												"Disabled",
+												"Active",
+												"Hover",
+											},
+										},
+									},
+									Sound =  
+									{
+										 
+										{
+											sample = "UI\\FRONTEND\\UI_13",
+											event = "OnHover",
+										},
+										 
+										{
+											sample = "UI\\FRONTEND\\UI_07",
+											event = "OnClick",
+										},
+									},
+								},
+								size =  
+								{
+									0.18000,
+									0.09300,
+								},
+							},
+							 
+							{
+								type = "Button",
+								text = "$613276",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "RefreshButton",
+								tooltip_name = "TooltipLabel",
+								position =  
+								{
+									0.34536,
+									0.70627,
+								},
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											nameID = "bttn_active",
+											ID = 1306048,
+											texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+											shadermode = 0,
+											states =  
+											{
+												"Active",
+											},
+										},
+										 
+										{
+											type = "Graphic",
+											nameID = "bttn_normal",
+											colour =  
+											{
+												255,
+												255,
+												255,
+												220,
+											},
+											ID = 1306050,
+											texture = "art\\ui\\textures\\textures_fe\\nav_button",
+											shadermode = 0,
+											states =  
+											{
+												"Normal",
+												"Disabled",
+												"Hover",
+											},
+										},
+										 
+										{
+											type = "Text",
+											nameID = "text",
+											shadermode = 0,
+											textColourTop =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											multiline = false,
+											horzAlign = "Centre",
+											position =  
+											{
+												0,
+												-0.03049,
+											},
+											ID = 1306058,
+											fontname = "trebuchet ms regular 20",
+											textColourBottom =  
+											{
+												255,
+												255,
+												255,
+												255,
+											},
+											states =  
+											{
+												"Normal",
+												"Disabled",
+												"Active",
+												"Hover",
+											},
+										},
+									},
+									Sound =  
+									{
+										 
+										{
+											sample = "UI\\FRONTEND\\UI_13",
+											event = "OnHover",
+										},
+										 
+										{
+											sample = "UI\\FRONTEND\\UI_07",
+											event = "OnClick",
+										},
+									},
+								},
+								size =  
+								{
+									0.18000,
+									0.09300,
+								},
+							},
+							 
+							{
+								type = "Group",
+								Children =  
+								{
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Click here to select Army",
+										text = "$600802",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "PerfHeader",
+										position =  
+										{
+											0.44621,
+											0,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Right",
+													fontname = "trebuchet ms bold 16",
+													ID = 805079,
+													size =  
+													{
+														0.95000,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.04796,
+											0.04500,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Click here to select Army",
+										text = "$22026",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "CtrlHeader",
+										position =  
+										{
+											0.38389,
+											0,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													multiline = false,
+													fontname = "trebuchet ms bold 16",
+													ID = 805079,
+													size =  
+													{
+														0.95000,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.04796,
+											0.04500,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Click here to select Army",
+										text = "$18504",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "NumPlayersHeader",
+										position =  
+										{
+											0.29551,
+											0.00267,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													multiline = false,
+													fontname = "trebuchet ms bold 16",
+													ID = 805079,
+													size =  
+													{
+														0.95000,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.09625,
+											0.04500,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Click here to select Army",
+										text = "$500302",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "MapNameHeader",
+										position =  
+										{
+											0.14284,
+											0.00003,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													multiline = false,
+													fontname = "trebuchet ms bold 16",
+													ID = 805079,
+													size =  
+													{
+														0.95000,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.15132,
+											0.04497,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Click here to select Army",
+										text = "$500301",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "GameNameHeader",
+										position =  
+										{
+											0.00871,
+											0.00031,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														240,
+														240,
+														240,
+														255,
+													},
+													multiline = false,
+													ID = 805079,
+													fontname = "trebuchet ms bold 16",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.12900,
+											0.04469,
+										},
+									},
+								},
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleGroup",
+								},
+								position =  
+								{
+									0.02000,
+									0.05000,
+								},
+								name = "Header_grp",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+								},
+								size =  
+								{
+									0.50000,
+									0.04500,
+								},
+							},
+							 
+							{
+								type = "TextLabel",
+								name = "GameListTitle_lbl",
+								position =  
+								{
+									0.01962,
+									0.00250,
+								},
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								text = "$13256",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												255,
+												204,
+												63,
+												200,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												238,
+												187,
+												60,
+												246,
+											},
+											multiline = false,
+											fontname = "trebuchet ms bold 24",
+											position =  
+											{
+												-0.00078,
+												0,
+											},
+											ID = 225294,
+											size =  
+											{
+												1.00078,
+												1,
+											},
+											dropShadow = true,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.24000,
+									0.04000,
+								},
+							},
+						},
+						style =  
+						{
+							"DefaultStyles",
+							"defStyleGroup",
+						},
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "List_bg",
+									shadermode = 0,
+									position =  
+									{
+										0.02235,
+										0.04709,
+									},
+									ID = 3362196,
+									size =  
+									{
+										0.95531,
+										0.84054,
+									},
+									texture = "art\\ui\\textures\\textures_fe\\medals_panel_left",
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.54000,
+							0.80300,
+						},
+					},
+					 
+					{
+						visible = false,
+						type = "Group",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"DefaultStyles",
+							"defStyleGroup",
+						},
+						position =  
+						{
+							0.56424,
+							0.02193,
+						},
+						Children =  
+						{
+							 
+							{
+								type = "Group",
+								Children =  
+								{
+									 
+									{
+										type = "ArtLabel",
+										style =  
+										{
+											"DefaultStyles",
+											"defStyleLabel",
+										},
+										position =  
+										{
+											0.15231,
+											0.18757,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "weatherBG_copy",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													nameID = "Graphic",
+													ID = 3357005,
+													texture = "art\\ui\\textures\\textures_fe\\dropdown_panel",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18338,
+											0.05839,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "lblOptionWeather_copy",
+										position =  
+										{
+											0.16237,
+											0.19548,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													ID = 2084033,
+													fontname = "trebuchet ms regular 12",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18393,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Select which atmosphere to use",
+										text = "Atmosphere",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "txtOptionWeather_copy",
+										position =  
+										{
+											0.01564,
+											0.19548,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													multiline = false,
+													ID = 2084032,
+													fontname = "trebuchet ms bold 14",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.14483,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "ArtLabel",
+										style =  
+										{
+											"DefaultStyles",
+											"defStyleLabel",
+										},
+										position =  
+										{
+											0.15231,
+											0.14246,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "option1BG_copy",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													nameID = "Graphic",
+													ID = 3357005,
+													texture = "art\\ui\\textures\\textures_fe\\dropdown_panel",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18338,
+											0.05839,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "lblOption1_copy",
+										position =  
+										{
+											0.16237,
+											0.15059,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													ID = 2084033,
+													fontname = "trebuchet ms regular 12",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18393,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										text = "Starting Location",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "txtOption1_copy",
+										tooltip_name = "TooltipLabel",
+										position =  
+										{
+											0.01564,
+											0.15059,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													multiline = false,
+													ID = 2084032,
+													fontname = "trebuchet ms bold 14",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.14483,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "ArtLabel",
+										style =  
+										{
+											"DefaultStyles",
+											"defStyleLabel",
+										},
+										position =  
+										{
+											0.15231,
+											0.09736,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "option0BG_copy",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													nameID = "Graphic",
+													ID = 3357005,
+													texture = "art\\ui\\textures\\textures_fe\\dropdown_panel",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18338,
+											0.05839,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "lblOption0_copy",
+										position =  
+										{
+											0.16237,
+											0.10570,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													ID = 2084031,
+													fontname = "trebuchet ms regular 12",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18393,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										text = "Starting Resources",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "txtOption0_copy",
+										tooltip_name = "TooltipLabel",
+										position =  
+										{
+											0.01564,
+											0.10570,
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													multiline = false,
+													ID = 2084030,
+													fontname = "trebuchet ms bold 14",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.14483,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "ArtLabel",
+										style =  
+										{
+											"DefaultStyles",
+											"defStyleLabel",
+										},
+										position =  
+										{
+											0.15231,
+											0.05226,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "option2BG_copy",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													nameID = "Graphic",
+													ID = 3357005,
+													texture = "art\\ui\\textures\\textures_fe\\dropdown_panel",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18338,
+											0.05839,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "lblOption2_copy",
+										position =  
+										{
+											0.16237,
+											0.06081,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														220,
+														220,
+														220,
+														255,
+													},
+													ID = 2084035,
+													fontname = "trebuchet ms regular 12",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18393,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Set the maximum victory points for your match",
+										text = "Victory Ticker",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "txtOption2_copy",
+										position =  
+										{
+											0.01564,
+											0.06081,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													multiline = false,
+													ID = 2084034,
+													fontname = "trebuchet ms bold 14",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.14483,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "ArtLabel",
+										style =  
+										{
+											"DefaultStyles",
+											"defStyleLabel",
+										},
+										position =  
+										{
+											0.15231,
+											0.00715,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "WinConditionBG_copy",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													nameID = "Graphic",
+													ID = 3357005,
+													texture = "art\\ui\\textures\\textures_fe\\dropdown_panel",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.18338,
+											0.05839,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "lblWinCondition_copy",
+										position =  
+										{
+											0.16237,
+											0.01591,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														200,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														200,
+													},
+													ID = 555092,
+													fontname = "trebuchet ms bold 30",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.15515,
+											0.04000,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										tooltip_text = "Set the win condition for your match",
+										text = "Win Condition",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "txtWinCondition_copy",
+										position =  
+										{
+											0.01564,
+											0.01591,
+										},
+										tooltip_name = "TooltipLabel",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														240,
+														180,
+														255,
+													},
+													multiline = false,
+													ID = 2084036,
+													fontname = "trebuchet ms bold 14",
+													dropShadow = true,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.14483,
+											0.04000,
+										},
+									},
+								},
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"feral",
+									"Frame",
+								},
+								position =  
+								{
+									0,
+									0.48985,
+								},
+								name = "Settings_copy",
+								xAlignToParent = "Middle",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											colour =  
+											{
+												255,
+												255,
+												255,
+												210,
+											},
+											shadermode = 0,
+											texture = "art\\ui\\textures\\textures_fe\\skirmish_panel_bottom_right",
+											ID = 3351587,
+											states =  
+											{
+												"Normal",
+												"Active",
+												"Hover",
+												"Disabled",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.34000,
+									0.25000,
+								},
+							},
+							 
+							{
+								type = "Group",
+								name = "MapPreview_copy",
+								position =  
+								{
+									0.03300,
+									0.05412,
+								},
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								xAlignToParent = "Middle",
+								Children =  
+								{
+									 
+									{
+										type = "ArtLabel",
+										name = "artMapImage_copy",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										style =  
+										{
+											"DefaultStyles",
+											"defStyleLabel",
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+										yAlignToParent = "Stretch",
+										xAlignToParent = "Stretch",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													shadermode = 0,
+													texture = "",
+													ID = 153007,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														255,
+														0,
+														0,
+														255,
+													},
+													ID = 3815805,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.27400,
+											0.38400,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer1_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "View the medals you have earned.",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer2_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "View vehicles and enable them for play",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer3_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "Vehicles",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer4_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "Medals",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer5_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "Filter Desc",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer6_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "Filter Desc",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer7_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "Filter Desc",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+									 
+									{
+										type = "TextLabel",
+										name = "dotPlayer8_copy",
+										position =  
+										{
+											0,
+											0,
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										text = "Filter Desc",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Rectangle",
+													nameID = "Self",
+													colour =  
+													{
+														255,
+														215,
+														0,
+														255,
+													},
+													ID = 3488550,
+													rectangleType = "EllipseFill",
+													shadermode = 0,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													nameID = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														0,
+														0,
+														255,
+														255,
+													},
+													position =  
+													{
+														0.10000,
+														0.10000,
+													},
+													ID = 3488500,
+													rectangleType = "EllipseFill",
+													size =  
+													{
+														0.80000,
+														0.80000,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													shadermode = 0,
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														255,
+													},
+													multiline = false,
+													horzAlign = "Centre",
+													ID = 3488493,
+													fontname = "impact_12",
+													nameID = "Text",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								size =  
+								{
+									0.27400,
+									0.38400,
+								},
+							},
+							 
+							{
+								type = "TextLabel",
+								text = "Map Name",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								style =  
+								{
+									"feral",
+									"Text",
+								},
+								position =  
+								{
+									0.03755,
+									0.00675,
+								},
+								name = "txtMapName_copy",
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Text",
+											textColourBottom =  
+											{
+												244,
+												244,
+												244,
+												255,
+											},
+											shadermode = 0,
+											textColourTop =  
+											{
+												244,
+												244,
+												244,
+												255,
+											},
+											multiline = false,
+											horzAlign = "Centre",
+											ID = 3706857,
+											fontname = "trebuchet ms regular 20",
+											dropShadow = true,
+											states =  
+											{
+												"Normal",
+												"Disabled",
+												"Active",
+												"Hover",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.28411,
+									0.03840,
+								},
+							},
+						},
+						name = "GameInfo_grp_copy",
+						Presentation =  
+						{
+						},
+						size =  
+						{
+							0.34000,
+							0.69633,
+						},
+					},
+				},
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"feral",
+					"MainFrame",
+				},
+				position =  
+				{
+					0.03750,
+					0.13700,
+				},
+				name = "Main",
+				xAlignToParent = "Middle",
+				Presentation =  
+				{
+					Art =  
+					{
+						 
+						{
+							type = "Graphic",
+							nameID = "main_frame",
+							colour =  
+							{
+								255,
+								255,
+								255,
+								210,
+							},
+							ID = 3362097,
+							texture = "art\\ui\\textures\\textures_fe\\menu_background",
+							shadermode = 0,
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+						 
+						{
+							type = "Graphic",
+							nameID = "medals_frame",
+							shadermode = 0,
+							colour =  
+							{
+								255,
+								255,
+								255,
+								210,
+							},
+							position =  
+							{
+								0.00800,
+								0.00500,
+							},
+							ID = 3362108,
+							size =  
+							{
+								0.98500,
+								0.98600,
+							},
+							texture = "art\\ui\\textures\\textures_fe\\medals_panel_bg",
+							states =  
+							{
+								"Normal",
+								"Active",
+								"Hover",
+								"Disabled",
+							},
+						},
+					},
+				},
+				size =  
+				{
+					0.92500,
+					0.84300,
+				},
+			},
+			 
+			{
+				type = "Button",
+				style =  
+				{
+					"feral",
+					"acceptButton_phone",
+				},
+				position =  
+				{
+					0.84600,
+					0.86200,
+				},
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				text = "",
+				name = "Start",
+				size =  
+				{
+					0.09644,
+					0.09342,
+				},
+			},
+			 
+			{
+				type = "Button",
+				text = "$13254",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				style =  
+				{
+					"feral",
+					"backButton",
+				},
+				position =  
+				{
+					0.05709,
+					0.86155,
+				},
+				name = "btnLogout",
+				tooltip_name = "TooltipLabel",
+				size =  
+				{
+					0.09600,
+					0.09300,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+}
+ToolInfo =  
+{
+	version = 3,
+	WidgetInfo =  
+	{
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_screen",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "Main",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			type = "Group",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Group",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Group",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Group",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Group",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "CustomListBox",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "Component",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "CheckButton",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "ArtLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
+			HitAreaGuides =  
+			{
+			},
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "SwitchInfo_btn",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GamelList_grp",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "CustomListBox",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "items_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "scrlBar_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnDec_scrlBar_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnInc_scrlBar_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnTrk_scrlBar_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgDn_scrlBar_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgUp_scrlBar_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "itemTmplt_LANGameList",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grpProgressIconsPerf",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ProgressPerf5",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ProgressPerf4",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ProgressPerf3",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ProgressPerf2",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ProgressPerf1",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "LockIcon",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "LockIconGame",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "NumPlayers_grp",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "MaxNumPlayers",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "slash",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "NumPlayers",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "MapName",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameName",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "Filters_btn",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "RefreshButton",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "Header_grp",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "PerfHeader",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "CtrlHeader",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "NumPlayersHeader",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "MapNameHeader",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameNameHeader",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameListTitle_lbl",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "Start",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			type = "Button",
+			name = "btnLogout",
+			HitAreaGuides =  
+			{
+			},
+			hidden = true,
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_tooltips",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "TooltipBase",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "TooltipLabel",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "weatherBG_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lblOptionWeather_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "txtOptionWeather_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "option1BG_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lblOption1_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "txtOption1_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "option0BG_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lblOption0_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "txtOption0_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "option2BG_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lblOption2_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "txtOption2_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "WinConditionBG_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lblWinCondition_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "txtWinCondition_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "Settings_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "artMapImage_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer1_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer2_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer3_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer4_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer5_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer6_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer7_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "dotPlayer8_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "MapPreview_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "txtMapName_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameInfo_grp_copy",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+	},
+	Guides =  
+	{
+		 
+		{
+			horizontal = false,
+			position = 0.85526,
+		},
+	},
+	ScreenInfo =  
+	{
+		LocaleRange =  
+		{
+			13250,
+			710099,
+		},
+	},
+}

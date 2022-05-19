@@ -6819,6 +6819,26 @@ Screen =
 														"Disabled",
 													},
 												},
+												 
+												{
+													type = "Rectangle",
+													shadermode = 0,
+													colour =  
+													{
+														255,
+														0,
+														0,
+														255,
+													},
+													ID = 3813541,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
 											},
 										},
 										size =  
@@ -10231,44 +10251,6 @@ Screen =
 							0.07000,
 						},
 					},
-					 
-					{
-						type = "Button",
-						style =  
-						{
-							"feral",
-							"acceptButton",
-						},
-						position =  
-						{
-							0.83232,
-							0.76810,
-						},
-						HitArea =  
-						{
-							 
-							{
-								type = "Rectangle",
-								size =  
-								{
-									1,
-									1,
-								},
-								position =  
-								{
-									0,
-									0,
-								},
-							},
-						},
-						text = "",
-						name = "Start_btn",
-						size =  
-						{
-							0.10000,
-							0.07000,
-						},
-					},
 				},
 				HitArea =  
 				{
@@ -10365,6 +10347,44 @@ Screen =
 					0.88000,
 				},
 			},
+			 
+			{
+				type = "Button",
+				style =  
+				{
+					"feral",
+					"acceptButton",
+				},
+				position =  
+				{
+					0.85232,
+					0.86810,
+				},
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				text = "",
+				name = "Start",
+				size =  
+				{
+					0.10000,
+					0.07000,
+				},
+			},
 		},
 		size =  
 		{
@@ -10435,14 +10455,15 @@ ToolInfo =
 		},
 		 
 		{
-			ArtGuides =  
-			{
-			},
+			type = "Group",
 			name = "PlayerInfo_grp",
 			HitAreaGuides =  
 			{
 			},
-			type = "Group",
+			hidden = true,
+			ArtGuides =  
+			{
+			},
 		},
 		 
 		{
@@ -11318,15 +11339,14 @@ ToolInfo =
 		},
 		 
 		{
-			type = "Group",
+			ArtGuides =  
+			{
+			},
 			name = "GameInfo_grp",
 			HitAreaGuides =  
 			{
 			},
-			hidden = true,
-			ArtGuides =  
-			{
-			},
+			type = "Group",
 		},
 		 
 		{
@@ -11993,7 +12013,7 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
-			name = "Start_btn",
+			name = "Start",
 			HitAreaGuides =  
 			{
 			},
