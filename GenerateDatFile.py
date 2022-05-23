@@ -174,7 +174,7 @@ if __name__ == '__main__':
 						help='Path(s) to the screen files or directory(ies) containing screen files')
 
 	parser.add_argument('-d', '--dest',
-						help='Output directory for the .dat file',
+						help='Output directory for the .dat file (e.g. UIEditor/BIA/Root/CoH/Locale/English)',
 						metavar='outPath')
 
 	parser.add_argument('-l', '--locFile',
