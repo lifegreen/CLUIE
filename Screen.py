@@ -98,13 +98,31 @@ def dispValue(value):
 class List():
 	strings = []
 	IDs = []
+
+	startPattern = RegEx.listPattern
+
 	def __init__(self, parent=None, key=None, lines=None, start=None):
 		self.attrs 	= {}
 		self.parent = parent
 		self.key 	= key # The key under which this instance is stored in the parents dictionary
 
 		if None not in (lines, start):
-			self.parseSelf(lines, start)
+			if DEBUG and CCALL: print(f"New {self.__class__.__name__} @{lNum(start)}")
+
+			if not (match := self.startPattern.match(''.join(lines[start:start+2]))):
+				printLine(start,   lines[start])
+				printLine(start+1, lines[start+1])
+				msg = f"Invalid {self.__class__.__name__} starting line"
+				raise Exception(msg)
+
+			# self.key 		= match[1]
+			self.start 		= start
+			self.end 		= findMatchingBrace(lines, start)
+			self.indentLvl	= match.start(1)			# Number of tabs in front of opening brace
+			self.indent 	= '\t' * (self.indentLvl+1) # String for formatting attribute list
+
+			self.parse(lines, start + 2, self.end)  # skip the opening brace line
+			self.setDisplayName()
 			self.parsed = True
 
 		elif key is not None:
@@ -115,32 +133,16 @@ class List():
 			print()
 			raise Exception("Insufficient arguments passed")
 
+	def setDisplayName(self, dispName=None):
+		if dispName:			self.dispName = dispName
+		elif 'name' in self:	self.dispName = self['name']
+		else:					self.dispName = self.key
+
 
 	def __setitem__(self, key, value):	self.attrs[key] = value
 	def __getitem__(self, key):			return self.attrs[key]
 	def __delitem__(self, key):			del self.attrs[key]
 	def __contains__(self, key):		return key in self.attrs
-
-
-# Parsing screen files
-	def parseSelf(self, lines, start):
-		if DEBUG and CCALL: print(f"New List @{lNum(start)}")
-
-		if not (match := listPattern.match(''.join(lines[start:start+2]))):
-			printLine(start,   lines[start])
-			printLine(start+1, lines[start+1])
-			raise Exception("Invalid list starting line")
-
-		self.key 		= match[1]
-		self.start 		= start
-		self.end 		= findMatchingBrace(lines, start)
-		self.indentLvl	= match.start(1)			# Number of tabs in front of opening brace
-		self.indent 	= '\t' * (self.indentLvl+1) # String for formatting attribute list
-
-		self.parse(lines, start + 2, self.end)  # skip the opening brace line
-
-		if   'name' in self: self.dispName = self['name']
-		else:				 self.dispName = self.key 
 
 
 	def parse(self, lines, start, end):
@@ -510,24 +512,15 @@ class List():
 ################################################################################
 
 class Widget(List):
-	def parseSelf(self, lines, start):
-		if DEBUG and CCALL: print(f"New Widget @{lNum(start)}")
 
-		if not (match := widgetPattern.match(''.join(lines[start:start+2]))):
-			printLine(start, lines[start])
-			printLine(start+1, lines[start+1])
-			raise Exception('Invalid widget starting line')
+	startPattern = RegEx.widgetPattern
 
-		self.start 		= start
-		self.end 		= findMatchingBrace(lines, start)
-		self.indentLvl 	= match.start(1)
-		self.indent 	= '\t' * (self.indentLvl + 1)
+	def setDisplayName(self, dispName=None):
+		if dispName:			self.dispName = dispName
+		elif 'name' in self:	self.dispName = self['name']
+		elif 'type' in self:	self.dispName = self['type']
+		else:					self.dispName = self.key
 
-		self.parse(lines, start + 2, self.end) # Skip the opening brace line
-
-		if   'name' in self: self.dispName = self['name']
-		elif 'type' in self: self.dispName = self['type']
-		else:				 self.dispName = self.key 
 
 	def remove(self):
 		if self.parent:
