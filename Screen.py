@@ -2,6 +2,8 @@ import os, sys
 import re
 import weakref
 
+import RegEx
+
 
 
 
@@ -17,26 +19,6 @@ DEBUG = 0	# Toggle for all Debug output
 LINES = 1	# Print contents of lines as they are being processed
 FCALL = 0	# Print names of parsing functions when they are being called
 CCALL = 0	# Print names of classes when they are being created
-
-
-# RegEx patterns
-number 	= r'(-?\d+(\.\d\d\d\d\d)?)'
-string 	= r'"?([ !#-~]*)"?' # Any printable char except double quotes
-
-start	= r'^\t*' # Leading white space
-key		= r'(\w+) = '
-brace	= r'^\t*{\n'
-
-# Single-line
-numberPattern = re.compile(start + key + number + ',\n')
-stringPattern = re.compile(start + key + string + ',\n')
-
-numEntryPattern = re.compile(start + number + ',\n')
-strEntryPattern = re.compile(start + string + ',\n')
-
-# Two-line
-listPattern   = re.compile(r'(?m)' + start + key + '( \n)' + brace)
-widgetPattern = re.compile(r'(?m)' + start +       '( \n)' + brace)
 
 #									GLOBALS
 
@@ -60,11 +42,11 @@ def findMatchingBrace(lines, start):
 
 	while i < length:
 
-		if match := openingBrace.match(lines[i]):
+		if match := RegEx.openingBrace.match(lines[i]):
 			indentLvlStack.append(match.start(1))
 			braceCount += 1
 
-		elif match := closingBrace.match(lines[i]):
+		elif match := RegEx.closingBrace.match(lines[i]):
 			if (match.start(1) != indentLvlStack.pop()):
 				print(f"Funky looking brace at line {lNum(i)}")
 
@@ -168,15 +150,15 @@ class List():
 			printConsecLine(i, lines[i])
 
 			# Number attribute
-			if attrMatch := numberPattern.match(lines[i]):
+			if attrMatch := RegEx.numberPattern.match(lines[i]):
 				self.addAttr(attrMatch[1], float(attrMatch[2]))
 
 			# String attribute
-			elif attrMatch := stringPattern.match(lines[i]):
+			elif attrMatch := RegEx.stringPattern.match(lines[i]):
 				self.addAttr(attrMatch[1], attrMatch[2])
 
 			# Multi-line attribute
-			elif attrMatch := listPattern.match(''.join(lines[i:i+2])):
+			elif attrMatch := RegEx.listPattern.match(''.join(lines[i:i+2])):
 
 				listEnd = findMatchingBrace(lines, i)
 
@@ -207,19 +189,19 @@ class List():
 		while j < listEnd:
 
 			# Number list entry
-			if valueMatch := numEntryPattern.match(lines[j]):
+			if valueMatch := RegEx.numEntryPattern.match(lines[j]):
 				self.addAttr(listName, float(valueMatch[1]), asList=True)
 
 				printConsecLine(j, lines[j])
 
 			# String list entry
-			elif valueMatch := strEntryPattern.match(lines[j]):
+			elif valueMatch := RegEx.strEntryPattern.match(lines[j]):
 				self.addAttr(listName, valueMatch[1], asList=True)
 
 				printConsecLine(j, lines[j])
 
 			# Widget list entry (Widgets are always contained in a list)
-			elif widgetPattern.match("".join(lines[j:j+2])):
+			elif RegEx.widgetPattern.match("".join(lines[j:j+2])):
 				printConsecLine(j, lines[j])
 				printConsecLine(j+1, lines[j+1])
 

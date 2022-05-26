@@ -1,6 +1,5 @@
 import os, sys
 import pandas as pd
-import re
 
 from Screen import *
 from Selection import *
