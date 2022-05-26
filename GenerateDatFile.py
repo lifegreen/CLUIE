@@ -9,6 +9,7 @@ def lNum(i): return i + 1 # Convert line index to line number
 def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 	strings = None
 	if locFile:
+		# Load original strings
 		# TODO: Deal with bad lines
 		strings = pd.read_table(locFile,
 								encoding='utf-16',
@@ -22,7 +23,7 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 
 	# Process the screen file
 	print(f'\n[INFO] Processing: "{screen}"')
-	IDs, limits, newStrings = getStringIDs(screen, strings, fixScreen)
+	IDs, limits, newStrings = parseScreenStrings(screen, strings, fixScreen)
 
 
 	name = os.path.splitext(os.path.basename(screen))[0]
@@ -56,7 +57,7 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 	print(f'[INFO] Generated: "{path}"')
 
 
-def getStringIDs(screen, strings=None, fixScreen=False):
+def parseScreenStrings(screen, strings=None, fixScreen=False):
 	textEntry = re.compile(r'(\s*)text = "(.+)"')
 	stringID = re.compile(r'\$(\d+)')
 
@@ -92,15 +93,43 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 						# Make a note of the string so that we can add it to the end of the dat file
 						newStrings.append((i, textMatch[2]))
 
+
+	# Get the screen's "LocaleRange"
+	start = r'^\t*'
+	for i in range(len(lines)-3, -1, -1):
+		# print(bool(re.match(re.compile('^\t\tLocaleRange =  '), lines[i])), lines[i])
+		if re.match(re.compile('^\t\tLocaleRange =  '), lines[i]):
+			localeRange = re.match(r'(?m)' + \
+								   start + r'\{\n' + \
+								   start + r'(\d+),\n' + \
+								   start + r'(\d+),\n' + \
+								   start + r'\},\n',
+								   "".join(lines[i+1:i+5]))
+	if localeRange is None: raise Exception('[ERROR] Could not find "LocaleRange"')
+
+
+	# If we have detected string literals that aren't original strings then Generate IDs for them
 	if newStrings:
 		newID = max(IDs)
 		for i, string in newStrings:
-			# Generate an ID for the new string
 			newID += 1
 			lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', lines[i])
 			IDs.append(int(newID))
 
 			print(f'Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
+
+
+
+	IDs = list(set(IDs))
+	IDs.sort()
+	limits = roundRange(min(IDs), max(IDs))
+
+	if (localeRange[1], localeRange[2]) != limits:
+		needsFixing = True
+		if fixScreen:
+			print('[INFO] Updating LocaleRange:', (int(localeRange[1]), int(localeRange[2])), '->', limits)
+		else:
+			print('[WARNING] New "LocaleRange" does not match the range in the Screen file')
 
 
 	if needsFixing:
@@ -110,11 +139,6 @@ def getStringIDs(screen, strings=None, fixScreen=False):
 		else:
 			print('[INFO] Errors detected in the screen file. You can fix them by passing "--fix" to this script.')
 
-
-
-	IDs = list(set(IDs))
-	IDs.sort()
-	limits = roundRange(min(IDs), max(IDs))
 
 	return IDs, limits, newStrings
 
