@@ -61,7 +61,9 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 	textEntry = re.compile(r'(\s*)text = "(.+)"')
 	stringID = re.compile(r'\$(\d+)')
 
-	with open(screen) as file: lines = file.readlines()
+	with open(screen) as file:
+		lines = file.readlines()
+		LE = file.newlines
 
 	IDs = []
 	newStrings = []
@@ -94,20 +96,6 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 						newStrings.append((i, textMatch[2]))
 
 
-	# Get the screen's "LocaleRange"
-	start = r'^\t*'
-	for i in range(len(lines)-3, -1, -1):
-		# print(bool(re.match(re.compile('^\t\tLocaleRange =  '), lines[i])), lines[i])
-		if re.match(re.compile('^\t\tLocaleRange =  '), lines[i]):
-			localeRange = re.match(r'(?m)' + \
-								   start + r'\{\n' + \
-								   start + r'(\d+),\n' + \
-								   start + r'(\d+),\n' + \
-								   start + r'\},\n',
-								   "".join(lines[i+1:i+5]))
-	if localeRange is None: raise Exception('[ERROR] Could not find "LocaleRange"')
-
-
 	# If we have detected string literals that aren't original strings then Generate IDs for them
 	if newStrings:
 		newID = max(IDs)
@@ -124,18 +112,41 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 	IDs.sort()
 	limits = roundRange(min(IDs), max(IDs))
 
+
+	# Get the screen's "LocaleRange"
+	start = r'^\t*'
+	for i in range(len(lines)-3, -1, -1): # Searching in reverse since the range is at the end of the file
+		# print(bool(re.match(re.compile('^\t\tLocaleRange =  '), lines[i])), lines[i])
+		if re.match(re.compile('^\t\tLocaleRange =  '), lines[i]):
+			localeRange = re.match(r'(?m)' + \
+								   start + r'\{\n' + \
+								   start + r'(\d+),\n' + \
+								   start + r'(\d+),\n' + \
+								   start + r'\},\n',
+								   "".join(lines[i+1:i+5]))
+
+			rangePos = (i+2, i+3) # Line numbers of the range values
+			break
+
+
+	if  localeRange is None: raise Exception('[ERROR] Could not find "LocaleRange"')
+
 	if (localeRange[1], localeRange[2]) != limits:
 		needsFixing = True
 		if fixScreen:
 			print('[INFO] Updating LocaleRange:', (int(localeRange[1]), int(localeRange[2])), '->', limits)
-		else:
-			print('[WARNING] New "LocaleRange" does not match the range in the Screen file')
+
+			lines[rangePos[0]] = re.sub(r'\d+', str(limits[0]), lines[rangePos[0]])
+			lines[rangePos[1]] = re.sub(r'\d+', str(limits[1]), lines[rangePos[1]])
+
+		else: print('[WARNING] New "LocaleRange" does not match the range in the Screen file')
 
 
 	if needsFixing:
 		if fixScreen:
 			print(f'[INFO] Overwriting: "{screen}"')
-			with open(screen, 'w') as file: file.writelines(lines)
+			with open(screen, 'w') as file:
+				file.writelines(l[:-1]+LE for l in lines) # Preserve the line endings
 		else:
 			print('[INFO] Errors detected in the screen file. You can fix them by passing "--fix" to this script.')
 
@@ -232,7 +243,6 @@ if __name__ == '__main__':
 
 	if args.fix and not args.locFile:
 			print(f'[WARNING] Fixing screens without localisation file is not recommended (May result in the game displaying different string to the UI editor).')
-			sys.exit()
 
 
 	for screen in getScreenFiles(args.paths):
