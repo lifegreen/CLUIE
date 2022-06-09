@@ -336,7 +336,7 @@ class List():
 			List.strings.append((weakref.ref(self), value))
 
 			ids = re.findall(r"\$(\d+)", value)
-			if DEBUG and CCAL: print(value, '=>', ids)
+			if DEBUG and CCALL: print(value, '=>', ids)
 
 			for i in ids:
 				List.IDs.append(int(i))
