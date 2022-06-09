@@ -225,311 +225,6 @@ Screen =
 			 
 			{
 				type = "Group",
-				HitArea =  
-				{
-					 
-					{
-						type = "Rectangle",
-						size =  
-						{
-							1,
-							1,
-						},
-						position =  
-						{
-							0,
-							0,
-						},
-					},
-				},
-				style =  
-				{
-					"feral",
-					"tabGroup",
-				},
-				position =  
-				{
-					0.02000,
-					0.02313,
-				},
-				name = "TabGroup",
-				xAlignToParent = "Middle",
-				Children =  
-				{
-					 
-					{
-						type = "RadioButton",
-						text = "$710073",
-						HitArea =  
-						{
-							 
-							{
-								type = "Rectangle",
-								size =  
-								{
-									1,
-									1,
-								},
-								position =  
-								{
-									0,
-									0,
-								},
-							},
-						},
-						name = "RewardsTab",
-						position =  
-						{
-							0.35500,
-							0,
-						},
-						yAlignToParent = "Stretch",
-						xAlignToParent = "Middle",
-						Presentation =  
-						{
-							Art =  
-							{
-								 
-								{
-									type = "Graphic",
-									nameID = "Graphic_selected",
-									ID = 3362316,
-									texture = "art\\ui\\textures\\textures_fe\\tab_selected",
-									shadermode = 0,
-									states =  
-									{
-										"Checked",
-										"CheckedDisabled",
-										"CheckedActive",
-										"CheckedHover",
-									},
-								},
-								 
-								{
-									type = "Text",
-									textColourBottom =  
-									{
-										248,
-										248,
-										248,
-										255,
-									},
-									shadermode = 0,
-									textColourTop =  
-									{
-										248,
-										248,
-										248,
-										255,
-									},
-									horzAlign = "Centre",
-									fontname = "impact_24",
-									ID = 3362033,
-									nameID = "Text_selected",
-									dropShadow = true,
-									states =  
-									{
-										"Checked",
-										"CheckedDisabled",
-										"CheckedActive",
-										"CheckedHover",
-									},
-								},
-								 
-								{
-									type = "Graphic",
-									nameID = "Graphic_normal",
-									ID = 3705286,
-									texture = "art\\ui\\textures\\textures_fe\\tab",
-									shadermode = 0,
-									states =  
-									{
-										"Normal",
-										"Disabled",
-										"Active",
-										"Hover",
-									},
-								},
-								 
-								{
-									type = "Text",
-									textColourBottom =  
-									{
-										148,
-										148,
-										148,
-										255,
-									},
-									shadermode = 0,
-									textColourTop =  
-									{
-										147,
-										148,
-										148,
-										255,
-									},
-									horzAlign = "Centre",
-									ID = 3705285,
-									fontname = "impact_24",
-									nameID = "Text_normal",
-									states =  
-									{
-										"Normal",
-										"Disabled",
-										"Active",
-										"Hover",
-									},
-								},
-							},
-						},
-						style =  
-						{
-							"feral",
-							"tabStatic",
-						},
-					},
-					 
-					{
-						type = "RadioButton",
-						text = "$702790",
-						HitArea =  
-						{
-							 
-							{
-								type = "Rectangle",
-								size =  
-								{
-									1,
-									1,
-								},
-								position =  
-								{
-									0,
-									0,
-								},
-							},
-						},
-						name = "MedalsTab",
-						position =  
-						{
-							0,
-							0,
-						},
-						yAlignToParent = "Stretch",
-						xAlignToParent = "SideA",
-						Presentation =  
-						{
-							Art =  
-							{
-								 
-								{
-									type = "Graphic",
-									nameID = "Graphic_selected",
-									ID = 3362316,
-									texture = "art\\ui\\textures\\textures_fe\\tab_selected",
-									shadermode = 0,
-									states =  
-									{
-										"Checked",
-										"CheckedDisabled",
-										"CheckedActive",
-										"CheckedHover",
-									},
-								},
-								 
-								{
-									type = "Text",
-									textColourBottom =  
-									{
-										248,
-										248,
-										248,
-										255,
-									},
-									shadermode = 0,
-									textColourTop =  
-									{
-										248,
-										248,
-										248,
-										255,
-									},
-									horzAlign = "Centre",
-									fontname = "impact_24",
-									ID = 3362033,
-									nameID = "Text_selected",
-									dropShadow = true,
-									states =  
-									{
-										"Checked",
-										"CheckedDisabled",
-										"CheckedActive",
-										"CheckedHover",
-									},
-								},
-								 
-								{
-									type = "Graphic",
-									nameID = "Graphic_normal",
-									ID = 3705286,
-									texture = "art\\ui\\textures\\textures_fe\\tab",
-									shadermode = 0,
-									states =  
-									{
-										"Normal",
-										"Disabled",
-										"Active",
-										"Hover",
-									},
-								},
-								 
-								{
-									type = "Text",
-									textColourBottom =  
-									{
-										148,
-										148,
-										148,
-										255,
-									},
-									shadermode = 0,
-									textColourTop =  
-									{
-										147,
-										148,
-										148,
-										255,
-									},
-									horzAlign = "Centre",
-									ID = 3705285,
-									fontname = "impact_24",
-									nameID = "Text_normal",
-									states =  
-									{
-										"Normal",
-										"Disabled",
-										"Active",
-										"Hover",
-									},
-								},
-							},
-						},
-						style =  
-						{
-							"feral",
-							"tabStatic",
-						},
-					},
-				},
-				size =  
-				{
-					0.96000,
-					0.08300,
-				},
-			},
-			 
-			{
-				type = "Group",
 				Children =  
 				{
 					 
@@ -6819,26 +6514,6 @@ Screen =
 														"Disabled",
 													},
 												},
-												 
-												{
-													type = "Rectangle",
-													shadermode = 0,
-													colour =  
-													{
-														255,
-														0,
-														0,
-														255,
-													},
-													ID = 3813541,
-													states =  
-													{
-														"Normal",
-														"Active",
-														"Hover",
-														"Disabled",
-													},
-												},
 											},
 										},
 										size =  
@@ -9214,7 +8889,7 @@ Screen =
 										},
 									},
 								},
-								name = "RefreshButton",
+								name = "Refresh_btn",
 								position =  
 								{
 									0.36010,
@@ -10251,6 +9926,44 @@ Screen =
 							0.07000,
 						},
 					},
+					 
+					{
+						type = "Button",
+						style =  
+						{
+							"feral",
+							"acceptButton",
+						},
+						position =  
+						{
+							0.83232,
+							0.76810,
+						},
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						text = "",
+						name = "Start_btn",
+						size =  
+						{
+							0.10000,
+							0.07000,
+						},
+					},
 				},
 				HitArea =  
 				{
@@ -10347,44 +10060,6 @@ Screen =
 					0.88000,
 				},
 			},
-			 
-			{
-				type = "Button",
-				style =  
-				{
-					"feral",
-					"acceptButton",
-				},
-				position =  
-				{
-					0.85232,
-					0.86810,
-				},
-				HitArea =  
-				{
-					 
-					{
-						type = "Rectangle",
-						size =  
-						{
-							1,
-							1,
-						},
-						position =  
-						{
-							0,
-							0,
-						},
-					},
-				},
-				text = "",
-				name = "Start",
-				size =  
-				{
-					0.10000,
-					0.07000,
-				},
-			},
 		},
 		size =  
 		{
@@ -10414,39 +10089,6 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
-			name = "TabGroup",
-			HitAreaGuides =  
-			{
-			},
-			type = "Group",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "RewardsTab",
-			HitAreaGuides =  
-			{
-			},
-			type = "RadioButton",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "MedalsTab",
-			HitAreaGuides =  
-			{
-			},
-			type = "RadioButton",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
 			name = "Main",
 			HitAreaGuides =  
 			{
@@ -10455,15 +10097,14 @@ ToolInfo =
 		},
 		 
 		{
-			type = "Group",
+			ArtGuides =  
+			{
+			},
 			name = "PlayerInfo_grp",
 			HitAreaGuides =  
 			{
 			},
-			hidden = true,
-			ArtGuides =  
-			{
-			},
+			type = "Group",
 		},
 		 
 		{
@@ -11339,14 +10980,15 @@ ToolInfo =
 		},
 		 
 		{
-			ArtGuides =  
-			{
-			},
+			type = "Group",
 			name = "GameInfo_grp",
 			HitAreaGuides =  
 			{
 			},
-			type = "Group",
+			hidden = true,
+			ArtGuides =  
+			{
+			},
 		},
 		 
 		{
@@ -11914,7 +11556,7 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
-			name = "RefreshButton",
+			name = "Refresh_btn",
 			HitAreaGuides =  
 			{
 			},
@@ -12013,7 +11655,7 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
-			name = "Start",
+			name = "Start_btn",
 			HitAreaGuides =  
 			{
 			},

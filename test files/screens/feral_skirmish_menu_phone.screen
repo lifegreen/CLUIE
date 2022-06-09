@@ -1192,17 +1192,44 @@ Screen =
 							},
 							 
 							{
-								ListBox =  
+								type = "Group",
+								HitArea =  
 								{
-									visible = false,
-									ItemsGroup =  
+									 
 									{
-										type = "Group",
-										name = "items_lstBox_ControlType_cmb",
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
 										position =  
 										{
 											0,
 											0,
+										},
+									},
+								},
+								name = "ControlType_grp",
+								position =  
+								{
+									0.02358,
+									0.31200,
+								},
+								Children =  
+								{
+									 
+									{
+										type = "ArtLabel",
+										style =  
+										{
+											"DefaultStyles",
+											"defStyleLabel",
+										},
+										position =  
+										{
+											0,
+											0.04174,
 										},
 										HitArea =  
 										{
@@ -1221,24 +1248,780 @@ Screen =
 												},
 											},
 										},
+										name = "ControlType_bg",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\dropdown_panel",
+													ID = 3808795,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.39200,
+											0.07513,
+										},
+									},
+									 
+									{
+										ListBox =  
+										{
+											visible = false,
+											ItemsGroup =  
+											{
+												type = "Group",
+												name = "items_lstBox_ControlType_cmb",
+												position =  
+												{
+													0,
+													0,
+												},
+												HitArea =  
+												{
+													 
+													{
+														type = "Rectangle",
+														size =  
+														{
+															1,
+															1,
+														},
+														position =  
+														{
+															0,
+															0,
+														},
+													},
+												},
+												Presentation =  
+												{
+												},
+												size =  
+												{
+													0.36000,
+													0.15000,
+												},
+											},
+											ItemTemplate =  
+											{
+												type = "CustomListBoxItem",
+												name = "itemTmplt_lstBox_ControlType_cmb",
+												position =  
+												{
+													0,
+													0,
+												},
+												Children =  
+												{
+													 
+													{
+														type = "ArtLabel",
+														HitArea =  
+														{
+															 
+															{
+																type = "Rectangle",
+																size =  
+																{
+																	1,
+																	1,
+																},
+																position =  
+																{
+																	0,
+																	0,
+																},
+															},
+														},
+														name = "controlIcon",
+														position =  
+														{
+															0.30000,
+															0,
+														},
+														yAlignToParent = "Stretch",
+														style =  
+														{
+															"DefaultStyles",
+															"defStyleLabel",
+														},
+														Presentation =  
+														{
+															Art =  
+															{
+																 
+																{
+																	type = "Graphic",
+																	shadermode = 0,
+																	texture = "",
+																	ID = 3809712,
+																	states =  
+																	{
+																		"Normal",
+																		"Active",
+																		"Hover",
+																		"Disabled",
+																	},
+																},
+															},
+														},
+														size =  
+														{
+															0.04000,
+															0.05000,
+														},
+													},
+													 
+													{
+														type = "TextLabel",
+														text = "$13257",
+														HitArea =  
+														{
+														},
+														name = "controlName",
+														position =  
+														{
+															0,
+															0,
+														},
+														yAlignToParent = "Stretch",
+														xAlignToParent = "SideA",
+														Presentation =  
+														{
+															Art =  
+															{
+																 
+																{
+																	type = "Text",
+																	textColourBottom =  
+																	{
+																		255,
+																		252,
+																		255,
+																		255,
+																	},
+																	shadermode = 0,
+																	textColourTop =  
+																	{
+																		255,
+																		252,
+																		255,
+																		255,
+																	},
+																	multiline = false,
+																	fontname = "trebuchet ms regular 20",
+																	position =  
+																	{
+																		0.02612,
+																		0,
+																	},
+																	ID = 2012750,
+																	size =  
+																	{
+																		0.87890,
+																		1,
+																	},
+																	dropShadow = true,
+																	states =  
+																	{
+																		"Normal",
+																		"Disabled",
+																		"Active",
+																		"Hover",
+																	},
+																},
+															},
+														},
+														size =  
+														{
+															0.30000,
+															0.05000,
+														},
+													},
+												},
+												HitArea =  
+												{
+													 
+													{
+														type = "Rectangle",
+														size =  
+														{
+															1,
+															1,
+														},
+														position =  
+														{
+															0,
+															0,
+														},
+													},
+												},
+												Presentation =  
+												{
+													Art =  
+													{
+														 
+														{
+															type = "Rectangle",
+															nameID = "selected",
+															position =  
+															{
+																0,
+																0.10000,
+															},
+															ID = 3352331,
+															size =  
+															{
+																1,
+																0.80000,
+															},
+															shadermode = 0,
+															states =  
+															{
+																"Checked",
+																"CheckedDisabled",
+																"CheckedActive",
+																"CheckedHover",
+															},
+														},
+													},
+												},
+												size =  
+												{
+													0.36000,
+													0.05000,
+												},
+											},
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "lstBox_ControlType_cmb",
+											position =  
+											{
+												0,
+												0,
+											},
+											ScrollBar =  
+											{
+												visible = false,
+												type = "ScrollBar",
+												range =  
+												{
+													0,
+													0.15000,
+												},
+												ButtonDecrement =  
+												{
+													type = "Button",
+													buttonType = "ClickOnPress",
+													text = "",
+													HitArea =  
+													{
+														 
+														{
+															type = "Rectangle",
+															size =  
+															{
+																1,
+																1,
+															},
+															position =  
+															{
+																0,
+																0,
+															},
+														},
+													},
+													name = "btnDec_scrlBar_lstBox_ControlType_cmb",
+													position =  
+													{
+														0,
+														0,
+													},
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																nameID = "Normal",
+																ID = 1998093,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_box",
+																shadermode = 0,
+																states =  
+																{
+																	"Normal",
+																	"Disabled",
+																	"Active",
+																	"Hover",
+																},
+															},
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
+																position =  
+																{
+																	-0.15637,
+																	-0.21459,
+																},
+																ID = 3352107,
+																flipVertical = true,
+																size =  
+																{
+																	1.38641,
+																	1.37100,
+																},
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.03000,
+														0.04000,
+													},
+												},
+												ButtonTrack =  
+												{
+													type = "Button",
+													name = "btnTrk_scrlBar_lstBox_ControlType_cmb",
+													position =  
+													{
+														0,
+														0.04000,
+													},
+													HitArea =  
+													{
+														 
+														{
+															type = "Rectangle",
+															size =  
+															{
+																1,
+																1,
+															},
+															position =  
+															{
+																0,
+																0,
+															},
+														},
+													},
+													text = "",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_slider",
+																ID = 3352111,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.03000,
+														0,
+													},
+												},
+												HitArea =  
+												{
+													 
+													{
+														type = "Rectangle",
+														size =  
+														{
+															1,
+															1,
+														},
+														position =  
+														{
+															0,
+															0,
+														},
+													},
+												},
+												name = "scrlBar_lstBox_ControlType_cmb",
+												position =  
+												{
+													0.36000,
+													0,
+												},
+												stepSize = 0,
+												ButtonIncrement =  
+												{
+													type = "Button",
+													buttonType = "ClickOnPress",
+													text = "",
+													HitArea =  
+													{
+														 
+														{
+															type = "Rectangle",
+															size =  
+															{
+																1,
+																1,
+															},
+															position =  
+															{
+																0,
+																0,
+															},
+														},
+													},
+													name = "btnInc_scrlBar_lstBox_ControlType_cmb",
+													position =  
+													{
+														0,
+														0.11000,
+													},
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																nameID = "Normal",
+																ID = 1998097,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_box",
+																shadermode = 0,
+																states =  
+																{
+																	"Normal",
+																	"Disabled",
+																	"Active",
+																	"Hover",
+																},
+															},
+															 
+															{
+																type = "Graphic",
+																size =  
+																{
+																	1.38641,
+																	1.38013,
+																},
+																position =  
+																{
+																	-0.15637,
+																	-0.19764,
+																},
+																shadermode = 0,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
+																ID = 3352103,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.03000,
+														0.04000,
+													},
+												},
+												Presentation =  
+												{
+													Art =  
+													{
+														 
+														{
+															type = "Graphic",
+															size =  
+															{
+																0.96942,
+																1,
+															},
+															shadermode = 0,
+															texture = "art\\ui\\textures\\textures_fe\\scrollbar_background",
+															ID = 3352099,
+															states =  
+															{
+																"Normal",
+																"Active",
+																"Hover",
+																"Disabled",
+															},
+														},
+													},
+												},
+												size =  
+												{
+													0.03000,
+													0.15000,
+												},
+											},
+											type = "CustomListBox",
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Rectangle",
+														nameID = "fill",
+														ID = 3352112,
+														colour =  
+														{
+															25,
+															25,
+															25,
+															210,
+														},
+														shadermode = 0,
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+													 
+													{
+														type = "Rectangle",
+														nameID = "outline",
+														ID = 3352113,
+														rectangleType = "Border",
+														shadermode = 0,
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.36000,
+												0.15000,
+											},
+										},
+										type = "CustomComboBox",
+										Label =  
+										{
+											type = "Button",
+											text = "",
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "lbl_ControlType_cmb",
+											tooltip_name = "TooltipLabel",
+											position =  
+											{
+												0,
+												0,
+											},
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Text",
+														textColourBottom =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														shadermode = 0,
+														textColourTop =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														multiline = false,
+														fontname = "trebuchet ms bold 16",
+														position =  
+														{
+															0,
+															0.01643,
+														},
+														ID = 1998076,
+														size =  
+														{
+															1,
+															0.79113,
+														},
+														dropShadow = true,
+														states =  
+														{
+															"Active",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.33000,
+												0.05000,
+											},
+										},
+										ArrowButton =  
+										{
+											type = "Button",
+											text = "",
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "btn_ControlType_cmb",
+											tooltip_name = "TooltipLabel",
+											position =  
+											{
+												0.33000,
+												0,
+											},
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Graphic",
+														shadermode = 0,
+														texture = "art\\ui\\textures\\textures_fe\\dropdown_button",
+														ID = 3352090,
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.03000,
+												0.05000,
+											},
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "ControlType_cmb",
+										position =  
+										{
+											0.01500,
+											0.05309,
+										},
+										tooltip_name = "TooltipLabel",
 										Presentation =  
 										{
 										},
 										size =  
 										{
 											0.36000,
-											0.20000,
+											0.05000,
 										},
 									},
-									ItemTemplate =  
+									 
 									{
-										type = "TextListBoxItem",
-										name = "itemTmplt_lstBox_ControlType_cmb",
-										position =  
-										{
-											0,
-											0,
-										},
+										type = "TextLabel",
+										text = "$502253",
 										HitArea =  
 										{
 											 
@@ -1256,7 +2039,17 @@ Screen =
 												},
 											},
 										},
-										text = "",
+										style =  
+										{
+											"feral",
+											"Text",
+										},
+										position =  
+										{
+											0.02000,
+											0,
+										},
+										name = "ControlType_lbl",
 										Presentation =  
 										{
 											Art =  
@@ -1264,7 +2057,13 @@ Screen =
 												 
 												{
 													type = "Text",
-													nameID = "Text",
+													textColourBottom =  
+													{
+														244,
+														244,
+														244,
+														255,
+													},
 													shadermode = 0,
 													textColourTop =  
 													{
@@ -1274,622 +2073,43 @@ Screen =
 														255,
 													},
 													multiline = false,
-													fontname = "trebuchet ms regular 20",
-													position =  
-													{
-														0.04000,
-														0,
-													},
-													ID = 2663962,
-													textColourBottom =  
-													{
-														244,
-														244,
-														244,
-														255,
-													},
-													size =  
-													{
-														0.96000,
-														1,
-													},
+													ID = 3706808,
+													fontname = "trebuchet ms regular 24",
+													dropShadow = true,
 													states =  
 													{
 														"Normal",
 														"Disabled",
 														"Active",
 														"Hover",
-														"Checked",
-														"CheckedDisabled",
-														"CheckedActive",
-														"CheckedHover",
 													},
 												},
 											},
 										},
 										size =  
 										{
-											0.36000,
-											0.04500,
+											0.35500,
+											0.05300,
 										},
-									},
-									HitArea =  
-									{
-										 
-										{
-											type = "Rectangle",
-											size =  
-											{
-												1,
-												1,
-											},
-											position =  
-											{
-												0,
-												0,
-											},
-										},
-									},
-									name = "lstBox_ControlType_cmb",
-									position =  
-									{
-										0,
-										0,
-									},
-									ScrollBar =  
-									{
-										visible = false,
-										type = "ScrollBar",
-										range =  
-										{
-											0,
-											0.20000,
-										},
-										ButtonDecrement =  
-										{
-											type = "Button",
-											buttonType = "ClickOnPress",
-											text = "",
-											HitArea =  
-											{
-												 
-												{
-													type = "Rectangle",
-													size =  
-													{
-														1,
-														1,
-													},
-													position =  
-													{
-														0,
-														0,
-													},
-												},
-											},
-											name = "btnDec_scrlBar_lstBox_ControlType_cmb",
-											position =  
-											{
-												0,
-												0,
-											},
-											Presentation =  
-											{
-												Art =  
-												{
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_press",
-														ID = 2663950,
-														states =  
-														{
-															"Active",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_hover",
-														ID = 2663951,
-														states =  
-														{
-															"Hover",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_disabled",
-														ID = 2663952,
-														states =  
-														{
-															"Disabled",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_default",
-														ID = 2663953,
-														states =  
-														{
-															"Normal",
-														},
-													},
-												},
-											},
-											size =  
-											{
-												0.02500,
-												0.02500,
-											},
-										},
-										ButtonTrack =  
-										{
-											type = "Button",
-											name = "btnTrk_scrlBar_lstBox_ControlType_cmb",
-											position =  
-											{
-												0,
-												0.02500,
-											},
-											text = "",
-											HitArea =  
-											{
-												 
-												{
-													type = "Rectangle",
-													size =  
-													{
-														1,
-														1,
-													},
-													position =  
-													{
-														0,
-														0,
-													},
-												},
-											},
-											size =  
-											{
-												0.02500,
-												0,
-											},
-										},
-										HitArea =  
-										{
-											 
-											{
-												type = "Rectangle",
-												size =  
-												{
-													1,
-													1,
-												},
-												position =  
-												{
-													0,
-													0,
-												},
-											},
-										},
-										name = "scrlBar_lstBox_ControlType_cmb",
-										position =  
-										{
-											0.36000,
-											0,
-										},
-										stepSize = 0,
-										ButtonIncrement =  
-										{
-											type = "Button",
-											buttonType = "ClickOnPress",
-											text = "",
-											HitArea =  
-											{
-												 
-												{
-													type = "Rectangle",
-													size =  
-													{
-														1,
-														1,
-													},
-													position =  
-													{
-														0,
-														0,
-													},
-												},
-											},
-											name = "btnInc_scrlBar_lstBox_ControlType_cmb",
-											position =  
-											{
-												0,
-												0.17500,
-											},
-											Presentation =  
-											{
-												Art =  
-												{
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_press",
-														ID = 2663954,
-														states =  
-														{
-															"Active",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_hover",
-														ID = 2663955,
-														states =  
-														{
-															"Hover",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_disabled",
-														ID = 2663956,
-														states =  
-														{
-															"Disabled",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_default",
-														ID = 2663957,
-														states =  
-														{
-															"Normal",
-														},
-													},
-												},
-											},
-											size =  
-											{
-												0.02500,
-												0.02500,
-											},
-										},
-										Presentation =  
-										{
-										},
-										size =  
-										{
-											0.02500,
-											0.20000,
-										},
-									},
-									type = "TextListBox",
-									Presentation =  
-									{
-										Art =  
-										{
-											 
-											{
-												type = "Rectangle",
-												nameID = "Background",
-												ID = 2664576,
-												colour =  
-												{
-													24,
-													24,
-													25,
-													255,
-												},
-												shadermode = 0,
-												states =  
-												{
-													"Normal",
-													"Active",
-													"Hover",
-													"Disabled",
-												},
-											},
-											 
-											{
-												type = "Rectangle",
-												nameID = "Outline",
-												line_width = 0.00200,
-												shadermode = 0,
-												ID = 2664577,
-												colour =  
-												{
-													128,
-													128,
-													128,
-													255,
-												},
-												rectangleType = "WidthBorder",
-												states =  
-												{
-													"Normal",
-													"Active",
-													"Hover",
-													"Disabled",
-												},
-											},
-										},
-									},
-									size =  
-									{
-										0.36000,
-										0.20000,
 									},
 								},
-								type = "ComboBox",
-								Label =  
+								style =  
 								{
-									type = "Button",
-									name = "lbl_ControlType_cmb",
-									position =  
-									{
-										0,
-										0,
-									},
-									HitArea =  
-									{
-										 
-										{
-											type = "Rectangle",
-											size =  
-											{
-												1,
-												1,
-											},
-											position =  
-											{
-												0,
-												0,
-											},
-										},
-									},
-									text = "",
-									Presentation =  
-									{
-										Art =  
-										{
-											 
-											{
-												type = "Text",
-												textColourBottom =  
-												{
-													244,
-													244,
-													244,
-													255,
-												},
-												shadermode = 0,
-												textColourTop =  
-												{
-													244,
-													244,
-													244,
-													255,
-												},
-												fontname = "trebuchet ms regular 20",
-												size =  
-												{
-													0.96000,
-													1,
-												},
-												position =  
-												{
-													0.04000,
-													0,
-												},
-												ID = 2663937,
-												padding =  
-												{
-													0.00625,
-													0,
-												},
-												dropShadow = true,
-												states =  
-												{
-													"Normal",
-													"Disabled",
-													"Active",
-													"Hover",
-												},
-											},
-										},
-									},
-									size =  
-									{
-										0.32500,
-										0.05000,
-									},
+									"DefaultStyles",
+									"defStyleGroup",
 								},
-								ArrowButton =  
+								Presentation =  
 								{
-									type = "Button",
-									name = "btn_ControlType_cmb",
-									position =  
-									{
-										0.32500,
-										0,
-									},
-									HitArea =  
-									{
-										 
-										{
-											type = "Rectangle",
-											size =  
-											{
-												1,
-												1,
-											},
-											position =  
-											{
-												0,
-												0,
-											},
-										},
-									},
-									text = "",
-									Presentation =  
-									{
-										Art =  
-										{
-											 
-											{
-												type = "Graphic",
-												nameID = "bg",
-												shadermode = 0,
-												colour = "White",
-												position =  
-												{
-													0.13649,
-													0.11598,
-												},
-												ID = 2663945,
-												size =  
-												{
-													0.75952,
-													0.79133,
-												},
-												texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_box",
-												states =  
-												{
-													"Normal",
-													"Disabled",
-													"Active",
-													"Hover",
-												},
-											},
-											 
-											{
-												type = "Graphic",
-												nameID = "arrow",
-												shadermode = 0,
-												position =  
-												{
-													0.13600,
-													0.11600,
-												},
-												ID = 3335141,
-												size =  
-												{
-													0.76000,
-													0.79100,
-												},
-												texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
-												states =  
-												{
-													"Normal",
-													"Active",
-													"Hover",
-													"Disabled",
-												},
-											},
-										},
-									},
-									size =  
-									{
-										0.03500,
-										0.05000,
-									},
 								},
+								size =  
+								{
+									0.39200,
+									0.11809,
+								},
+							},
+							 
+							{
+								type = "Group",
 								HitArea =  
 								{
 									 
@@ -1907,160 +2127,26 @@ Screen =
 										},
 									},
 								},
-								name = "ControlType_cmb",
+								name = "GameType_grp",
 								position =  
 								{
-									0.04328,
-									0.36667,
+									0.02262,
+									0.05011,
 								},
-								style =  
-								{
-									"CoH_Engine_Final",
-									"DropDown_000",
-								},
-								Presentation =  
-								{
-									Art =  
-									{
-										 
-										{
-											type = "Rectangle",
-											nameID = "Background",
-											ID = 2664306,
-											colour =  
-											{
-												24,
-												24,
-												25,
-												255,
-											},
-											shadermode = 0,
-											states =  
-											{
-												"Normal",
-												"Active",
-												"Hover",
-												"Disabled",
-											},
-										},
-										 
-										{
-											type = "Rectangle",
-											nameID = "Outline",
-											line_width = 0.00200,
-											shadermode = 0,
-											ID = 2664305,
-											colour =  
-											{
-												128,
-												127,
-												128,
-												255,
-											},
-											rectangleType = "WidthBorder",
-											states =  
-											{
-												"Normal",
-												"Active",
-												"Hover",
-												"Disabled",
-											},
-										},
-									},
-								},
-								size =  
-								{
-									0.36000,
-									0.05000,
-								},
-							},
-							 
-							{
-								type = "TextLabel",
-								text = "$708002",
-								HitArea =  
+								Children =  
 								{
 									 
 									{
-										type = "Rectangle",
-										size =  
+										type = "ArtLabel",
+										style =  
 										{
-											1,
-											1,
+											"DefaultStyles",
+											"defStyleLabel",
 										},
 										position =  
 										{
 											0,
-											0,
-										},
-									},
-								},
-								style =  
-								{
-									"feral",
-									"Text",
-								},
-								position =  
-								{
-									0.04328,
-									0.31325,
-								},
-								name = "ControlType_lbl",
-								Presentation =  
-								{
-									Art =  
-									{
-										 
-										{
-											type = "Text",
-											textColourBottom =  
-											{
-												244,
-												244,
-												244,
-												255,
-											},
-											shadermode = 0,
-											textColourTop =  
-											{
-												244,
-												244,
-												244,
-												255,
-											},
-											multiline = false,
-											ID = 3706808,
-											fontname = "trebuchet ms regular 24",
-											dropShadow = true,
-											states =  
-											{
-												"Normal",
-												"Disabled",
-												"Active",
-												"Hover",
-											},
-										},
-									},
-								},
-								size =  
-								{
-									0.39549,
-									0.05342,
-								},
-							},
-							 
-							{
-								ListBox =  
-								{
-									visible = false,
-									ItemsGroup =  
-									{
-										type = "Group",
-										name = "items_lstBox_GameType_cmb",
-										position =  
-										{
-											0,
-											0,
+											0.04174,
 										},
 										HitArea =  
 										{
@@ -2079,24 +2165,722 @@ Screen =
 												},
 											},
 										},
+										name = "GameType_bg",
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													shadermode = 0,
+													texture = "art\\ui\\textures\\textures_fe\\dropdown_panel",
+													ID = 3808795,
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+											},
+										},
+										size =  
+										{
+											0.39200,
+											0.07513,
+										},
+									},
+									 
+									{
+										ListBox =  
+										{
+											visible = false,
+											ItemsGroup =  
+											{
+												type = "Group",
+												name = "items_lstBox_GameType_cmb",
+												position =  
+												{
+													0,
+													0,
+												},
+												HitArea =  
+												{
+													 
+													{
+														type = "Rectangle",
+														size =  
+														{
+															1,
+															1,
+														},
+														position =  
+														{
+															0,
+															0,
+														},
+													},
+												},
+												Presentation =  
+												{
+												},
+												size =  
+												{
+													0.36000,
+													0.20000,
+												},
+											},
+											ItemTemplate =  
+											{
+												type = "CustomListBoxItem",
+												name = "itemTmplt_lstBox_GameType_cmb",
+												position =  
+												{
+													0,
+													0,
+												},
+												Children =  
+												{
+													 
+													{
+														type = "TextLabel",
+														text = "$507512",
+														HitArea =  
+														{
+														},
+														name = "itemText",
+														position =  
+														{
+															0,
+															0,
+														},
+														yAlignToParent = "Stretch",
+														xAlignToParent = "SideA",
+														Presentation =  
+														{
+															Art =  
+															{
+																 
+																{
+																	type = "Text",
+																	textColourBottom =  
+																	{
+																		255,
+																		252,
+																		255,
+																		255,
+																	},
+																	shadermode = 0,
+																	textColourTop =  
+																	{
+																		255,
+																		252,
+																		255,
+																		255,
+																	},
+																	multiline = false,
+																	fontname = "trebuchet ms regular 20",
+																	position =  
+																	{
+																		0.02612,
+																		0,
+																	},
+																	ID = 2012750,
+																	size =  
+																	{
+																		0.87890,
+																		1,
+																	},
+																	dropShadow = true,
+																	states =  
+																	{
+																		"Normal",
+																		"Disabled",
+																		"Active",
+																		"Hover",
+																	},
+																},
+															},
+														},
+														size =  
+														{
+															0.33000,
+															0.05000,
+														},
+													},
+												},
+												HitArea =  
+												{
+													 
+													{
+														type = "Rectangle",
+														size =  
+														{
+															1,
+															1,
+														},
+														position =  
+														{
+															0,
+															0,
+														},
+													},
+												},
+												Presentation =  
+												{
+													Art =  
+													{
+														 
+														{
+															type = "Rectangle",
+															nameID = "selected",
+															position =  
+															{
+																0,
+																0.10000,
+															},
+															ID = 3352331,
+															size =  
+															{
+																1,
+																0.80000,
+															},
+															shadermode = 0,
+															states =  
+															{
+																"Checked",
+																"CheckedDisabled",
+																"CheckedActive",
+																"CheckedHover",
+															},
+														},
+													},
+												},
+												size =  
+												{
+													0.36000,
+													0.05000,
+												},
+											},
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "lstBox_GameType_cmb",
+											position =  
+											{
+												0,
+												0,
+											},
+											ScrollBar =  
+											{
+												visible = false,
+												type = "ScrollBar",
+												range =  
+												{
+													0,
+													0.20000,
+												},
+												ButtonDecrement =  
+												{
+													type = "Button",
+													buttonType = "ClickOnPress",
+													text = "",
+													HitArea =  
+													{
+														 
+														{
+															type = "Rectangle",
+															size =  
+															{
+																1,
+																1,
+															},
+															position =  
+															{
+																0,
+																0,
+															},
+														},
+													},
+													name = "btnDec_scrlBar_lstBox_GameType_cmb",
+													position =  
+													{
+														0,
+														0,
+													},
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																nameID = "Normal",
+																ID = 1998093,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_box",
+																shadermode = 0,
+																states =  
+																{
+																	"Normal",
+																	"Disabled",
+																	"Active",
+																	"Hover",
+																},
+															},
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
+																position =  
+																{
+																	-0.15637,
+																	-0.21459,
+																},
+																ID = 3352107,
+																flipVertical = true,
+																size =  
+																{
+																	1.38641,
+																	1.37100,
+																},
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.03000,
+														0.04000,
+													},
+												},
+												ButtonTrack =  
+												{
+													type = "Button",
+													name = "btnTrk_scrlBar_lstBox_GameType_cmb",
+													position =  
+													{
+														0,
+														0.04000,
+													},
+													HitArea =  
+													{
+														 
+														{
+															type = "Rectangle",
+															size =  
+															{
+																1,
+																1,
+															},
+															position =  
+															{
+																0,
+																0,
+															},
+														},
+													},
+													text = "",
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																shadermode = 0,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_slider",
+																ID = 3352111,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.03000,
+														0,
+													},
+												},
+												HitArea =  
+												{
+													 
+													{
+														type = "Rectangle",
+														size =  
+														{
+															1,
+															1,
+														},
+														position =  
+														{
+															0,
+															0,
+														},
+													},
+												},
+												name = "scrlBar_lstBox_GameType_cmb",
+												position =  
+												{
+													0.36000,
+													0,
+												},
+												stepSize = 0,
+												ButtonIncrement =  
+												{
+													type = "Button",
+													buttonType = "ClickOnPress",
+													text = "",
+													HitArea =  
+													{
+														 
+														{
+															type = "Rectangle",
+															size =  
+															{
+																1,
+																1,
+															},
+															position =  
+															{
+																0,
+																0,
+															},
+														},
+													},
+													name = "btnInc_scrlBar_lstBox_GameType_cmb",
+													position =  
+													{
+														0,
+														0.16000,
+													},
+													Presentation =  
+													{
+														Art =  
+														{
+															 
+															{
+																type = "Graphic",
+																nameID = "Normal",
+																ID = 1998097,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_box",
+																shadermode = 0,
+																states =  
+																{
+																	"Normal",
+																	"Disabled",
+																	"Active",
+																	"Hover",
+																},
+															},
+															 
+															{
+																type = "Graphic",
+																size =  
+																{
+																	1.38641,
+																	1.38013,
+																},
+																position =  
+																{
+																	-0.15637,
+																	-0.19764,
+																},
+																shadermode = 0,
+																texture = "art\\ui\\textures\\textures_fe\\scrollbar_arrow_down",
+																ID = 3352103,
+																states =  
+																{
+																	"Normal",
+																	"Active",
+																	"Hover",
+																	"Disabled",
+																},
+															},
+														},
+													},
+													size =  
+													{
+														0.03000,
+														0.04000,
+													},
+												},
+												Presentation =  
+												{
+													Art =  
+													{
+														 
+														{
+															type = "Graphic",
+															size =  
+															{
+																0.96942,
+																1,
+															},
+															shadermode = 0,
+															texture = "art\\ui\\textures\\textures_fe\\scrollbar_background",
+															ID = 3352099,
+															states =  
+															{
+																"Normal",
+																"Active",
+																"Hover",
+																"Disabled",
+															},
+														},
+													},
+												},
+												size =  
+												{
+													0.03000,
+													0.20000,
+												},
+											},
+											type = "CustomListBox",
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Rectangle",
+														nameID = "fill",
+														ID = 3352112,
+														colour =  
+														{
+															25,
+															25,
+															25,
+															210,
+														},
+														shadermode = 0,
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+													 
+													{
+														type = "Rectangle",
+														nameID = "outline",
+														ID = 3352113,
+														rectangleType = "Border",
+														shadermode = 0,
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.36000,
+												0.20000,
+											},
+										},
+										type = "CustomComboBox",
+										Label =  
+										{
+											type = "Button",
+											text = "",
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "lbl_GameType_cmb",
+											tooltip_name = "TooltipLabel",
+											position =  
+											{
+												0,
+												0,
+											},
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Text",
+														textColourBottom =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														shadermode = 0,
+														textColourTop =  
+														{
+															255,
+															255,
+															255,
+															255,
+														},
+														multiline = false,
+														fontname = "trebuchet ms bold 16",
+														position =  
+														{
+															0,
+															0.01643,
+														},
+														ID = 1998076,
+														size =  
+														{
+															1,
+															0.79113,
+														},
+														dropShadow = true,
+														states =  
+														{
+															"Active",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.33000,
+												0.05000,
+											},
+										},
+										ArrowButton =  
+										{
+											type = "Button",
+											text = "",
+											HitArea =  
+											{
+												 
+												{
+													type = "Rectangle",
+													size =  
+													{
+														1,
+														1,
+													},
+													position =  
+													{
+														0,
+														0,
+													},
+												},
+											},
+											name = "btn_GameType_cmb",
+											tooltip_name = "TooltipLabel",
+											position =  
+											{
+												0.33000,
+												0,
+											},
+											Presentation =  
+											{
+												Art =  
+												{
+													 
+													{
+														type = "Graphic",
+														shadermode = 0,
+														texture = "art\\ui\\textures\\textures_fe\\dropdown_button",
+														ID = 3352090,
+														states =  
+														{
+															"Normal",
+															"Active",
+															"Hover",
+															"Disabled",
+														},
+													},
+												},
+											},
+											size =  
+											{
+												0.03000,
+												0.05000,
+											},
+										},
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "GameType_cmb",
+										position =  
+										{
+											0.01500,
+											0.05309,
+										},
+										tooltip_name = "TooltipLabel",
 										Presentation =  
 										{
 										},
 										size =  
 										{
 											0.36000,
-											0.20000,
+											0.05000,
 										},
 									},
-									ItemTemplate =  
+									 
 									{
-										type = "TextListBoxItem",
-										name = "itemTmplt_lstBox_GameType_cmb",
-										position =  
-										{
-											0,
-											0,
-										},
+										type = "TextLabel",
+										text = "$13250",
 										HitArea =  
 										{
 											 
@@ -2114,7 +2898,17 @@ Screen =
 												},
 											},
 										},
-										text = "",
+										style =  
+										{
+											"feral",
+											"Text",
+										},
+										position =  
+										{
+											0.02000,
+											0,
+										},
+										name = "GameType_lbl",
 										Presentation =  
 										{
 											Art =  
@@ -2122,7 +2916,13 @@ Screen =
 												 
 												{
 													type = "Text",
-													nameID = "Text",
+													textColourBottom =  
+													{
+														244,
+														244,
+														244,
+														255,
+													},
 													shadermode = 0,
 													textColourTop =  
 													{
@@ -2132,764 +2932,38 @@ Screen =
 														255,
 													},
 													multiline = false,
-													fontname = "trebuchet ms regular 20",
-													position =  
-													{
-														0.04000,
-														0,
-													},
-													ID = 2663962,
-													textColourBottom =  
-													{
-														244,
-														244,
-														244,
-														255,
-													},
-													size =  
-													{
-														0.96000,
-														1,
-													},
+													ID = 3706808,
+													fontname = "trebuchet ms regular 24",
+													dropShadow = true,
 													states =  
 													{
 														"Normal",
 														"Disabled",
 														"Active",
 														"Hover",
-														"Checked",
-														"CheckedDisabled",
-														"CheckedActive",
-														"CheckedHover",
 													},
 												},
 											},
 										},
 										size =  
 										{
-											0.36000,
-											0.04500,
-										},
-									},
-									HitArea =  
-									{
-										 
-										{
-											type = "Rectangle",
-											size =  
-											{
-												1,
-												1,
-											},
-											position =  
-											{
-												0,
-												0,
-											},
-										},
-									},
-									name = "lstBox_GameType_cmb",
-									position =  
-									{
-										0,
-										0,
-									},
-									ScrollBar =  
-									{
-										visible = false,
-										type = "ScrollBar",
-										range =  
-										{
-											0,
-											0.20000,
-										},
-										ButtonDecrement =  
-										{
-											type = "Button",
-											buttonType = "ClickOnPress",
-											text = "",
-											HitArea =  
-											{
-												 
-												{
-													type = "Rectangle",
-													size =  
-													{
-														1,
-														1,
-													},
-													position =  
-													{
-														0,
-														0,
-													},
-												},
-											},
-											name = "btnDec_scrlBar_lstBox_GameType_cmb",
-											position =  
-											{
-												0,
-												0,
-											},
-											Presentation =  
-											{
-												Art =  
-												{
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_press",
-														ID = 2663950,
-														states =  
-														{
-															"Active",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_hover",
-														ID = 2663951,
-														states =  
-														{
-															"Hover",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_disabled",
-														ID = 2663952,
-														states =  
-														{
-															"Disabled",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_up_default",
-														ID = 2663953,
-														states =  
-														{
-															"Normal",
-														},
-													},
-												},
-											},
-											size =  
-											{
-												0.02500,
-												0.02500,
-											},
-										},
-										ButtonTrack =  
-										{
-											type = "Button",
-											name = "btnTrk_scrlBar_lstBox_GameType_cmb",
-											position =  
-											{
-												0,
-												0.02500,
-											},
-											text = "",
-											HitArea =  
-											{
-												 
-												{
-													type = "Rectangle",
-													size =  
-													{
-														1,
-														1,
-													},
-													position =  
-													{
-														0,
-														0,
-													},
-												},
-											},
-											size =  
-											{
-												0.02500,
-												0,
-											},
-										},
-										HitArea =  
-										{
-											 
-											{
-												type = "Rectangle",
-												size =  
-												{
-													1,
-													1,
-												},
-												position =  
-												{
-													0,
-													0,
-												},
-											},
-										},
-										name = "scrlBar_lstBox_GameType_cmb",
-										position =  
-										{
-											0.36000,
-											0,
-										},
-										stepSize = 0,
-										ButtonIncrement =  
-										{
-											type = "Button",
-											buttonType = "ClickOnPress",
-											text = "",
-											HitArea =  
-											{
-												 
-												{
-													type = "Rectangle",
-													size =  
-													{
-														1,
-														1,
-													},
-													position =  
-													{
-														0,
-														0,
-													},
-												},
-											},
-											name = "btnInc_scrlBar_lstBox_GameType_cmb",
-											position =  
-											{
-												0,
-												0.17500,
-											},
-											Presentation =  
-											{
-												Art =  
-												{
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_press",
-														ID = 2663954,
-														states =  
-														{
-															"Active",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_hover",
-														ID = 2663955,
-														states =  
-														{
-															"Hover",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_disabled",
-														ID = 2663956,
-														states =  
-														{
-															"Disabled",
-														},
-													},
-													 
-													{
-														type = "Graphic",
-														size =  
-														{
-															0.87891,
-															0.93750,
-														},
-														position =  
-														{
-															0.06055,
-															0.03125,
-														},
-														shadermode = 0,
-														texture = "art\\ui\\textures\\textures_fe\\arrow_down_default",
-														ID = 2663957,
-														states =  
-														{
-															"Normal",
-														},
-													},
-												},
-											},
-											size =  
-											{
-												0.02500,
-												0.02500,
-											},
-										},
-										Presentation =  
-										{
-											Art =  
-											{
-												 
-												{
-													type = "Rectangle",
-													shadermode = 0,
-													colour =  
-													{
-														0,
-														0,
-														0,
-														221,
-													},
-													ID = 3709882,
-													states =  
-													{
-														"Normal",
-														"Active",
-														"Hover",
-														"Disabled",
-													},
-												},
-											},
-										},
-										size =  
-										{
-											0.02500,
-											0.20000,
-										},
-									},
-									type = "TextListBox",
-									Presentation =  
-									{
-										Art =  
-										{
-											 
-											{
-												type = "Rectangle",
-												nameID = "Background",
-												ID = 2664576,
-												colour =  
-												{
-													24,
-													24,
-													25,
-													255,
-												},
-												shadermode = 0,
-												states =  
-												{
-													"Normal",
-													"Active",
-													"Hover",
-													"Disabled",
-												},
-											},
-											 
-											{
-												type = "Rectangle",
-												nameID = "Outline",
-												line_width = 0.00200,
-												shadermode = 0,
-												ID = 2664577,
-												colour =  
-												{
-													128,
-													128,
-													128,
-													255,
-												},
-												rectangleType = "WidthBorder",
-												states =  
-												{
-													"Normal",
-													"Active",
-													"Hover",
-													"Disabled",
-												},
-											},
-										},
-									},
-									size =  
-									{
-										0.36000,
-										0.20000,
-									},
-								},
-								type = "ComboBox",
-								Label =  
-								{
-									type = "Button",
-									name = "lbl_GameType_cmb",
-									position =  
-									{
-										0,
-										0,
-									},
-									HitArea =  
-									{
-										 
-										{
-											type = "Rectangle",
-											size =  
-											{
-												1,
-												1,
-											},
-											position =  
-											{
-												0,
-												0,
-											},
-										},
-									},
-									text = "",
-									Presentation =  
-									{
-										Art =  
-										{
-											 
-											{
-												type = "Text",
-												textColourBottom =  
-												{
-													244,
-													244,
-													244,
-													255,
-												},
-												shadermode = 0,
-												textColourTop =  
-												{
-													244,
-													244,
-													244,
-													255,
-												},
-												fontname = "trebuchet ms regular 20",
-												size =  
-												{
-													0.96000,
-													1,
-												},
-												position =  
-												{
-													0.04000,
-													0,
-												},
-												ID = 2663937,
-												padding =  
-												{
-													0.00625,
-													0,
-												},
-												dropShadow = true,
-												states =  
-												{
-													"Normal",
-													"Disabled",
-													"Active",
-													"Hover",
-												},
-											},
-										},
-									},
-									size =  
-									{
-										0.32500,
-										0.05000,
-									},
-								},
-								ArrowButton =  
-								{
-									type = "Button",
-									name = "btn_GameType_cmb",
-									position =  
-									{
-										0.32500,
-										0,
-									},
-									HitArea =  
-									{
-										 
-										{
-											type = "Rectangle",
-											size =  
-											{
-												1,
-												1,
-											},
-											position =  
-											{
-												0,
-												0,
-											},
-										},
-									},
-									text = "",
-									Presentation =  
-									{
-										Art =  
-										{
-											 
-											{
-												type = "Graphic",
-												shadermode = 0,
-												texture = "art\\ui\\textures\\textures_fe\\dropdown_button",
-												ID = 3805100,
-												states =  
-												{
-													"Normal",
-													"Active",
-													"Hover",
-													"Disabled",
-												},
-											},
-										},
-									},
-									size =  
-									{
-										0.03500,
-										0.05000,
-									},
-								},
-								HitArea =  
-								{
-									 
-									{
-										type = "Rectangle",
-										size =  
-										{
-											1,
-											1,
-										},
-										position =  
-										{
-											0,
-											0,
-										},
-									},
-								},
-								name = "GameType_cmb",
-								position =  
-								{
-									0.04328,
-									0.10000,
-								},
-								style =  
-								{
-									"CoH_Engine_Final",
-									"DropDown_000",
-								},
-								Presentation =  
-								{
-									Art =  
-									{
-										 
-										{
-											type = "Rectangle",
-											nameID = "Background",
-											ID = 2664306,
-											colour =  
-											{
-												24,
-												24,
-												25,
-												255,
-											},
-											shadermode = 0,
-											states =  
-											{
-												"Normal",
-												"Active",
-												"Hover",
-												"Disabled",
-											},
-										},
-										 
-										{
-											type = "Rectangle",
-											nameID = "Outline",
-											line_width = 0.00200,
-											shadermode = 0,
-											ID = 2664305,
-											colour =  
-											{
-												128,
-												127,
-												128,
-												255,
-											},
-											rectangleType = "WidthBorder",
-											states =  
-											{
-												"Normal",
-												"Active",
-												"Hover",
-												"Disabled",
-											},
-										},
-									},
-								},
-								size =  
-								{
-									0.36000,
-									0.05000,
-								},
-							},
-							 
-							{
-								type = "TextLabel",
-								text = "$708003",
-								HitArea =  
-								{
-									 
-									{
-										type = "Rectangle",
-										size =  
-										{
-											1,
-											1,
-										},
-										position =  
-										{
-											0,
-											0,
+											0.35500,
+											0.05300,
 										},
 									},
 								},
 								style =  
 								{
-									"feral",
-									"Text",
+									"DefaultStyles",
+									"defStyleGroup",
 								},
-								position =  
-								{
-									0.04328,
-									0.05000,
-								},
-								name = "GameType_lbl",
 								Presentation =  
 								{
-									Art =  
-									{
-										 
-										{
-											type = "Text",
-											textColourBottom =  
-											{
-												244,
-												244,
-												244,
-												255,
-											},
-											shadermode = 0,
-											textColourTop =  
-											{
-												244,
-												244,
-												244,
-												255,
-											},
-											multiline = false,
-											ID = 3706808,
-											fontname = "trebuchet ms regular 24",
-											dropShadow = true,
-											states =  
-											{
-												"Normal",
-												"Disabled",
-												"Active",
-												"Hover",
-											},
-										},
-									},
 								},
 								size =  
 								{
-									0.39549,
-									0.05342,
+									0.39200,
+									0.11809,
 								},
 							},
 						},
@@ -4055,6 +4129,44 @@ Screen =
 							0.84300,
 						},
 					},
+					 
+					{
+						type = "Button",
+						style =  
+						{
+							"feral",
+							"acceptButton",
+						},
+						position =  
+						{
+							0.80850,
+							0.72461,
+						},
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						text = "",
+						name = "Start_btn",
+						size =  
+						{
+							0.09600,
+							0.09300,
+						},
+					},
 				},
 				HitArea =  
 				{
@@ -4149,44 +4261,6 @@ Screen =
 				{
 					0.92500,
 					0.84261,
-				},
-			},
-			 
-			{
-				type = "Button",
-				style =  
-				{
-					"feral",
-					"acceptButton",
-				},
-				position =  
-				{
-					0.84600,
-					0.86200,
-				},
-				HitArea =  
-				{
-					 
-					{
-						type = "Rectangle",
-						size =  
-						{
-							1,
-							1,
-						},
-						position =  
-						{
-							0,
-							0,
-						},
-					},
-				},
-				text = "",
-				name = "Start",
-				size =  
-				{
-					0.09700,
-					0.09300,
 				},
 			},
 		},
@@ -4329,11 +4403,33 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
+			name = "ControlType_grp",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ControlType_bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
 			name = "ControlType_cmb",
 			HitAreaGuides =  
 			{
 			},
-			type = "ComboBox",
+			type = "CustomComboBox",
 		},
 		 
 		{
@@ -4461,6 +4557,28 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
+			name = "controlIcon",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "controlName",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
 			name = "ControlType_lbl",
 			HitAreaGuides =  
 			{
@@ -4472,11 +4590,33 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
+			name = "GameType_grp",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameType_bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
 			name = "GameType_cmb",
 			HitAreaGuides =  
 			{
 			},
-			type = "ComboBox",
+			type = "CustomComboBox",
 		},
 		 
 		{
@@ -4604,6 +4744,17 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
+			name = "itemText",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
 			name = "GameType_lbl",
 			HitAreaGuides =  
 			{
@@ -4723,6 +4874,18 @@ ToolInfo =
 		 
 		{
 			type = "TextLabel",
+			name = "Offline_desc",
+			HitAreaGuides =  
+			{
+			},
+			hidden = true,
+			ArtGuides =  
+			{
+			},
+		},
+		 
+		{
+			type = "TextLabel",
 			name = "Skirmish_desc",
 			HitAreaGuides =  
 			{
@@ -4759,7 +4922,7 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
-			name = "Start",
+			name = "Start_btn",
 			HitAreaGuides =  
 			{
 			},
@@ -4798,18 +4961,6 @@ ToolInfo =
 			},
 			type = "TextLabel",
 		},
-		 
-		{
-			type = "TextLabel",
-			name = "Offline_desc",
-			HitAreaGuides =  
-			{
-			},
-			hidden = true,
-			ArtGuides =  
-			{
-			},
-		},
 	},
 	Guides =  
 	{
@@ -4833,8 +4984,8 @@ ToolInfo =
 	{
 		LocaleRange =  
 		{
-			708000,
-			708249,
+			13250,
+			708049,
 		},
 	},
 }

@@ -939,7 +939,42 @@ Screen =
 									{
 										ListBox =  
 										{
-											type = "CustomListBox",
+											visible = false,
+											ItemsGroup =  
+											{
+												type = "Group",
+												name = "items_lstBox_ControlType_cmb",
+												position =  
+												{
+													0,
+													0,
+												},
+												HitArea =  
+												{
+													 
+													{
+														type = "Rectangle",
+														size =  
+														{
+															1,
+															1,
+														},
+														position =  
+														{
+															0,
+															0,
+														},
+													},
+												},
+												Presentation =  
+												{
+												},
+												size =  
+												{
+													0.36000,
+													0.15000,
+												},
+											},
 											ItemTemplate =  
 											{
 												type = "CustomListBoxItem",
@@ -1012,7 +1047,7 @@ Screen =
 													 
 													{
 														type = "TextLabel",
-														text = "$600838 No Key",
+														text = "$600754",
 														HitArea =  
 														{
 														},
@@ -1155,6 +1190,7 @@ Screen =
 											},
 											ScrollBar =  
 											{
+												visible = false,
 												type = "ScrollBar",
 												range =  
 												{
@@ -1428,41 +1464,7 @@ Screen =
 													0.15000,
 												},
 											},
-											ItemsGroup =  
-											{
-												type = "Group",
-												name = "items_lstBox_ControlType_cmb",
-												position =  
-												{
-													0,
-													0,
-												},
-												HitArea =  
-												{
-													 
-													{
-														type = "Rectangle",
-														size =  
-														{
-															1,
-															1,
-														},
-														position =  
-														{
-															0,
-															0,
-														},
-													},
-												},
-												Presentation =  
-												{
-												},
-												size =  
-												{
-													0.36000,
-													0.15000,
-												},
-											},
+											type = "CustomListBox",
 											Presentation =  
 											{
 												Art =  
@@ -1904,7 +1906,7 @@ Screen =
 													 
 													{
 														type = "TextLabel",
-														text = "$600838 No Key",
+														text = "$600755",
 														HitArea =  
 														{
 														},
@@ -4155,6 +4157,154 @@ Screen =
 							0.88000,
 						},
 					},
+					 
+					{
+						type = "Button",
+						tooltip_text = "$600783 No Key",
+						text = "$600756",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "Start_btn",
+						position =  
+						{
+							0.82500,
+							0.77000,
+						},
+						tooltip_name = "TooltipLabel",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_disabled",
+									shadermode = 0,
+									saturation = 0.30000,
+									ID = 3135999,
+									colour =  
+									{
+										255,
+										255,
+										255,
+										106,
+									},
+									texture = "art\\ui\\textures\\textures_fe\\nav_button",
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Background_pressed",
+									ID = 3338987,
+									texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
+									shadermode = 0,
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Background",
+									ID = 3135998,
+									texture = "art\\ui\\textures\\textures_fe\\nav_button",
+									shadermode = 0,
+									states =  
+									{
+										"Normal",
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Arrow_disabled",
+									shadermode = 0,
+									colour =  
+									{
+										3,
+										255,
+										0,
+										106,
+									},
+									texture = "art\\ui\\textures\\textures_fe\\nav_arrow",
+									position =  
+									{
+										0.20000,
+										0,
+									},
+									ID = 3809823,
+									size =  
+									{
+										0.60000,
+										1,
+									},
+									flipHorizontal = true,
+									states =  
+									{
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									nameID = "Arrow",
+									shadermode = 0,
+									colour =  
+									{
+										4,
+										255,
+										0,
+										255,
+									},
+									texture = "art\\ui\\textures\\textures_fe\\nav_arrow",
+									position =  
+									{
+										0.20000,
+										0,
+									},
+									ID = 3080997,
+									size =  
+									{
+										0.60000,
+										1,
+									},
+									flipHorizontal = true,
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							0.10000,
+							0.07000,
+						},
+					},
 				},
 				xAlignToParent = "Middle",
 				Presentation =  
@@ -4221,124 +4371,6 @@ Screen =
 				{
 					0.96000,
 					0.88000,
-				},
-			},
-			 
-			{
-				type = "Button",
-				tooltip_text = "$600783",
-				text = "$600777",
-				HitArea =  
-				{
-					 
-					{
-						type = "Rectangle",
-						size =  
-						{
-							1,
-							1,
-						},
-						position =  
-						{
-							0,
-							0,
-						},
-					},
-				},
-				name = "Start",
-				position =  
-				{
-					0.84507,
-					0.86957,
-				},
-				tooltip_name = "TooltipLabel",
-				Presentation =  
-				{
-					Art =  
-					{
-						 
-						{
-							type = "Graphic",
-							nameID = "Background_disabled",
-							shadermode = 0,
-							saturation = 0.30000,
-							ID = 3135999,
-							colour =  
-							{
-								255,
-								255,
-								255,
-								106,
-							},
-							texture = "art\\ui\\textures\\textures_fe\\nav_button",
-							states =  
-							{
-								"Disabled",
-							},
-						},
-						 
-						{
-							type = "Graphic",
-							nameID = "Background_pressed",
-							ID = 3338987,
-							texture = "art\\ui\\textures\\textures_fe\\nav_button_pressed",
-							shadermode = 0,
-							states =  
-							{
-								"Hover",
-							},
-						},
-						 
-						{
-							type = "Graphic",
-							nameID = "Background",
-							ID = 3135998,
-							texture = "art\\ui\\textures\\textures_fe\\nav_button",
-							shadermode = 0,
-							states =  
-							{
-								"Normal",
-								"Active",
-							},
-						},
-						 
-						{
-							type = "Graphic",
-							shadermode = 0,
-							colour =  
-							{
-								4,
-								255,
-								0,
-								255,
-							},
-							size =  
-							{
-								0.60000,
-								1,
-							},
-							position =  
-							{
-								0.20000,
-								0,
-							},
-							ID = 3080997,
-							texture = "art\\ui\\textures\\textures_fe\\nav_arrow",
-							flipHorizontal = true,
-							states =  
-							{
-								"Normal",
-								"Active",
-								"Hover",
-								"Disabled",
-							},
-						},
-					},
-				},
-				size =  
-				{
-					0.10000,
-					0.07000,
 				},
 			},
 		},
@@ -4437,7 +4469,348 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
+			name = "ControlType_grp",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ControlType_bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "CustomComboBox",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lbl_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "items_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "scrlBar_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnDec_scrlBar_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnInc_scrlBar_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnTrk_scrlBar_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgDn_scrlBar_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgUp_scrlBar_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "itemTmplt_lstBox_ControlType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "controlIcon",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "controlName",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
 			name = "ControlType_lbl",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameType_grp",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameType_bg",
+			HitAreaGuides =  
+			{
+			},
+			type = "ArtLabel",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "CustomComboBox",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lbl_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "items_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "scrlBar_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnDec_scrlBar_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnInc_scrlBar_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnTrk_scrlBar_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgDn_scrlBar_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgUp_scrlBar_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "itemTmplt_lstBox_GameType_cmb",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "itemText",
 			HitAreaGuides =  
 			{
 			},
@@ -4659,7 +5032,7 @@ ToolInfo =
 			ArtGuides =  
 			{
 			},
-			name = "Start",
+			name = "Start_btn",
 			HitAreaGuides =  
 			{
 			},
@@ -4698,347 +5071,6 @@ ToolInfo =
 			},
 			type = "TextLabel",
 		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "lbl_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btn_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "items_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnDec_scrlBar_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnInc_scrlBar_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnTrk_scrlBar_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnPgDn_scrlBar_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnPgUp_scrlBar_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "scrlBar_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "itemText",
-			HitAreaGuides =  
-			{
-			},
-			type = "TextLabel",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "itemTmplt_lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "lstBox_GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "GameType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "CustomComboBox",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "GameType_bg",
-			HitAreaGuides =  
-			{
-			},
-			type = "ArtLabel",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "GameType_grp",
-			HitAreaGuides =  
-			{
-			},
-			type = "Group",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "ControlType_bg",
-			HitAreaGuides =  
-			{
-			},
-			type = "ArtLabel",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "lbl_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btn_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "items_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnDec_scrlBar_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnInc_scrlBar_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnTrk_scrlBar_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnPgDn_scrlBar_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "btnPgUp_scrlBar_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "scrlBar_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "controlName",
-			HitAreaGuides =  
-			{
-			},
-			type = "TextLabel",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "itemTmplt_lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "lstBox_ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "Component",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "ControlType_cmb",
-			HitAreaGuides =  
-			{
-			},
-			type = "CustomComboBox",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "ControlType_grp",
-			HitAreaGuides =  
-			{
-			},
-			type = "Group",
-		},
-		 
-		{
-			ArtGuides =  
-			{
-			},
-			name = "controlIcon",
-			HitAreaGuides =  
-			{
-			},
-			type = "ArtLabel",
-		},
 	},
 	Guides =  
 	{
@@ -5073,7 +5105,7 @@ ToolInfo =
 		LocaleRange =  
 		{
 			600750,
-			600999,
+			600849,
 		},
 	},
 }
