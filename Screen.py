@@ -113,7 +113,13 @@ class List():
 				msg = f"Invalid {self.__class__.__name__} starting line"
 				raise Exception(msg)
 
-			# self.key 		= match[1]
+			if type(self) is List:
+				self.key = match[1]
+			else:
+				if self.key is None:
+					raise Exception('Widgets need the key to be passed in on creation')
+
+
 			self.start 		= start
 			self.end 		= findMatchingBrace(lines, start)
 			self.indentLvl	= match.start(1)			# Number of tabs in front of opening brace
