@@ -37,8 +37,6 @@ def findMatchingBrace(lines, start):
 	braceCount = 0
 	i = start
 	indentLvlStack = []
-	openingBrace = re.compile(r'^\t*({)')
-	closingBrace = re.compile(r'^\t*(})')
 
 	while i < length:
 

@@ -11,6 +11,8 @@ brace	= r'^\t*{\n'
 
 
 # Compiled patterns
+openingBrace = re.compile(start + r'({)')
+closingBrace = re.compile(start + r'(})')
 
 # Single-line
 numberPattern = re.compile(start + key + number + ',\n')
