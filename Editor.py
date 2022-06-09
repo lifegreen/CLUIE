@@ -132,7 +132,7 @@ class Editor():
 		self.screen = None
 		self.datPath = None
 
-		self.__call__(screen, datPath)
+		self.openScreen(screen, datPath)
 
 
 		contents = ""
@@ -144,7 +144,7 @@ class Editor():
 	def __call__(self, screen, datPath=None):
 		self.openScreen(screen, datPath)
 
-	def openScreen(self, screen, datPath=None):
+	def openScreen(self, screen, datPath):
 		if screen:
 			if type(screen) is Screen:
 				self.screen = screen

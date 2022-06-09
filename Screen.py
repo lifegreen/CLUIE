@@ -385,7 +385,7 @@ class List():
 
 
 
-# Outputting screen file 
+# Outputting screen file
 	def write(self, file, LE='\n'):
 		# Opening/Closing brace and the list name
 		indent = '\t' * self.indentLvl
@@ -615,7 +615,7 @@ class Screen(Widget):
 		if self.lines[0] == "Screen =  \n" and \
 		   self.lines[1] == "{\n":
 
-			if self.VB: 
+			if self.VB:
 				print(f"Looks good so far...")
 
 				# Display first few lines
