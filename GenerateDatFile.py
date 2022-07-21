@@ -146,7 +146,7 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 		if fixScreen:
 			print(f'[INFO] Overwriting: "{screen}"')
 			with open(screen, 'w') as file:
-				file.writelines(l[:-1]+LE for l in lines) # Preserve the line endings
+				file.writelines(l[:-1] + LE for l in lines) # Preserve the line endings
 		else:
 			print('[INFO] Errors detected in the screen file. You can fix them by passing "--fix" to this script.')
 
@@ -225,12 +225,8 @@ if __name__ == '__main__':
 
 	# Validate parameters
 	if args.dest and not os.path.isdir(args.dest):
-		if os.path.exists(os.path.dirname(args.dest)):
-			# Create a directory if it doesn't exist (but the rest of the path does)
-			os.mkdir(args.dest)
-		else:
-			print(f'[ERROR] Path does not exist: "{args.dest}"')
-			sys.exit()
+		print(f'[ERROR] Directory does not exist: "{args.dest}"')
+		sys.exit()
 
 	if args.locFile:
 		if not os.path.isfile(args.locFile):
@@ -242,7 +238,7 @@ if __name__ == '__main__':
 			sys.exit()
 
 	if args.fix and not args.locFile:
-			print(f'[WARNING] Fixing screens without localisation file is not recommended (May result in the game displaying different string to the UI editor).')
+		print(f'[WARNING] Fixing screens without localisation file is not recommended (May result in the game displaying different string to the UI editor).')
 
 
 	for screen in getScreenFiles(args.paths):
