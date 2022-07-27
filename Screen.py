@@ -183,15 +183,17 @@ class List():
 
 
 	def parseList(self, lines, listStart, listEnd, listName):
+		# Print opening brace
 		printConsecLine(listStart+1, lines[listStart+1])
+
 		if DEBUG and FCALL: print("parseList")
 
-		# Empty list
-		if "}," in lines[listStart+2]:
-			self.addAttr(listName, None)
-			return
-
 		j = listStart + 2 # Skip the list name and the opening brace
+
+		# Empty list
+		if j == listEnd:
+			self.addAttr(listName, None)
+
 		while j < listEnd:
 
 			# Number list entry
