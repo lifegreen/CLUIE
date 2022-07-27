@@ -386,7 +386,7 @@ class List():
 
 
 # Outputting screen file
-	def write(self, file, LE='\n'):
+	def write(self, file, LE='\r\n'):
 		# Opening/Closing brace and the list name
 		indent = '\t' * self.indentLvl
 
@@ -399,7 +399,7 @@ class List():
 
 
 
-	def writeAttrs(self, file, LE='\n'):
+	def writeAttrs(self, file, LE='\r\n'):
 		for key, value in self.attrs.items():
 			if type(value) is list:
 				file.write(f"{self.indent}{key} =  {LE}")
@@ -547,7 +547,7 @@ class Widget(List):
 
 
 
-	def write(self, file, LE='\n'):
+	def write(self, file, LE='\r\n'):
 			# Opening/Closing brace indent
 			indent = '\t' * self.indentLvl
 
@@ -660,9 +660,9 @@ class Screen(Widget):
 
 
 
-	def write(self, outputPath, DOS=False):
-		if DOS: LE = '\r\n'
-		else:   LE = '\n'
+	def write(self, outputPath, UNIX=False):
+		if UNIX: LE = '\n'
+		else:	 LE = '\r\n'
 
 		with open(outputPath, 'w') as file:
 			# Opening/Closing brace indent
