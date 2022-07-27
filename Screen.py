@@ -637,16 +637,17 @@ class Screen(Widget):
 		# Reset consecutive line counter
 		printConsecLine.counter = -1
 
-		line = self.start
+		i = self.start
 		self.attrs = {}
-		while line < self.length:
-			printConsecLine(line, lines[line])
-			printConsecLine(line+1, lines[line+1])
-			lst = List(self, lines=lines, start=line)
+		while i < self.length:
+			printConsecLine(i, lines[i])
+			printConsecLine(i+1, lines[i+1])
+			lst = List(self, lines=lines, start=i)
 			self[lst.key] = lst
 
 			printConsecLine(lst.end, lines[lst.end])
-			line = lst.end + 1
+			i = lst.end + 1
+
 		if self.VB: print("Done")
 
 		if 'Screen'   not in self:
