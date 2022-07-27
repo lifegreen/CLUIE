@@ -3,7 +3,7 @@ import re
 
 # RegEx patterns
 number 	= r'(-?\d+(\.\d\d\d\d\d)?)'
-string 	= r'"?([ !#-~]*)"?' # Any printable char except double quotes
+string 	= r'"?([ !#-<>-~]*)"?' # Any printable char except " and =
 
 start	= r'^\t*' # Leading white space
 key		= r'(\w+) = '
