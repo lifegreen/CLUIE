@@ -160,7 +160,7 @@ class Editor():
 
 			else:
 				err = f"Invalid 'screen' argument type: '{type(screen)}'"
-					raise Exception(err)
+				raise Exception(err)
 
 		if datPath:
 			datPath = resolvePath(datPath)

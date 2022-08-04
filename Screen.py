@@ -550,15 +550,15 @@ class Widget(List):
 
 
 	def write(self, file, LE='\r\n'):
-			# Opening/Closing brace indent
-			indent = '\t' * self.indentLvl
+		# Opening/Closing brace indent
+		indent = '\t' * self.indentLvl
 
-			file.write(f"{indent} {LE}")
-			file.write(f"{indent}{{{LE}")
+		file.write(f"{indent} {LE}")
+		file.write(f"{indent}{{{LE}")
 
-			self.writeAttrs(file, LE)
+		self.writeAttrs(file, LE)
 
-			file.write(f"{indent}}},{LE}")
+		file.write(f"{indent}}},{LE}")
 
 
 	def hasEssntials(self):
