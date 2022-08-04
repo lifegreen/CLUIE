@@ -149,13 +149,17 @@ class Editor():
 			if type(screen) is Screen:
 				self.screen = screen
 
-			else:
+			elif type(screen) is str:
 				filePath = resolvePath(screen)
 
 				if os.path.isfile(filePath):
 					self.screen = Screen(filePath)
 				else:
 					err = f"File: '{filePath}' DOES NOT EXIST"
+					raise Exception(err)
+
+			else:
+				err = f"Invalid 'screen' argument type: '{type(screen)}'"
 					raise Exception(err)
 
 		if datPath:
