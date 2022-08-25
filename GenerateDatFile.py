@@ -213,6 +213,7 @@ if __name__ == '__main__':
 						metavar='outPath')
 
 	parser.add_argument('-l', '--locFile',
+						default=os.path.expandvars('$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/CompanyOfHeroesData/Data/coh/engine/locale/english/reliccoh.english.ucs'),
 						help='Localisation file containing original strings',
 						metavar='locFile')
 
