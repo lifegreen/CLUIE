@@ -95,6 +95,10 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 						# Make a note of the string so that we can add it to the end of the dat file
 						newStrings.append((i, textMatch[2]))
 
+	if not IDs:
+		print("[WARNING] No IDs were found in the screen file")
+		# If no IDs were found just add something to the list so that it's not empty
+		IDs.append(1)
 
 	# If we have detected string literals that aren't original strings then Generate IDs for them
 	if newStrings:
