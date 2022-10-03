@@ -80,9 +80,11 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 				needsFixing = True
 
 				if fixScreen:
+					# Check if the string exists in the original localisation file
 					if (strings is not None) and (textMatch[2] in strings['String'].values):
 						# This horrible looking line simply gets the index of the first occurrence
-						# of textMatch[2] (i.e. the text that's in-between " & ") in the 'strings' DataFrame
+						# of textMatch[2] in the 'strings' DataFrame.
+						# In other words, get the original string ID of the text inside the double quotes
 						newID = strings.index.values[strings['String'] == textMatch[2]][0]
 
 						print(f'Substituting "{textMatch[2]}" with ${newID}')
@@ -214,10 +216,11 @@ if __name__ == '__main__':
 
 	parser.add_argument('-l', '--locFile',
 						default=os.path.expandvars('$FERAL_SVN_DATA_ROOT/CompanyOfHeroes/Data/CompanyOfHeroesData/Data/coh/engine/locale/english/reliccoh.english.ucs'),
-						help='Localisation file containing original strings',
+						help='''Localisation file containing original strings. By default the file is located using the "FERAL_SVN_DATA_ROOT" env var.
+								Pass "None" or "no" if you wish to not use original strings. will make the UI Editor display the string IDs in place of all the strings''',
 						metavar='locFile')
 
-	parser.add_argument('--fix', '--auto-fix',
+	parser.add_argument('--fix',
 						action=argparse.BooleanOptionalAction,
 						help='Fix the errors in the screen file (overrides original screen file)')
 
@@ -230,16 +233,28 @@ if __name__ == '__main__':
 		sys.exit()
 
 	if args.locFile:
-		if not os.path.isfile(args.locFile):
+		if args.locFile.lower in ['none','no','null']:
+			args.locFile = None
+
+		elif not os.path.isfile(args.locFile):
 			print(f'[ERROR] File does not exist: "{args.locFile}"')
 			sys.exit()
 
 		elif not args.locFile.endswith('.ucs'):
 			print(f'[ERROR] Not a localisation (.ucs) file: "{args.locFile}"')
-			sys.exit()
+
+	else:
+		print(f'[INFO] Localisation file not specified, would you like to use the default')
+
 
 	if args.fix and not args.locFile:
-		print(f'[WARNING] Fixing screens without localisation file is not recommended (May result in the game displaying different string to the UI editor).')
+		print(f'[WARNING] Fixing screens without localisation file will make the UI Editor display the string IDs in place of all the strings')
+		while True:
+			answer = input("Do you wish to proceed? [y/N]")
+
+			if answer.lower() in ['y','yes']:		break
+			elif answer.lower() in ['n','no','']:	sys.exit()
+			else:									print('[ERROR] Invalid input')
 
 
 	for screen in getScreenFiles(args.paths):
