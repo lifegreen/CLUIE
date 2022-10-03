@@ -120,25 +120,25 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 	# Get the screen's "LocaleRange"
 	start = r'^\t*'
 	for i in range(len(lines)-3, -1, -1): # Searching in reverse since the range is at the end of the file
-		# print(bool(re.match(re.compile('^\t\tLocaleRange =  '), lines[i])), lines[i])
 		if re.match(re.compile('^\t\tLocaleRange =  '), lines[i]):
-			localeRange = re.match(r'(?m)' + \
-								   start + r'\{\n' + \
-								   start + r'(\d+),\n' + \
-								   start + r'(\d+),\n' + \
-								   start + r'\},\n',
-								   "".join(lines[i+1:i+5]))
+			match = re.match(r'(?m)' + \
+							 start + r'\{\n' + \
+							 start + r'(\d+),\n' + \
+							 start + r'(\d+),\n' + \
+							 start + r'\},\n',
+							 "".join(lines[i+1:i+5]))
 
+			localeRange = (int(match[1]), int(match[2]))
 			rangePos = (i+2, i+3) # Line numbers of the range values
 			break
 
 
 	if  localeRange is None: raise Exception('[ERROR] Could not find "LocaleRange"')
 
-	if (localeRange[1], localeRange[2]) != limits:
+	if localeRange != limits:
 		needsFixing = True
 		if fixScreen:
-			print('[INFO] Updating LocaleRange:', (int(localeRange[1]), int(localeRange[2])), '->', limits)
+			print('[INFO] Updating LocaleRange:', localeRange, '->', limits)
 
 			lines[rangePos[0]] = re.sub(r'\d+', str(limits[0]), lines[rangePos[0]])
 			lines[rangePos[1]] = re.sub(r'\d+', str(limits[1]), lines[rangePos[1]])
