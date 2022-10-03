@@ -161,13 +161,10 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 def roundRange(_min, _max):
 	# Round down to nearest fifty
 	start = (_min // 50) * 50
-	end   = (_max // 50) * 50
 
-	# Round up unless it divides equally
-	if (_max % 50) != 0: end += 50
+	# Round up and subtract 1 (upper bound has to be one less than a multiple of 50)
+	end = (_max // 50) * 50 + 49
 
-	# The range has to end on 1 less than a multiple of 50
-	end -= 1
 	return (start, end)
 
 
