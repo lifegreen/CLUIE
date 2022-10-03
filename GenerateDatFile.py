@@ -149,8 +149,7 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 	if needsFixing:
 		if fixScreen:
 			print(f'[INFO] Overwriting: "{screen}"')
-			with open(screen, 'w') as file:
-				file.writelines(l[:-1] + LE for l in lines) # Preserve the line endings
+			with open(screen, 'w', newline=LE) as file: file.writelines(lines)
 		else:
 			print('[INFO] Errors detected in the screen file. You can fix them by passing "--fix" to this script.')
 
