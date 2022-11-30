@@ -58,7 +58,7 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 
 
 def parseScreenStrings(screen, strings=None, fixScreen=False):
-	textEntry = re.compile(r'(\s*)text = "(.+)"')
+	textEntry = re.compile(r'(\s*)(tooltip_text|text) = "(.+)"')
 	stringID = re.compile(r'\$(\d+)')
 
 	with open(screen) as file:
@@ -72,30 +72,36 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 	# Extract all string IDs used in the file
 	for i, line in enumerate(lines):
 		if textMatch := textEntry.match(line):
-			if idMatch := stringID.match(textMatch[2]):
+			if idMatch := stringID.match(textMatch[3]):
 				IDs.append(int(idMatch[1]))
 			else:
-				# This can cause issues when using UI editor (I think)
+				''' 
+				UI editor doesn't like string literals in screen files and will replace them with string
+				IDs from the .dat file. If it can't find a matching string in the .dat file, it will 
+				add the string literal to the .dat file under the first unused string ID.
+				''' 
 				print(f'[WARNING] String literal in text entry on line {lNum(i)}: {textMatch[0].strip()}')
 				needsFixing = True
 
 				if fixScreen:
 					# Check if the string exists in the original localisation file
-					if (strings is not None) and (textMatch[2] in strings['String'].values):
-						# This horrible looking line simply gets the index of the first occurrence
-						# of textMatch[2] in the 'strings' DataFrame.
-						# In other words, get the original string ID of the text inside the double quotes
-						newID = strings.index.values[strings['String'] == textMatch[2]][0]
+					if (strings is not None) and (textMatch[3] in strings['String'].values):
+						'''
+						This horrible looking line simply gets the index of the first occurrence
+						of textMatch[3] in the 'strings' DataFrame.
+						In other words, get the original string ID of the text inside the double quotes
+						'''
+						newID = strings.index.values[strings['String'] == textMatch[3]][0]
 
-						print(f'Substituting "{textMatch[2]}" with ${newID}')
+						print(f'Substituting "{textMatch[3]}" with ${newID}')
 
 						# Replace the string with an existing string ID
-						lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', line)
+						lines[i] = re.sub(textEntry, rf'\1\2 = "${newID}"', line)
 						IDs.append(int(newID))
 
 					else:
 						# Make a note of the string so that we can add it to the end of the dat file
-						newStrings.append((i, textMatch[2]))
+						newStrings.append((i, textMatch[3]))
 
 	if not IDs:
 		print("[WARNING] No IDs were found in the screen file")
@@ -107,7 +113,7 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 		newID = max(IDs)
 		for i, string in newStrings:
 			newID += 1
-			lines[i] = re.sub(textEntry, rf'\1text = "${newID}"', lines[i])
+			lines[i] = re.sub(textEntry, rf'\1\2 = "${newID}"', lines[i])
 			IDs.append(int(newID))
 
 			print(f'Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
