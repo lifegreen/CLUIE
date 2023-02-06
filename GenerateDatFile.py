@@ -66,6 +66,7 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 		LE = file.newlines
 
 	IDs = []
+	substitutions = []
 	newStrings = []
 	needsFixing = False
 
@@ -93,12 +94,11 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 						'''
 						newID = strings.index.values[strings['String'] == textMatch[3]][0]
 
-						print(f'Substituting "{textMatch[3]}" with ${newID}')
-
 						# Replace the string with an existing string ID
 						lines[i] = re.sub(textEntry, rf'\1\2 = "${newID}"', line)
-						IDs.append(int(newID))
 
+						IDs.append(int(newID))
+						substitutions.append((textMatch[3], newID))
 					else:
 						# Make a note of the string so that we can add it to the end of the dat file
 						newStrings.append((i, textMatch[3]))
@@ -116,8 +116,11 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 			lines[i] = re.sub(textEntry, rf'\1\2 = "${newID}"', lines[i])
 			IDs.append(int(newID))
 
-			print(f'Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
+			print(f'[INFO] Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
 
+	# Print out all the string substitutions we have made (if any)
+	for (string, newID) in substitutions:
+		print(f'[INFO] Substituted "{string}" with ${newID}')
 
 
 	IDs = list(set(IDs))
