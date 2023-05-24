@@ -21,19 +21,23 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 		assert strings is not None
 
 
+	name = os.path.splitext(os.path.basename(screen))[0]
+	datFile = f'Text.UI.{name}.dat'
+
+	# Output the dat file in the current directory if no output path is specified
+	if outPath: datFile = os.path.join(outPath, datFile)
+
+	# Check the dat file to see if we have added custom strings already
+	if os.path.isfile(datFile):
+		parseDatFileStrings(datFile, strings)
+
+
 	# Process the screen file
 	print(f'\n[INFO] Processing: "{screen}"')
 	IDs, limits, newStrings = parseScreenStrings(screen, strings, fixScreen)
 
 
-	name = os.path.splitext(os.path.basename(screen))[0]
-	path = f'Text.UI.{name}.dat'
-
-	# Output the dat file in the current directory if no output path is specified
-	if outPath: path = os.path.join(outPath, path)
-
-
-	with open(path, 'w') as file:
+	with open(datFile, 'w') as file:
 		file.write(datFileHeader(name, limits))
 
 		file.write(f'rangestart {limits[0]} {limits[1]}\n')
@@ -54,7 +58,41 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 		file.write('rangeend\n')
 
 
-	print(f'[INFO] Generated: "{path}"')
+	print(f'[INFO] Generated: "{datFile}"')
+
+
+
+def parseDatFileStrings(datFile, strings):
+	with open(datFile) as file:
+		lines = file.readlines()
+
+	stringEntry = re.compile(r'(\d+)\t(.*)\n')
+
+	startFound = False
+	for line in lines:
+		if 'rangestart' in line:
+			startFound = True
+			continue
+
+		# Skip lines until we reach the first string entry
+		if startFound:
+			if match := stringEntry.match(line):
+				ID = int(match[1])
+				string = match[2]
+
+				if (ID not in strings.index) or (string != strings.loc[ID].item()):
+					'''
+					If the string ID doesn't exists in the locfile, or if the ID
+					does exist but has a different string attached to it then
+					this must be a string literal that we added to dat file at
+					some point in the past. Therefore, we append this string to
+					the end of the 'strings' data frame so that it doesn't get
+					overridden with "${ID} - Does not exist".
+					'''
+					# Append ID + String to 'strings'
+					print(f"[INFO] Adding custom string: [{ID}] '{string}'")
+					strings.loc[ID] = string
+
 
 
 def parseScreenStrings(screen, strings=None, fixScreen=False):
