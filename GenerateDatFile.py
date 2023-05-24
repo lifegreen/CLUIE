@@ -103,10 +103,18 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 						# Make a note of the string so that we can add it to the end of the dat file
 						newStrings.append((i, textMatch[3]))
 
+
+
 	if not IDs:
 		print("[WARNING] No IDs were found in the screen file")
 		# If no IDs were found just add something to the list so that it's not empty
 		IDs.append(1)
+
+
+	# Print out all the string substitutions we have made (if any)
+	for (string, newID) in substitutions:
+		print(f'[INFO] Substituted "{string}" with ${newID}')
+
 
 	# If we have detected string literals that aren't original strings then Generate IDs for them
 	if newStrings:
@@ -117,10 +125,6 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 			IDs.append(int(newID))
 
 			print(f'[INFO] Assigning new ID [{newID}] for "{string}" (line {lNum(i)})')
-
-	# Print out all the string substitutions we have made (if any)
-	for (string, newID) in substitutions:
-		print(f'[INFO] Substituted "{string}" with ${newID}')
 
 
 	IDs = list(set(IDs))
