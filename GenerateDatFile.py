@@ -4,7 +4,15 @@ import argparse
 import re
 import pandas as pd
 
+
+
+
+
 def lNum(i): return i + 1 # Convert line index to line number
+
+
+
+
 
 def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 	strings = None
@@ -62,6 +70,8 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 
 
 
+
+
 def parseDatFileStrings(datFile, strings):
 	with open(datFile) as file:
 		lines = file.readlines()
@@ -92,6 +102,9 @@ def parseDatFileStrings(datFile, strings):
 					# Append ID + String to 'strings'
 					print(f"[INFO] Adding custom string: [{ID}] '{string}'")
 					strings.loc[ID] = string
+
+
+
 
 
 
@@ -210,6 +223,9 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 	return IDs, limits, newStrings
 
 
+
+
+
 def roundRange(_min, _max):
 	# Round down to nearest fifty
 	start = (_min // 50) * 50
@@ -221,6 +237,8 @@ def roundRange(_min, _max):
 
 
 
+
+
 def datFileHeader(name, limits):
 	# Dat file boiler plate
 	header = '/' * 69 + '\n'
@@ -229,6 +247,8 @@ def datFileHeader(name, limits):
 	header += '/' * 69 + '\n' # nice
 	header += f'// UI Screen: {name}\n\n'
 	return header
+
+
 
 
 
@@ -251,6 +271,8 @@ def getScreenFiles(paths):
 			print(f'[ERROR] The path does not exist: "{path}"')
 
 	return screens
+
+
 
 
 
