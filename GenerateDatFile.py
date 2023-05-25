@@ -35,16 +35,17 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 	# Output the dat file in the current directory if no output path is specified
 	if outPath: datFile = os.path.join(outPath, datFile)
 
+
 	# Check the dat file to see if we have added custom strings already
 	if os.path.isfile(datFile):
 		parseDatFileStrings(datFile, strings)
 
 
-	# Process the screen file
-	print(f'\n[INFO] Processing: "{screen}"')
+	# Find all the strings used in the screen file
 	IDs, limits, newStrings = parseScreenStrings(screen, strings, fixScreen)
 
 
+	# Generate the dat file
 	with open(datFile, 'w') as file:
 		file.write(datFileHeader(name, limits))
 
@@ -73,6 +74,8 @@ def GenerateDatFile(screen, locFile=None, outPath=None, fixScreen=True):
 
 
 def parseDatFileStrings(datFile, strings):
+	print(f'\n[INFO] Processing existing datFile: "{datFile}"')
+
 	with open(datFile) as file:
 		lines = file.readlines()
 
@@ -98,11 +101,11 @@ def parseDatFileStrings(datFile, strings):
 				the end of the 'strings' data frame so that it doesn't get
 				overridden with "${ID} - Does not exist".
 				'''
-				if (ID not in strings.index):
+				if ID not in strings.index:
 					print(f"[INFO] Adding custom string: [{ID}] '{string}'")
 					strings.loc[ID] = string
 
-				elif (string != strings.loc[ID].item()):
+				elif string != strings.loc[ID].item():
 					print(f"[WARN] Overriding string [{ID}] with '{string}'")
 					strings.loc[ID] = string
 
@@ -111,12 +114,14 @@ def parseDatFileStrings(datFile, strings):
 
 
 def parseScreenStrings(screen, strings=None, fixScreen=False):
-	textEntry = re.compile(r'(\s*)(tooltip_text|text) = "(.+)"')
-	stringID = re.compile(r'\$(\d+)')
+	print(f'\n[INFO] Processing: "{screen}"')
 
 	with open(screen) as file:
 		lines = file.readlines()
 		LE = file.newlines
+
+	textEntry = re.compile(r'(\s*)(tooltip_text|text) = "(.+)"')
+	stringID = re.compile(r'\$(\d+)')
 
 	IDs = []
 	substitutions = []
@@ -155,7 +160,6 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 					else:
 						# Make a note of the string so that we can add it to the end of the dat file
 						newStrings.append((i, textMatch[3]))
-
 
 
 	if not IDs:
@@ -200,8 +204,7 @@ def parseScreenStrings(screen, strings=None, fixScreen=False):
 			rangePos = (i+2, i+3) # Line numbers of the range values
 			break
 
-
-	if  localeRange is None: raise Exception('[ERROR] Could not find "LocaleRange"')
+	if localeRange is None: raise Exception('[ERROR] Could not find "LocaleRange"')
 
 	if localeRange != limits:
 		needsFixing = True
