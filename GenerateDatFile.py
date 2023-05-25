@@ -80,29 +80,31 @@ def parseDatFileStrings(datFile, strings):
 
 	startFound = False
 	for line in lines:
+		# Skip lines until we reach the first string entry
 		if 'rangestart' in line:
 			startFound = True
 			continue
 
-		# Skip lines until we reach the first string entry
 		if startFound:
 			if match := stringEntry.match(line):
 				ID = int(match[1])
 				string = match[2]
 
-				if (ID not in strings.index) or (string != strings.loc[ID].item()):
-					'''
-					If the string ID doesn't exists in the locfile, or if the ID
-					does exist but has a different string attached to it then
-					this must be a string literal that we added to dat file at
-					some point in the past. Therefore, we append this string to
-					the end of the 'strings' data frame so that it doesn't get
-					overridden with "${ID} - Does not exist".
-					'''
-					# Append ID + String to 'strings'
+				'''
+				If the string ID doesn't exists in the locfile, or if the ID
+				does exist but has a different string attached to it then
+				this must be a string literal that we added to dat file at
+				some point in the past. Therefore, we append this string to
+				the end of the 'strings' data frame so that it doesn't get
+				overridden with "${ID} - Does not exist".
+				'''
+				if (ID not in strings.index):
 					print(f"[INFO] Adding custom string: [{ID}] '{string}'")
 					strings.loc[ID] = string
 
+				elif (string != strings.loc[ID].item()):
+					print(f"[WARN] Overriding string [{ID}] with '{string}'")
+					strings.loc[ID] = string
 
 
 
